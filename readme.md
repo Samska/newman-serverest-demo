@@ -31,3 +31,5 @@ Executar os testes através da raíz do projeto:
 ```sh
 newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json -r htmlextra
 ```
+
+Para consultar o resultado dos testes basta abrir a pasta Newman que foi criada na raíz do projeto.

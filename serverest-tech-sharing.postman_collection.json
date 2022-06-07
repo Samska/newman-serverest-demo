@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "f95ba45d-04d9-4bbb-86e5-b9fc7edaa7ad",
+		"name": "serverest-tech-sharing",
+		"description": "Conteúdo para o tech sharing de testes de API com Postman.\n\nAPI utilizada:\n\n**O ServeRest é uma API REST que simula uma loja virtual com intuito de servir de material de estudos de testes de API.**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19215117"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Cadastrar usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
+									"var nome = pm.variables.replaceIn('{{$randomFirstName}}');\r",
+									"var email = nome + \"@qa.com.br\";\r",
+									"var password = pm.variables.replaceIn('{{$randomPassword}}');\r",
+									"\r",
+									"//Armazeno o email e password no environment para utilizar nos próximos testes\r",
+									"pm.environment.set(\"email\", email);\r",
+									"pm.environment.set(\"password\", password);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/usuarios",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
+									"    pm.expect(responseJson).to.have.property('authorization'); \r",
+									"    //Armazeno o token no environment para utilizar nos próximos testes\r",
+									"    pm.environment.set(\"authorization\",responseJson.authorization);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Listar produtos cadastrados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const schema = {\r",
+									"    //Valido o primeiro nível do schema\r",
+									"    \"type\": \"object\",\r",
+									"    \"required\" : [\"quantidade\", \"produtos\"],\r",
+									"    \"properties\": {\r",
+									"        \"quantidade\": { \"type\": \"integer\" },\r",
+									"        \"produtos\": {\r",
+									"            //Valido o segundo nível do schema\r",
+									"            \"type\": \"array\",\r",
+									"            \"items\": {\r",
+									"                \"type\": \"object\",\r",
+									"                \"required\" : [\"nome\", \"preco\", \"descricao\", \"quantidade\", \"_id\"],\r",
+									"                \"properties\": {\r",
+									"                    \"nome\": { \"type\": \"string\" },\r",
+									"                    \"preco\": { \"type\": \"integer\" },\r",
+									"                    \"descricao\": { \"type\": \"string\" },\r",
+									"                    \"quantidade\": { \"type\": \"integer\" },\r",
+									"                    \"_id\": { \"type\": \"string\" },\r",
+									"                }\r",
+									"            }\r",
+									"        }\r",
+									"    }\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Valida o schema e status code\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    //Valida o json schema\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/produtos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produto",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(201);\r",
+									"    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
+									"    pm.expect(responseJson).to.have.property('_id'); \r",
+									"    //Armazeno o token no environment para utilizar nos próximos testes\r",
+									"    pm.environment.set(\"idProduto\",responseJson._id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProductName}}\",\r\n  \"quantidade\": {{$randomInt}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/produtos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrinhos",
+			"item": [
+				{
+					"name": "Cadastrar carrinho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(201);\r",
+									"    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
+									"    pm.expect(responseJson).to.have.property('_id'); \r",
+									"    //Armazeno o token no environment para utilizar nos próximos testes\r",
+									"    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{idProduto}}\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/carrinhos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carrinhos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar carrinho por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const schema = {\r",
+									"    //Valido o primeiro nível do schema\r",
+									"    \"type\": \"object\",\r",
+									"    \"required\" : [\"quantidade\", \"carrinhos\"],\r",
+									"    \"properties\": {\r",
+									"        \"quantidade\": { \"type\": \"integer\" },\r",
+									"        \"carrinhos\": {\r",
+									"            //Valido o segundo nível do schema\r",
+									"            \"type\": \"array\",\r",
+									"            \"items\": {\r",
+									"                \"type\": \"object\",\r",
+									"                \"required\" : [\"produtos\", \"precoTotal\", \"quantidadeTotal\", \"idUsuario\", \"_id\"],\r",
+									"                \"properties\": {                    \r",
+									"                    \"precoTotal\": { \"type\": \"integer\" },\r",
+									"                    \"quantidadeTotal\": { \"type\": \"integer\" },\r",
+									"                    \"idUsuario\": { \"type\": \"string\" },\r",
+									"                    \"_id\": { \"type\": \"string\" },\r",
+									"                    \"produtos\":{\r",
+									"                        //Valido o terceiro nível do schema\r",
+									"                        \"type\": \"array\",\r",
+									"                        \"items\": {\r",
+									"                            \"type\":\"object\",\r",
+									"                            \"required\" : [\"idProduto\", \"quantidade\", \"precoUnitario\"],\r",
+									"                            \"properties\": {\r",
+									"                                \"idProduto\": { \"type\": \"string\" },\r",
+									"                                \"quantidade\": { \"type\": \"integer\" },\r",
+									"                                \"precoUnitario\": { \"type\": \"integer\" }\r",
+									"                            }\r",
+									"                        }\r",
+									"                    }\r",
+									"                }\r",
+									"            }\r",
+									"        }\r",
+									"    }\r",
+									"}\r",
+									"\r",
+									"pm.test(\"Valida o schema e status code\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    //Valida o json schema\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/carrinhos?_id={{idCarrinho}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carrinhos"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "{{idCarrinho}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir carrinho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
+									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
+									"    var responseJson = pm.response.json();\r",
+									"    //Valido o status code e propriedades do response\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/carrinhos/concluir-compra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carrinhos",
+								"concluir-compra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

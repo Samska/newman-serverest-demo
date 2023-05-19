@@ -42,3 +42,7 @@ jobs:
         publish_dir: .
         publish_branch: gh-pages
         commit_message: Update the test report
+    
+    - name: Display Test Report URL
+      run: |
+        echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"

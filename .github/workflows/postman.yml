@@ -21,8 +21,10 @@ jobs:
       with:
         node-version: 14  # Replace with the version of Node.js you need
 
-    - name: Install Newman
-      run: npm install -g newman
+    - name: Install Newman and Newman HTML Reporter
+      run: |
+        npm install -g newman
+        npm install -g newman-reporter-htmlextra
 
     - name: Run Postman Collection
-      run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json
+      run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json -r htmlextra

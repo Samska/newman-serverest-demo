@@ -29,12 +29,13 @@ jobs:
 
     - name: Run Postman Collection
       run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
-
+    
     - name: Publish HTML Report
       uses: actions/upload-artifact@v3
       with:
         name: HTML Report
         path: report.html
+      continue-on-error: true  # Continue running even if the previous step fails
 
     - name: Publish HTML Report
       uses: peaceiris/actions-gh-pages@v3

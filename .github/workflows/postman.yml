@@ -27,4 +27,10 @@ jobs:
         npm install -g newman-reporter-htmlextra
 
     - name: Run Postman Collection
-      run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json -r htmlextra
+      run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
+
+    - name: Publish HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: HTML Report
+        path: report.html

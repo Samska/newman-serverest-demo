@@ -9,6 +9,7 @@ on:
     - cron: '0 0 * * *'  # Runs every day at 00:00
 
 jobs:
+  test:
     runs-on: ubuntu-latest
 
     steps:

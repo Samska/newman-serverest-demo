@@ -1,50 +1,56 @@
-name: Run API Tests with Postman and Newman
+name: Run API Tests with Postman and Newman  # Name of the workflow
 
 on:
   push:
     branches:
-      - master
-  pull_request:
+      - master  # Trigger the workflow when a commit is pushed to the master branch
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at 00:00
-  workflow_dispatch:  # Enable manual triggering
+    - cron: '0 0 * * *'  # Trigger the workflow every day at midnight
+  workflow_dispatch:   # Trigger the workflow manually from the Actions tab
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  Tests:
+    runs-on: ubuntu-latest  # Run the job on the latest version of Ubuntu
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      # Check out the code from the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 14  # Replace with the version of Node.js you need
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
 
-    - name: Install Newman and Newman HTML Reporter
-      run: |
-        npm install -g newman
-        npm install -g newman-reporter-htmlextra
+      # Install Newman and Newman HTML Reporter globally
+      - name: Install Newman and Newman HTML Reporter
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
 
-    - name: Run Postman Collection
-      run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
-      continue-on-error: true
+      # Run Postman Collection using Newman and export an HTML report
+      - name: Run Postman Collection
+        run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
+        continue-on-error: true   # Continue even if there are errors in the tests
 
-    - name: Publish HTML Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: HTML Report
-        path: report.html
+      # Upload the HTML report as an artifact
+      - name: Publish HTML Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: HTML Report
+          path: report.html
 
-    - name: Publish HTML Report
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        publish_branch: gh-pages
-        commit_message: Update the test report
-    
-    - name: Display Test Report URL
-      run: |
-        echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
+      # Publish the HTML report to GitHub Pages
+      - name: Publish HTML Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          commit_message: Update the test report
+
+      # Display the URL of the published HTML report to the console
+      - name: Display Test Report URL
+        run: |
+          echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"

@@ -33,3 +33,7 @@ newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-shar
 ```
 
 Para consultar o resultado dos testes basta abrir a pasta Newman que foi criada na raíz do projeto.
+
+### Badges
+
+[![Run API Tests with Postman and Newman](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml/badge.svg)](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml)

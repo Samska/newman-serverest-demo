@@ -1,38 +1,38 @@
-# Conteúdo feito para o Tech Sharing da equipe Daruk
+# Content created for Daruk team Tech Sharing
 
-## Testes de API utilizando Postman + Newman Reporter HTMLextra
+## API Testing using Postman + Newman Reporter HTMLextra
 
-Para demonstrar ao time como utilizar o Postman para testes de API, utilizei a API REST [ServeRest](https://serverest.dev/) do Paulo Gonçalves.
+To demonstrate to the team how to use Postman for API testing, I used Paulo Gonçalves [ServeRest](https://serverest.dev/) REST API.
 
-Conceitos utilizados nos testes:
+Concepts used in the tests:
 
-Dynamic variables;
-Pre-request scripts;
-Test scripts;
-JSON schema validation.
+Dynamic variables
+Pre-request scripts
+Test scripts
+JSON schema validation
 
-### Configuração
+### Setup
 
-Para consultar os testes e scripts utilizados, basta importar a collection e environment aqui utilizados, diretamente no Postman. Já para executar os testes via Newman, basta seguir esses passos:
+To view the tests and scripts used, simply import the collection and environment files that were used here directly into Postman. To execute the tests via Newman, follow these steps:
 
-- Baixar e instalar a última versão do [Node.js](https://nodejs.org/en/)
+- Download and install the latest version of [Node.js](https://nodejs.org/en/)
 
-Instalar o newman:
+Install Newman:
 ```sh
 npm install -g newman
 ```
 
-Instalar o newman report:
+Install the Newman report:
 ```sh
 npm install -g newman-reporter-htmlextra
 ```
 
-Executar os testes através da raíz do projeto:
+Run the tests through the project root directory:
 ```sh
 newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
 ```
 
-Para consultar o resultado dos testes basta abrir a pasta Newman que foi criada na raíz do projeto.
+To view the test results, simply open the report.html that was created in the project root.
 
 ### Badges
 

@@ -34,6 +34,8 @@ newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-shar
 
 To view the test results, simply open the report.html that was created in the project root.
 
+You can also consult the test results on this [Page](https://samska.github.io/serverest-tech-sharing/report.html) as it is published with each new pipeline run.
+
 ### Badges
 
 [![Run API Tests with Postman and Newman](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml/badge.svg)](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml)

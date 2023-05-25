@@ -54,3 +54,19 @@ jobs:
       - name: Display Test Report URL
         run: |
           echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
+
+      - name: Send Slack Notification
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "channel": "'"${SLACK_CHANNEL}"'",
+            "text": "Postman + Newman Test Results",
+            "attachments": [
+              {
+                "title": "Resultado dos testes",
+                "text": "https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
+              }
+            ]
+          }' "${SLACK_WEBHOOK_URL}"

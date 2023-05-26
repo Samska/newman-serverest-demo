@@ -40,7 +40,7 @@ jobs:
         id: extract_value
         run: |
           totalRequests=$(jq -r '.run.stats.requests.total' report.json)
-          echo "TOTAL_REQUESTS=$totalRequests" >> $GITHUB_ENV
+          TOTAL_REQUESTS=$totalRequests >> $GITHUB_ENV
 
       - name: Usar o valor em outro step
         run: |

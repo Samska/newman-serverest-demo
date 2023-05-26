@@ -6,11 +6,11 @@
     },
     "item": [
       {
-        "id": "4a127977-3c4a-44fe-af04-e76122066cd4",
+        "id": "1501b132-3bd0-4776-8a2b-b882b5eda5eb",
         "name": "Usuários",
         "item": [
           {
-            "id": "cb5b3871-7938-479c-a051-873ce4d2887e",
+            "id": "c1bbef76-cbd5-4da1-9f01-528607dd8826",
             "name": "Cadastrar usuário",
             "request": {
               "url": {
@@ -39,18 +39,18 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "e3d91520-21dc-47d2-b06c-ad6e2c85f228",
+                  "id": "8c355582-16e8-4c44-954b-cd7bbbd48005",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "7352b1da-8496-430c-aed0-518fbd045d78"
+                  "_lastExecutionId": "6729d434-8d92-4c5b-a31b-2bfd3dcf6857"
                 }
               },
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "53fed5b6-dbf6-408c-a07c-518d71adf952",
+                  "id": "ee986080-24f7-4220-8e68-3a9cda8062f8",
                   "type": "text/javascript",
                   "exec": [
                     "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -62,7 +62,7 @@
                     "pm.environment.set(\"email\", email);\r",
                     "pm.environment.set(\"password\", password);"
                   ],
-                  "_lastExecutionId": "f1fd844c-172d-4c20-81c4-c83a29f79196"
+                  "_lastExecutionId": "103fceff-f148-44ac-99ac-dac6831dbaf8"
                 }
               }
             ]
@@ -71,11 +71,11 @@
         "event": []
       },
       {
-        "id": "b2f37edd-31d1-4951-a576-4394f9bd4738",
+        "id": "9c3fcd77-9aab-40ea-a285-635f731c6c2c",
         "name": "Login",
         "item": [
           {
-            "id": "66473de7-ca4d-4bb6-ae14-00e96f268bfe",
+            "id": "69fcb153-eb4a-40a3-9387-0435146bcb0c",
             "name": "Login",
             "request": {
               "url": {
@@ -104,21 +104,21 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "c4a3174b-4da2-4842-aca2-00fc0b9f3aa3",
+                  "id": "8fa68cf2-6af3-4ea4-86f0-e1677451fe82",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
                     "    //Armazeno o response json em um var para manipular os dados nos testes\r",
                     "    var responseJson = pm.response.json();\r",
                     "    //Valido o status code e propriedades do response\r",
-                    "    pm.expect(pm.response.code).to.eql(201);\r",
+                    "    pm.expect(pm.response.code).to.eql(200);\r",
                     "    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
                     "    pm.expect(responseJson).to.have.property('authorization'); \r",
                     "    //Armazeno o token no environment para utilizar nos próximos testes\r",
                     "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "d80a1864-a8e6-4802-84c2-dbccecc5e8ff"
+                  "_lastExecutionId": "1214db77-1094-460b-8412-93c77c09b89e"
                 }
               }
             ]
@@ -127,11 +127,11 @@
         "event": []
       },
       {
-        "id": "b10db49c-6787-41f9-b32c-a9a3e3574ee8",
+        "id": "44b8ad3d-3f04-4493-9f7f-75f52505f462",
         "name": "Produtos",
         "item": [
           {
-            "id": "3e6fe910-b3d1-4075-9439-7ba3a1d91a0b",
+            "id": "a428402e-31f7-4606-9691-b3be69e64763",
             "name": "Listar produtos cadastrados",
             "request": {
               "url": {
@@ -151,7 +151,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "58055bb3-fc42-4931-9316-56da2ba3344e",
+                  "id": "0d91d9ec-798d-4a06-80d4-bf5dc9c69efb",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -187,13 +187,13 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "c5e75a0c-e390-4560-a360-bc44a7915bca"
+                  "_lastExecutionId": "40f2ce49-f25b-4377-9c37-19fc0c05d4d4"
                 }
               }
             ]
           },
           {
-            "id": "aa6565a5-65e1-454b-92a1-d63c6e6f349b",
+            "id": "31e9f832-ee3e-4f93-8b0c-90d62a81b1af",
             "name": "Cadastrar produto",
             "request": {
               "url": {
@@ -228,18 +228,18 @@
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "a84e9132-5aa9-4761-97e0-05d9ea7a1d20",
+                  "id": "96d0524f-d0d2-434a-a341-19e946adc06e",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "6aa64bf3-4e23-4b04-8173-66c3b262d74a"
+                  "_lastExecutionId": "a6e19b1f-76c8-44b1-b5ee-ad94be5b3975"
                 }
               },
               {
                 "listen": "test",
                 "script": {
-                  "id": "dda8fd6b-da7a-4090-b015-13663c33fac9",
+                  "id": "47c00301-6a54-436c-a907-e9cfcf19a571",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -253,7 +253,7 @@
                     "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "bda1053a-b4c3-4430-a46f-1a11396cb5e4"
+                  "_lastExecutionId": "1c4eb548-9ea0-46a7-a146-2ad60da7f5c0"
                 }
               }
             ]
@@ -262,11 +262,11 @@
         "event": []
       },
       {
-        "id": "3d5e9b2f-d204-485a-b647-ff55298bb841",
+        "id": "ca97cc24-9dec-42af-aa1a-9d7604b75763",
         "name": "Carrinhos",
         "item": [
           {
-            "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
+            "id": "c17574c8-2fd2-4deb-b71f-b2898369999b",
             "name": "Cadastrar carrinho",
             "request": {
               "url": {
@@ -301,7 +301,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
+                  "id": "95bd2f0e-ce68-4419-876d-4493df611771",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -315,13 +315,13 @@
                     "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
+                  "_lastExecutionId": "6ff6c768-b62f-4d26-9330-d8acd06cf249"
                 }
               }
             ]
           },
           {
-            "id": "06bd46ce-4006-4218-bee9-43a6ae6650a7",
+            "id": "29d017c2-547c-4d11-bbfd-37a5088abb87",
             "name": "Buscar carrinho por ID",
             "request": {
               "url": {
@@ -361,7 +361,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "6792d4fb-0534-4d99-ba3d-5e89b6b561c4",
+                  "id": "29fc0dd6-3f17-4e9b-8841-24b679cb854b",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -409,7 +409,7 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "ed264937-b7e7-43a4-ba8e-09491fbd14c1"
+                  "_lastExecutionId": "fb99753b-9d17-4f5a-964a-560a4b29f9f8"
                 }
               }
             ],
@@ -418,7 +418,7 @@
             }
           },
           {
-            "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
+            "id": "1707729d-99df-4f33-9243-25343f5cca72",
             "name": "Excluir carrinho",
             "request": {
               "url": {
@@ -454,7 +454,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
+                  "id": "9703d9ae-7a0b-42b9-85d2-f880e5f96296",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -465,7 +465,7 @@
                     "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                     "});"
                   ],
-                  "_lastExecutionId": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
+                  "_lastExecutionId": "60da384a-ed04-4869-8911-758331124b55"
                 }
               }
             ]
@@ -497,17 +497,17 @@
     "values": [
       {
         "type": "any",
-        "value": "Reggie@qa.com.br",
+        "value": "Peter@qa.com.br",
         "key": "email"
       },
       {
         "type": "any",
-        "value": "Z8itPmPbvYfrU7N",
+        "value": "pcXG0yxpwHWOLWG",
         "key": "password"
       },
       {
         "type": "any",
-        "value": "",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlBldGVyQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicGNYRzB5eHB3SFdPTFdHIiwiaWF0IjoxNjg1MTE3MDQ5LCJleHAiOjE2ODUxMTc2NDl9.B_1VBQB91Bi7L9i-TexVTUNeQctzqWFYXfe87yHdADI",
         "key": "authorization"
       },
       {
@@ -517,18 +517,18 @@
       },
       {
         "type": "any",
-        "value": "",
+        "value": "lvmgvp76eyqXmZdm",
         "key": "idProduto"
       },
       {
         "type": "any",
-        "value": "",
+        "value": "4tQBzg4bUItn04CK",
         "key": "idCarrinho"
       }
     ]
   },
   "globals": {
-    "id": "ef60bd7b-871d-4b98-ac03-2604d7863e70",
+    "id": "b87ad73c-d885-4fb8-8df9-25d4c7bd1801",
     "values": []
   },
   "run": {
@@ -566,7 +566,7 @@
       "assertions": {
         "total": 6,
         "pending": 0,
-        "failed": 4
+        "failed": 0
       },
       "testScripts": {
         "total": 7,
@@ -580,10 +580,10 @@
       }
     },
     "timings": {
-      "responseAverage": 101.42857142857143,
-      "responseMin": 71,
-      "responseMax": 268,
-      "responseSd": 68.03750466335701,
+      "responseAverage": 60.285714285714285,
+      "responseMin": 37,
+      "responseMax": 183,
+      "responseSd": 50.1560829118585,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -592,8 +592,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1685116056087,
-      "completed": 1685116057084
+      "started": 1685117048755,
+      "completed": 1685117049484
     },
     "executions": [
       {
@@ -606,11 +606,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "c588b856-c93d-49c1-ad45-88f88c2e2f56",
-          "httpRequestId": "d15cfc26-d927-4665-a22b-ba91d8dda683"
+          "ref": "ce2161a8-50d2-4e26-9696-5a380f3b03ed",
+          "httpRequestId": "0cd28a0f-fbdf-4140-9016-4e9113ce8a3e"
         },
         "item": {
-          "id": "cb5b3871-7938-479c-a051-873ce4d2887e",
+          "id": "c1bbef76-cbd5-4da1-9f01-528607dd8826",
           "name": "Cadastrar usuário",
           "request": {
             "url": {
@@ -639,18 +639,18 @@
             {
               "listen": "test",
               "script": {
-                "id": "e3d91520-21dc-47d2-b06c-ad6e2c85f228",
+                "id": "8c355582-16e8-4c44-954b-cd7bbbd48005",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "7352b1da-8496-430c-aed0-518fbd045d78"
+                "_lastExecutionId": "6729d434-8d92-4c5b-a31b-2bfd3dcf6857"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "53fed5b6-dbf6-408c-a07c-518d71adf952",
+                "id": "ee986080-24f7-4220-8e68-3a9cda8062f8",
                 "type": "text/javascript",
                 "exec": [
                   "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -662,7 +662,7 @@
                   "pm.environment.set(\"email\", email);\r",
                   "pm.environment.set(\"password\", password);"
                 ],
-                "_lastExecutionId": "f1fd844c-172d-4c20-81c4-c83a29f79196"
+                "_lastExecutionId": "103fceff-f148-44ac-99ac-dac6831dbaf8"
               }
             }
           ]
@@ -703,7 +703,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "7edb9954-b4c8-4bd9-afd8-c74534a75ccb",
+              "value": "7d911bbf-023b-4a38-a748-6ec4f13d2913",
               "system": true
             },
             {
@@ -723,14 +723,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "120",
+              "value": "119",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Reggie@qa.com.br\",\r\n  \"password\": \"Z8itPmPbvYfrU7N\",\r\n  \"administrador\": \"true\"\r\n}",
+            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Peter@qa.com.br\",\r\n  \"password\": \"pcXG0yxpwHWOLWG\",\r\n  \"administrador\": \"true\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -739,7 +739,7 @@
           }
         },
         "response": {
-          "id": "b5334863-c772-4379-9ae7-75104dc91e20",
+          "id": "3decc463-f623-4d21-b9b6-e7649bb1b45b",
           "status": "Created",
           "code": 201,
           "header": [
@@ -773,7 +773,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "2936eced-9943-4925-9dec-a454878f8017"
+              "value": "dc601874-f863-48d7-8e11-80afbf2e6a1d"
             },
             {
               "key": "content-type",
@@ -781,11 +781,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "b8a9c2b2a68e92971f451ea37e6c8180;o=1"
+              "value": "14e54e5d21fda8f52679caffcde44148;o=1"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:08 GMT"
             },
             {
               "key": "Server",
@@ -862,44 +862,44 @@
               58,
               32,
               34,
-              100,
-              106,
-              109,
-              90,
-              55,
-              75,
-              108,
-              111,
-              105,
-              76,
-              73,
-              100,
-              111,
-              70,
-              67,
-              55,
+              72,
+              48,
+              107,
+              121,
+              82,
+              82,
+              118,
+              77,
+              120,
+              77,
+              49,
+              72,
+              107,
+              79,
+              53,
+              102,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 268,
+          "responseTime": 183,
           "responseSize": 82
         },
-        "id": "cb5b3871-7938-479c-a051-873ce4d2887e"
+        "id": "c1bbef76-cbd5-4da1-9f01-528607dd8826"
       },
       {
         "cursor": {
-          "ref": "c7e472bf-0171-4a12-8452-cd59da2f2235",
+          "ref": "abc56626-c315-4c9f-b798-ae28a87eb3cb",
           "length": 7,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "fd3b0e5d-7fdb-4968-80a3-ba923c2bbdcb"
+          "httpRequestId": "4a3a7094-d027-42cc-a42e-dba8bc5901d2"
         },
         "item": {
-          "id": "66473de7-ca4d-4bb6-ae14-00e96f268bfe",
+          "id": "69fcb153-eb4a-40a3-9387-0435146bcb0c",
           "name": "Login",
           "request": {
             "url": {
@@ -928,21 +928,21 @@
             {
               "listen": "test",
               "script": {
-                "id": "c4a3174b-4da2-4842-aca2-00fc0b9f3aa3",
+                "id": "8fa68cf2-6af3-4ea4-86f0-e1677451fe82",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
                   "    //Armazeno o response json em um var para manipular os dados nos testes\r",
                   "    var responseJson = pm.response.json();\r",
                   "    //Valido o status code e propriedades do response\r",
-                  "    pm.expect(pm.response.code).to.eql(201);\r",
+                  "    pm.expect(pm.response.code).to.eql(200);\r",
                   "    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
                   "    pm.expect(responseJson).to.have.property('authorization'); \r",
                   "    //Armazeno o token no environment para utilizar nos próximos testes\r",
                   "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                   "});"
                 ],
-                "_lastExecutionId": "d80a1864-a8e6-4802-84c2-dbccecc5e8ff"
+                "_lastExecutionId": "1214db77-1094-460b-8412-93c77c09b89e"
               }
             }
           ]
@@ -983,7 +983,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "f6949d7e-985f-43ab-b190-c5bb3bd58543",
+              "value": "5773cbf0-4406-4f03-bd5d-733069606f87",
               "system": true
             },
             {
@@ -1003,14 +1003,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "69",
+              "value": "68",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"email\": \"Reggie@qa.com.br\",\r\n  \"password\": \"Z8itPmPbvYfrU7N\"\r\n}",
+            "raw": "{\r\n  \"email\": \"Peter@qa.com.br\",\r\n  \"password\": \"pcXG0yxpwHWOLWG\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -1019,7 +1019,7 @@
           }
         },
         "response": {
-          "id": "58ee4ee4-2775-41a0-a110-dda67c561abf",
+          "id": "1e6e046b-a888-45a3-8637-2124d66772e2",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1053,7 +1053,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "cb74fb83-b7db-48e2-a17d-6764a4e95576"
+              "value": "91368404-fa29-4176-91d8-d52a45a46d5c"
             },
             {
               "key": "content-type",
@@ -1061,11 +1061,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "428a8c363fab703cf15fdf30ceb30549"
+              "value": "2c5a8b7c07b19d6bf10c3fc3582bae7c"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -1073,7 +1073,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "283"
+              "value": "281"
             }
           ],
           "stream": {
@@ -1207,96 +1207,72 @@
               54,
               73,
               108,
-              74,
-              108,
-              90,
-              50,
-              100,
-              112,
-              90,
-              85,
               66,
-              120,
-              89,
+              108,
+              100,
+              71,
+              86,
+              121,
+              81,
+              72,
+              70,
+              104,
+              76,
+              109,
+              78,
+              118,
+              98,
               83,
               53,
-              106,
-              98,
-              50,
-              48,
-              117,
-              89,
-              110,
-              73,
               105,
-              76,
-              67,
-              74,
-              119,
-              89,
-              88,
-              78,
-              122,
-              100,
-              50,
-              57,
-              121,
-              90,
-              67,
-              73,
-              54,
-              73,
-              108,
-              111,
-              52,
-              97,
-              88,
-              82,
-              81,
-              98,
-              86,
-              66,
-              105,
-              100,
-              108,
-              108,
-              109,
               99,
-              108,
-              85,
-              51,
-              84,
               105,
               73,
               115,
               73,
-              109,
-              108,
+              110,
+              66,
               104,
-              100,
-              67,
+              99,
+              51,
+              78,
+              51,
+              98,
+              51,
+              74,
+              107,
               73,
-              54,
-              77,
-              84,
-              89,
-              52,
-              78,
-              84,
-              69,
-              120,
-              78,
               106,
-              65,
-              49,
+              111,
+              105,
+              99,
+              71,
               78,
+              89,
+              82,
+              122,
+              66,
+              53,
+              101,
+              72,
+              66,
+              51,
+              83,
+              70,
+              100,
+              80,
+              84,
+              70,
+              100,
+              72,
+              73,
               105,
               119,
               105,
-              90,
-              88,
-              104,
-              119,
+              97,
+              87,
+              70,
+              48,
               73,
               106,
               111,
@@ -1308,92 +1284,107 @@
               77,
               84,
               69,
+              51,
+              77,
+              68,
+              81,
+              53,
+              76,
+              67,
+              74,
+              108,
+              101,
+              72,
+              65,
+              105,
+              79,
+              106,
+              69,
+              50,
+              79,
+              68,
+              85,
+              120,
+              77,
+              84,
+              99,
               50,
               78,
-              106,
-              85,
-              50,
-              102,
-              81,
-              46,
-              54,
-              116,
-              108,
-              98,
-              122,
-              45,
-              97,
-              82,
+              68,
               108,
               57,
-              120,
-              85,
-              117,
-              102,
-              45,
-              77,
-              113,
-              112,
-              85,
-              115,
-              113,
-              105,
-              105,
-              89,
+              46,
+              66,
               95,
-              74,
-              54,
-              109,
-              48,
-              51,
-              107,
-              72,
-              81,
-              109,
+              49,
+              86,
+              66,
               81,
               66,
-              85,
+              57,
+              49,
+              66,
+              105,
               55,
+              76,
+              57,
+              105,
+              45,
+              84,
+              101,
+              120,
+              86,
+              84,
+              85,
+              78,
+              101,
+              81,
+              99,
+              116,
+              122,
+              113,
+              87,
+              70,
               89,
-              117,
-              67,
-              112,
-              69,
+              88,
+              102,
+              101,
+              56,
+              55,
+              121,
+              72,
+              100,
+              65,
+              68,
+              73,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 78,
-          "responseSize": 283
+          "responseTime": 39,
+          "responseSize": 281
         },
-        "id": "66473de7-ca4d-4bb6-ae14-00e96f268bfe",
+        "id": "69fcb153-eb4a-40a3-9387-0435146bcb0c",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso e token de auth",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Deve retornar status 200 com mensagem de sucesso e token de auth",
-              "message": "expected 200 to deeply equal 201",
-              "stack": "AssertionError: expected 200 to deeply equal 201\n   at Object.eval sandbox-script.js:1:2)"
-            }
+            "skipped": false
           }
         ]
       },
       {
         "cursor": {
-          "ref": "fc5a6c21-b10b-4164-b198-f62797208f0b",
+          "ref": "8a5a75a3-524c-469d-88f0-c827edf890f8",
           "length": 7,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "3210adcf-4843-41ee-8e76-cffbcf4a5ad1"
+          "httpRequestId": "4e60e86e-db08-4686-b2a7-09935a57a137"
         },
         "item": {
-          "id": "3e6fe910-b3d1-4075-9439-7ba3a1d91a0b",
+          "id": "a428402e-31f7-4606-9691-b3be69e64763",
           "name": "Listar produtos cadastrados",
           "request": {
             "url": {
@@ -1413,7 +1404,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "58055bb3-fc42-4931-9316-56da2ba3344e",
+                "id": "0d91d9ec-798d-4a06-80d4-bf5dc9c69efb",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -1449,7 +1440,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "c5e75a0c-e390-4560-a360-bc44a7915bca"
+                "_lastExecutionId": "40f2ce49-f25b-4377-9c37-19fc0c05d4d4"
               }
             }
           ]
@@ -1485,7 +1476,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "0be1853f-c15b-4a30-83a4-591cb2bea738",
+              "value": "479988cb-4772-4f63-8ead-1ec08333d6b7",
               "system": true
             },
             {
@@ -1507,7 +1498,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "47f0577d-21a6-4ae0-9538-15eaa3a1501a",
+          "id": "9f138e21-b120-442c-8197-82fda515e72b",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1541,7 +1532,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "822c518a-2daf-4276-9e1d-dfd4ac4346a4"
+              "value": "a062cf3e-94d5-47fb-a2a0-236beb54e095"
             },
             {
               "key": "content-type",
@@ -1549,11 +1540,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "00785a88224c1afebf287fbfa4bb17e3"
+              "value": "2a7b0cc2283934a473c098ca4c81a230"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -5816,10 +5807,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 75,
+          "responseTime": 39,
           "responseSize": 4246
         },
-        "id": "3e6fe910-b3d1-4075-9439-7ba3a1d91a0b",
+        "id": "a428402e-31f7-4606-9691-b3be69e64763",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -5829,15 +5820,15 @@
       },
       {
         "cursor": {
-          "ref": "c8a6ddf9-abe6-4ddc-bba5-fc7bd1cd7fdd",
+          "ref": "14b2140d-3dbc-4a10-8c3e-186f38df3780",
           "length": 7,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "13960f0d-053f-4197-afd7-822239334ec1"
+          "httpRequestId": "44ca59ba-3ee3-4a34-8223-b2d7a4fa8527"
         },
         "item": {
-          "id": "aa6565a5-65e1-454b-92a1-d63c6e6f349b",
+          "id": "31e9f832-ee3e-4f93-8b0c-90d62a81b1af",
           "name": "Cadastrar produto",
           "request": {
             "url": {
@@ -5872,18 +5863,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "a84e9132-5aa9-4761-97e0-05d9ea7a1d20",
+                "id": "96d0524f-d0d2-434a-a341-19e946adc06e",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "6aa64bf3-4e23-4b04-8173-66c3b262d74a"
+                "_lastExecutionId": "a6e19b1f-76c8-44b1-b5ee-ad94be5b3975"
               }
             },
             {
               "listen": "test",
               "script": {
-                "id": "dda8fd6b-da7a-4090-b015-13663c33fac9",
+                "id": "47c00301-6a54-436c-a907-e9cfcf19a571",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -5897,7 +5888,7 @@
                   "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "bda1053a-b4c3-4430-a46f-1a11396cb5e4"
+                "_lastExecutionId": "1c4eb548-9ea0-46a7-a146-2ad60da7f5c0"
               }
             }
           ]
@@ -5918,7 +5909,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": ""
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlBldGVyQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicGNYRzB5eHB3SFdPTFdHIiwiaWF0IjoxNjg1MTE3MDQ5LCJleHAiOjE2ODUxMTc2NDl9.B_1VBQB91Bi7L9i-TexVTUNeQctzqWFYXfe87yHdADI"
             },
             {
               "key": "Content-Type",
@@ -5942,7 +5933,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "04f4e6c4-1a89-4040-a187-c8a96b1208e0",
+              "value": "a5d1a128-4324-4dad-bab0-651622ccaaa6",
               "system": true
             },
             {
@@ -5962,14 +5953,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "122",
+              "value": "128",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"Practical Plastic Shoes\",\r\n  \"preco\": 556,\r\n  \"descricao\": \"Intelligent Steel Tuna\",\r\n  \"quantidade\": 272\r\n}",
+            "raw": "{\r\n  \"nome\": \"Practical Rubber Sausages\",\r\n  \"preco\": 930,\r\n  \"descricao\": \"Intelligent Steel Keyboard\",\r\n  \"quantidade\": 147\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -5978,9 +5969,9 @@
           }
         },
         "response": {
-          "id": "e717120e-72a8-42dd-8cc9-cfe3e4560380",
-          "status": "Unauthorized",
-          "code": 401,
+          "id": "681986a0-3097-443c-8bef-2ec068e1f8d9",
+          "status": "Created",
+          "code": 201,
           "header": [
             {
               "key": "access-control-allow-origin",
@@ -6012,7 +6003,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "7a373775-a5b5-434f-8c84-e5627d6812e3"
+              "value": "abd884dc-dfa1-49fa-ac80-c51afa85de7d"
             },
             {
               "key": "content-type",
@@ -6020,11 +6011,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "4162d73ffaec946beead8720a30633d5"
+              "value": "971827b0cb6da0014e40ebeb1319e5ef"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -6032,7 +6023,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "103"
+              "value": "82"
             }
           ],
           "stream": {
@@ -6056,123 +6047,95 @@
               58,
               32,
               34,
-              84,
-              111,
-              107,
-              101,
-              110,
-              32,
-              100,
-              101,
-              32,
+              67,
               97,
+              100,
+              97,
+              115,
+              116,
+              114,
+              111,
+              32,
+              114,
+              101,
+              97,
+              108,
+              105,
+              122,
+              97,
+              100,
+              111,
+              32,
+              99,
+              111,
+              109,
+              32,
+              115,
+              117,
               99,
               101,
               115,
               115,
               111,
-              32,
-              97,
-              117,
-              115,
-              101,
-              110,
-              116,
-              101,
+              34,
               44,
+              10,
               32,
+              32,
+              32,
+              32,
+              34,
+              95,
               105,
-              110,
-              118,
-              195,
-              161,
+              100,
+              34,
+              58,
+              32,
+              34,
               108,
-              105,
-              100,
-              111,
-              44,
-              32,
-              101,
-              120,
-              112,
-              105,
-              114,
-              97,
-              100,
-              111,
-              32,
-              111,
-              117,
-              32,
-              117,
-              115,
-              117,
-              195,
-              161,
-              114,
-              105,
-              111,
-              32,
-              100,
-              111,
-              32,
-              116,
-              111,
-              107,
-              101,
-              110,
-              32,
-              110,
-              195,
-              163,
-              111,
-              32,
-              101,
-              120,
-              105,
-              115,
-              116,
-              101,
-              32,
+              118,
               109,
-              97,
-              105,
-              115,
+              103,
+              118,
+              112,
+              55,
+              54,
+              101,
+              121,
+              113,
+              88,
+              109,
+              90,
+              100,
+              109,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 74,
-          "responseSize": 103
+          "responseTime": 41,
+          "responseSize": 82
         },
-        "id": "aa6565a5-65e1-454b-92a1-d63c6e6f349b",
+        "id": "31e9f832-ee3e-4f93-8b0c-90d62a81b1af",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do produto",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Deve retornar status 201 com mensagem de sucesso e o id do produto",
-              "message": "expected 401 to deeply equal 201",
-              "stack": "AssertionError: expected 401 to deeply equal 201\n   at Object.eval sandbox-script.js:1:4)"
-            }
+            "skipped": false
           }
         ]
       },
       {
         "cursor": {
-          "ref": "259281d0-66c5-4ff6-a6f9-a8ddfa2df7a1",
+          "ref": "fb52adcc-97b6-4a11-acbe-d3f05317acec",
           "length": 7,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "f68d3b9e-f180-4a96-8b71-ff3ed34f5116"
+          "httpRequestId": "753ee88d-f4fa-45ed-a3d1-3ecca9f87a27"
         },
         "item": {
-          "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
+          "id": "c17574c8-2fd2-4deb-b71f-b2898369999b",
           "name": "Cadastrar carrinho",
           "request": {
             "url": {
@@ -6207,7 +6170,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
+                "id": "95bd2f0e-ce68-4419-876d-4493df611771",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -6221,7 +6184,7 @@
                   "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
+                "_lastExecutionId": "6ff6c768-b62f-4d26-9330-d8acd06cf249"
               }
             }
           ]
@@ -6242,7 +6205,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": ""
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlBldGVyQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicGNYRzB5eHB3SFdPTFdHIiwiaWF0IjoxNjg1MTE3MDQ5LCJleHAiOjE2ODUxMTc2NDl9.B_1VBQB91Bi7L9i-TexVTUNeQctzqWFYXfe87yHdADI"
             },
             {
               "key": "Content-Type",
@@ -6266,7 +6229,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "f34dc5bd-66bb-4c18-b390-c7dd59304f5a",
+              "value": "2f0c0ac2-e52e-4669-b8e4-204697ccec4e",
               "system": true
             },
             {
@@ -6286,14 +6249,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "87",
+              "value": "103",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
+            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"lvmgvp76eyqXmZdm\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -6302,9 +6265,9 @@
           }
         },
         "response": {
-          "id": "29cb8e34-f1e5-4bdb-af4d-264e5c97cb9f",
-          "status": "Unauthorized",
-          "code": 401,
+          "id": "b5e76c0a-97f5-4a10-a8f8-33b3284b7ba7",
+          "status": "Created",
+          "code": 201,
           "header": [
             {
               "key": "access-control-allow-origin",
@@ -6336,7 +6299,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "35f93118-39b6-410b-a945-007f40e0a9a1"
+              "value": "474cb157-76da-4d9f-a58a-0f2c291f91aa"
             },
             {
               "key": "content-type",
@@ -6344,11 +6307,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "22d20ddd43a9d9bd0325e67810e36eb3"
+              "value": "a6a22ec60ff565c4d8a08270c9de7203"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -6356,7 +6319,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "103"
+              "value": "82"
             }
           ],
           "stream": {
@@ -6380,123 +6343,95 @@
               58,
               32,
               34,
-              84,
-              111,
-              107,
-              101,
-              110,
-              32,
-              100,
-              101,
-              32,
+              67,
               97,
+              100,
+              97,
+              115,
+              116,
+              114,
+              111,
+              32,
+              114,
+              101,
+              97,
+              108,
+              105,
+              122,
+              97,
+              100,
+              111,
+              32,
+              99,
+              111,
+              109,
+              32,
+              115,
+              117,
               99,
               101,
               115,
               115,
               111,
-              32,
-              97,
-              117,
-              115,
-              101,
-              110,
-              116,
-              101,
+              34,
               44,
+              10,
               32,
-              105,
-              110,
-              118,
-              195,
-              161,
-              108,
+              32,
+              32,
+              32,
+              34,
+              95,
               105,
               100,
-              111,
-              44,
+              34,
+              58,
               32,
-              101,
-              120,
-              112,
-              105,
-              114,
-              97,
-              100,
-              111,
-              32,
-              111,
-              117,
-              32,
-              117,
-              115,
-              117,
-              195,
-              161,
-              114,
-              105,
-              111,
-              32,
-              100,
-              111,
-              32,
+              34,
+              52,
               116,
-              111,
-              107,
-              101,
-              110,
-              32,
-              110,
-              195,
-              163,
-              111,
-              32,
-              101,
-              120,
-              105,
-              115,
+              81,
+              66,
+              122,
+              103,
+              52,
+              98,
+              85,
+              73,
               116,
-              101,
-              32,
-              109,
-              97,
-              105,
-              115,
+              110,
+              48,
+              52,
+              67,
+              75,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 71,
-          "responseSize": 103
+          "responseTime": 45,
+          "responseSize": 82
         },
-        "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
+        "id": "c17574c8-2fd2-4deb-b71f-b2898369999b",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do carrinho",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Deve retornar status 201 com mensagem de sucesso e o id do carrinho",
-              "message": "expected 401 to deeply equal 201",
-              "stack": "AssertionError: expected 401 to deeply equal 201\n   at Object.eval sandbox-script.js:1:5)"
-            }
+            "skipped": false
           }
         ]
       },
       {
         "cursor": {
-          "ref": "4c48c92f-9898-4820-ad6b-9f7f2937b755",
+          "ref": "1ba19629-dcf3-47fb-92d9-46ff7c25ee76",
           "length": 7,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "1aba8ed0-193e-4aa1-83f3-103e6772a22f"
+          "httpRequestId": "87e2aad0-28c9-4819-8f69-0f4bef51478c"
         },
         "item": {
-          "id": "06bd46ce-4006-4218-bee9-43a6ae6650a7",
+          "id": "29d017c2-547c-4d11-bbfd-37a5088abb87",
           "name": "Buscar carrinho por ID",
           "request": {
             "url": {
@@ -6536,7 +6471,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "6792d4fb-0534-4d99-ba3d-5e89b6b561c4",
+                "id": "29fc0dd6-3f17-4e9b-8841-24b679cb854b",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -6584,7 +6519,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "ed264937-b7e7-43a4-ba8e-09491fbd14c1"
+                "_lastExecutionId": "fb99753b-9d17-4f5a-964a-560a4b29f9f8"
               }
             }
           ],
@@ -6605,7 +6540,7 @@
             "query": [
               {
                 "key": "_id",
-                "value": ""
+                "value": "4tQBzg4bUItn04CK"
               }
             ],
             "variable": []
@@ -6613,7 +6548,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": ""
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlBldGVyQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicGNYRzB5eHB3SFdPTFdHIiwiaWF0IjoxNjg1MTE3MDQ5LCJleHAiOjE2ODUxMTc2NDl9.B_1VBQB91Bi7L9i-TexVTUNeQctzqWFYXfe87yHdADI"
             },
             {
               "key": "User-Agent",
@@ -6632,7 +6567,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "9310a7c7-c477-46f3-98a2-bd85dd1fb2d0",
+              "value": "0561a53f-9b3c-416c-918c-368c70adeaf8",
               "system": true
             },
             {
@@ -6663,7 +6598,7 @@
           }
         },
         "response": {
-          "id": "3e16e152-5b49-45e4-ab7e-fcb75026fd51",
+          "id": "9fb33a00-79fe-43f5-a376-445aa7df4e35",
           "status": "OK",
           "code": 200,
           "header": [
@@ -6697,7 +6632,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "5070ce64-fa2a-4310-9ad0-612e2a4449b0"
+              "value": "7699d7ae-8f8b-45d5-8970-85a5cbf6e028"
             },
             {
               "key": "content-type",
@@ -6705,11 +6640,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "1574a523e6db02469837b59628ba0a1c"
+              "value": "4f4dd5eee47d9e91329c77c1839879c0"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:36 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -6717,7 +6652,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "44"
+              "value": "425"
             }
           ],
           "stream": {
@@ -6743,7 +6678,7 @@
               34,
               58,
               32,
-              48,
+              49,
               44,
               10,
               32,
@@ -6764,16 +6699,397 @@
               58,
               32,
               91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              112,
+              114,
+              111,
+              100,
+              117,
+              116,
+              111,
+              115,
+              34,
+              58,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              105,
+              100,
+              80,
+              114,
+              111,
+              100,
+              117,
+              116,
+              111,
+              34,
+              58,
+              32,
+              34,
+              108,
+              118,
+              109,
+              103,
+              118,
+              112,
+              55,
+              54,
+              101,
+              121,
+              113,
+              88,
+              109,
+              90,
+              100,
+              109,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              113,
+              117,
+              97,
+              110,
+              116,
+              105,
+              100,
+              97,
+              100,
+              101,
+              34,
+              58,
+              32,
+              49,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              112,
+              114,
+              101,
+              99,
+              111,
+              85,
+              110,
+              105,
+              116,
+              97,
+              114,
+              105,
+              111,
+              34,
+              58,
+              32,
+              57,
+              51,
+              48,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              125,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              93,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              112,
+              114,
+              101,
+              99,
+              111,
+              84,
+              111,
+              116,
+              97,
+              108,
+              34,
+              58,
+              32,
+              57,
+              51,
+              48,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              113,
+              117,
+              97,
+              110,
+              116,
+              105,
+              100,
+              97,
+              100,
+              101,
+              84,
+              111,
+              116,
+              97,
+              108,
+              34,
+              58,
+              32,
+              49,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              105,
+              100,
+              85,
+              115,
+              117,
+              97,
+              114,
+              105,
+              111,
+              34,
+              58,
+              32,
+              34,
+              72,
+              48,
+              107,
+              121,
+              82,
+              82,
+              118,
+              77,
+              120,
+              77,
+              49,
+              72,
+              107,
+              79,
+              53,
+              102,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              95,
+              105,
+              100,
+              34,
+              58,
+              32,
+              34,
+              52,
+              116,
+              81,
+              66,
+              122,
+              103,
+              52,
+              98,
+              85,
+              73,
+              116,
+              110,
+              48,
+              52,
+              67,
+              75,
+              34,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              125,
+              10,
+              32,
+              32,
+              32,
+              32,
               93,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 72,
-          "responseSize": 44
+          "responseTime": 37,
+          "responseSize": 425
         },
-        "id": "06bd46ce-4006-4218-bee9-43a6ae6650a7",
+        "id": "29d017c2-547c-4d11-bbfd-37a5088abb87",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -6783,15 +7099,15 @@
       },
       {
         "cursor": {
-          "ref": "3cc651f7-8571-4368-bcb3-481640b89fe3",
+          "ref": "89065ca7-522e-442e-887b-5fd4fe5eb28c",
           "length": 7,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "78f45387-c740-48db-877e-d65f4f5097ec"
+          "httpRequestId": "baa37971-9fff-4249-9402-7adf1b421d35"
         },
         "item": {
-          "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
+          "id": "1707729d-99df-4f33-9243-25343f5cca72",
           "name": "Excluir carrinho",
           "request": {
             "url": {
@@ -6827,7 +7143,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
+                "id": "9703d9ae-7a0b-42b9-85d2-f880e5f96296",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -6838,7 +7154,7 @@
                   "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                   "});"
                 ],
-                "_lastExecutionId": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
+                "_lastExecutionId": "60da384a-ed04-4869-8911-758331124b55"
               }
             }
           ]
@@ -6860,7 +7176,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": ""
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlBldGVyQHFhLmNvbS5iciIsInBhc3N3b3JkIjoicGNYRzB5eHB3SFdPTFdHIiwiaWF0IjoxNjg1MTE3MDQ5LCJleHAiOjE2ODUxMTc2NDl9.B_1VBQB91Bi7L9i-TexVTUNeQctzqWFYXfe87yHdADI"
             },
             {
               "key": "User-Agent",
@@ -6879,7 +7195,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "a48372df-4977-4eb8-9706-80dfb80de679",
+              "value": "1567c3d4-06a9-476e-ad7f-28a0334a105e",
               "system": true
             },
             {
@@ -6910,9 +7226,9 @@
           }
         },
         "response": {
-          "id": "96e83029-c080-42fa-9783-002b898255a8",
-          "status": "Unauthorized",
-          "code": 401,
+          "id": "571d4f37-5d80-4c39-b8c8-0c8139f192c6",
+          "status": "OK",
+          "code": 200,
           "header": [
             {
               "key": "access-control-allow-origin",
@@ -6944,7 +7260,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "11608304-8422-4419-ad0c-6f46fc276a68"
+              "value": "9a4d8bb1-9aaa-4a66-b0bd-e742850b3716"
             },
             {
               "key": "content-type",
@@ -6952,11 +7268,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "dde0e48363320f9784ea216856c17637"
+              "value": "75902c269976f2865c3745cc56455166"
             },
             {
               "key": "Date",
-              "value": "Fri, 26 May 2023 15:47:37 GMT"
+              "value": "Fri, 26 May 2023 16:04:09 GMT"
             },
             {
               "key": "Server",
@@ -6964,7 +7280,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "103"
+              "value": "51"
             }
           ],
           "stream": {
@@ -6988,1092 +7304,58 @@
               58,
               32,
               34,
-              84,
+              82,
+              101,
+              103,
+              105,
+              115,
+              116,
+              114,
               111,
-              107,
-              101,
-              110,
               32,
+              101,
+              120,
+              99,
+              108,
+              117,
+              195,
+              173,
               100,
-              101,
+              111,
               32,
-              97,
+              99,
+              111,
+              109,
+              32,
+              115,
+              117,
               99,
               101,
               115,
               115,
               111,
-              32,
-              97,
-              117,
-              115,
-              101,
-              110,
-              116,
-              101,
-              44,
-              32,
-              105,
-              110,
-              118,
-              195,
-              161,
-              108,
-              105,
-              100,
-              111,
-              44,
-              32,
-              101,
-              120,
-              112,
-              105,
-              114,
-              97,
-              100,
-              111,
-              32,
-              111,
-              117,
-              32,
-              117,
-              115,
-              117,
-              195,
-              161,
-              114,
-              105,
-              111,
-              32,
-              100,
-              111,
-              32,
-              116,
-              111,
-              107,
-              101,
-              110,
-              32,
-              110,
-              195,
-              163,
-              111,
-              32,
-              101,
-              120,
-              105,
-              115,
-              116,
-              101,
-              32,
-              109,
-              97,
-              105,
-              115,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 72,
-          "responseSize": 103
+          "responseTime": 38,
+          "responseSize": 51
         },
-        "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
+        "id": "1707729d-99df-4f33-9243-25343f5cca72",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Deve retornar status 200 com mensagem de sucesso",
-              "message": "expected 401 to deeply equal 200",
-              "stack": "AssertionError: expected 401 to deeply equal 200\n   at Object.eval sandbox-script.js:1:7)"
-            }
+            "skipped": false
           }
         ]
       }
     ],
     "transfers": {
-      "responseTotal": 4964
+      "responseTotal": 5249
     },
-    "failures": [
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Deve retornar status 200 com mensagem de sucesso e token de auth",
-          "message": "expected 200 to deeply equal 201",
-          "stack": "AssertionError: expected 200 to deeply equal 201\n   at Object.eval sandbox-script.js:1:2)",
-          "checksum": "c7e51b9ade2ffac7380df72a32b298b2",
-          "id": "7b5856a8-f68d-46aa-9d9b-82c1ffcffde1",
-          "timestamp": 1685116056518,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 2,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "66473de7-ca4d-4bb6-ae14-00e96f268bfe",
-          "name": "Login",
-          "request": {
-            "url": {
-              "path": [
-                "login"
-              ],
-              "host": [
-                "{{url}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "c4a3174b-4da2-4842-aca2-00fc0b9f3aa3",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
-                  "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                  "    var responseJson = pm.response.json();\r",
-                  "    //Valido o status code e propriedades do response\r",
-                  "    pm.expect(pm.response.code).to.eql(201);\r",
-                  "    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
-                  "    pm.expect(responseJson).to.have.property('authorization'); \r",
-                  "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                  "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
-                  "});"
-                ],
-                "_lastExecutionId": "d80a1864-a8e6-4802-84c2-dbccecc5e8ff"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "id": "b2f37edd-31d1-4951-a576-4394f9bd4738",
-          "name": "Login",
-          "item": [
-            {
-              "id": "66473de7-ca4d-4bb6-ae14-00e96f268bfe",
-              "name": "Login",
-              "request": {
-                "url": {
-                  "path": [
-                    "login"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "c4a3174b-4da2-4842-aca2-00fc0b9f3aa3",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(201);\r",
-                      "    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
-                      "    pm.expect(responseJson).to.have.property('authorization'); \r",
-                      "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                      "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "d80a1864-a8e6-4802-84c2-dbccecc5e8ff"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": []
-        },
-        "cursor": {
-          "ref": "c7e472bf-0171-4a12-8452-cd59da2f2235",
-          "length": 7,
-          "cycles": 1,
-          "position": 1,
-          "iteration": 0,
-          "httpRequestId": "fd3b0e5d-7fdb-4968-80a3-ba923c2bbdcb",
-          "scriptId": "c4a3174b-4da2-4842-aca2-00fc0b9f3aa3",
-          "execution": "d80a1864-a8e6-4802-84c2-dbccecc5e8ff"
-        }
-      },
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Deve retornar status 201 com mensagem de sucesso e o id do produto",
-          "message": "expected 401 to deeply equal 201",
-          "stack": "AssertionError: expected 401 to deeply equal 201\n   at Object.eval sandbox-script.js:1:4)",
-          "checksum": "4ce750a2fa996cffd7b2ae446dfaa216",
-          "id": "8b1a0564-00e8-48aa-a254-91793ab6f9b1",
-          "timestamp": 1685116056768,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 4,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "aa6565a5-65e1-454b-92a1-d63c6e6f349b",
-          "name": "Cadastrar produto",
-          "request": {
-            "url": {
-              "path": [
-                "produtos"
-              ],
-              "host": [
-                "{{url}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{authorization}}"
-              }
-            ],
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProductName}}\",\r\n  \"quantidade\": {{$randomInt}}\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "a84e9132-5aa9-4761-97e0-05d9ea7a1d20",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ],
-                "_lastExecutionId": "6aa64bf3-4e23-4b04-8173-66c3b262d74a"
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "dda8fd6b-da7a-4090-b015-13663c33fac9",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
-                  "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                  "    var responseJson = pm.response.json();\r",
-                  "    //Valido o status code e propriedades do response\r",
-                  "    pm.expect(pm.response.code).to.eql(201);\r",
-                  "    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
-                  "    pm.expect(responseJson).to.have.property('_id'); \r",
-                  "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                  "    pm.environment.set(\"idProduto\",responseJson._id);\r",
-                  "});"
-                ],
-                "_lastExecutionId": "bda1053a-b4c3-4430-a46f-1a11396cb5e4"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "id": "b10db49c-6787-41f9-b32c-a9a3e3574ee8",
-          "name": "Produtos",
-          "item": [
-            {
-              "id": "3e6fe910-b3d1-4075-9439-7ba3a1d91a0b",
-              "name": "Listar produtos cadastrados",
-              "request": {
-                "url": {
-                  "path": [
-                    "produtos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "58055bb3-fc42-4931-9316-56da2ba3344e",
-                    "type": "text/javascript",
-                    "exec": [
-                      "const schema = {\r",
-                      "    //Valido o primeiro nível do schema\r",
-                      "    \"type\": \"object\",\r",
-                      "    \"required\" : [\"quantidade\", \"produtos\"],\r",
-                      "    \"properties\": {\r",
-                      "        \"quantidade\": { \"type\": \"integer\" },\r",
-                      "        \"produtos\": {\r",
-                      "            //Valido o segundo nível do schema\r",
-                      "            \"type\": \"array\",\r",
-                      "            \"items\": {\r",
-                      "                \"type\": \"object\",\r",
-                      "                \"required\" : [\"nome\", \"preco\", \"descricao\", \"quantidade\", \"_id\"],\r",
-                      "                \"properties\": {\r",
-                      "                    \"nome\": { \"type\": \"string\" },\r",
-                      "                    \"preco\": { \"type\": \"integer\" },\r",
-                      "                    \"descricao\": { \"type\": \"string\" },\r",
-                      "                    \"quantidade\": { \"type\": \"integer\" },\r",
-                      "                    \"_id\": { \"type\": \"string\" },\r",
-                      "                }\r",
-                      "            }\r",
-                      "        }\r",
-                      "    }\r",
-                      "}\r",
-                      "\r",
-                      "pm.test(\"Valida o schema e status code\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(200);\r",
-                      "    //Valida o json schema\r",
-                      "    pm.response.to.have.jsonSchema(schema);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "c5e75a0c-e390-4560-a360-bc44a7915bca"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "aa6565a5-65e1-454b-92a1-d63c6e6f349b",
-              "name": "Cadastrar produto",
-              "request": {
-                "url": {
-                  "path": [
-                    "produtos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"nome\": \"{{$randomProductName}}\",\r\n  \"preco\": {{$randomInt}},\r\n  \"descricao\": \"{{$randomProductName}}\",\r\n  \"quantidade\": {{$randomInt}}\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "a84e9132-5aa9-4761-97e0-05d9ea7a1d20",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ],
-                    "_lastExecutionId": "6aa64bf3-4e23-4b04-8173-66c3b262d74a"
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "dda8fd6b-da7a-4090-b015-13663c33fac9",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(201);\r",
-                      "    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
-                      "    pm.expect(responseJson).to.have.property('_id'); \r",
-                      "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                      "    pm.environment.set(\"idProduto\",responseJson._id);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "bda1053a-b4c3-4430-a46f-1a11396cb5e4"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": []
-        },
-        "cursor": {
-          "ref": "c8a6ddf9-abe6-4ddc-bba5-fc7bd1cd7fdd",
-          "length": 7,
-          "cycles": 1,
-          "position": 3,
-          "iteration": 0,
-          "httpRequestId": "13960f0d-053f-4197-afd7-822239334ec1",
-          "scriptId": "dda8fd6b-da7a-4090-b015-13663c33fac9",
-          "execution": "bda1053a-b4c3-4430-a46f-1a11396cb5e4"
-        }
-      },
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Deve retornar status 201 com mensagem de sucesso e o id do carrinho",
-          "message": "expected 401 to deeply equal 201",
-          "stack": "AssertionError: expected 401 to deeply equal 201\n   at Object.eval sandbox-script.js:1:5)",
-          "checksum": "3d802ce77e360d993753ef30606f1459",
-          "id": "0204bd29-e123-416e-a038-6e51f141323b",
-          "timestamp": 1685116056861,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 5,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
-          "name": "Cadastrar carrinho",
-          "request": {
-            "url": {
-              "path": [
-                "carrinhos"
-              ],
-              "host": [
-                "{{url}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{authorization}}"
-              }
-            ],
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{idProduto}}\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
-                  "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                  "    var responseJson = pm.response.json();\r",
-                  "    //Valido o status code e propriedades do response\r",
-                  "    pm.expect(pm.response.code).to.eql(201);\r",
-                  "    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
-                  "    pm.expect(responseJson).to.have.property('_id'); \r",
-                  "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                  "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
-                  "});"
-                ],
-                "_lastExecutionId": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "id": "3d5e9b2f-d204-485a-b647-ff55298bb841",
-          "name": "Carrinhos",
-          "item": [
-            {
-              "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
-              "name": "Cadastrar carrinho",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{idProduto}}\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(201);\r",
-                      "    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
-                      "    pm.expect(responseJson).to.have.property('_id'); \r",
-                      "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                      "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "06bd46ce-4006-4218-bee9-43a6ae6650a7",
-              "name": "Buscar carrinho por ID",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "_id",
-                      "value": "{{idCarrinho}}"
-                    }
-                  ],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "GET",
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "6792d4fb-0534-4d99-ba3d-5e89b6b561c4",
-                    "type": "text/javascript",
-                    "exec": [
-                      "const schema = {\r",
-                      "    //Valido o primeiro nível do schema\r",
-                      "    \"type\": \"object\",\r",
-                      "    \"required\" : [\"quantidade\", \"carrinhos\"],\r",
-                      "    \"properties\": {\r",
-                      "        \"quantidade\": { \"type\": \"integer\" },\r",
-                      "        \"carrinhos\": {\r",
-                      "            //Valido o segundo nível do schema\r",
-                      "            \"type\": \"array\",\r",
-                      "            \"items\": {\r",
-                      "                \"type\": \"object\",\r",
-                      "                \"required\" : [\"produtos\", \"precoTotal\", \"quantidadeTotal\", \"idUsuario\", \"_id\"],\r",
-                      "                \"properties\": {                    \r",
-                      "                    \"precoTotal\": { \"type\": \"integer\" },\r",
-                      "                    \"quantidadeTotal\": { \"type\": \"integer\" },\r",
-                      "                    \"idUsuario\": { \"type\": \"string\" },\r",
-                      "                    \"_id\": { \"type\": \"string\" },\r",
-                      "                    \"produtos\":{\r",
-                      "                        //Valido o terceiro nível do schema\r",
-                      "                        \"type\": \"array\",\r",
-                      "                        \"items\": {\r",
-                      "                            \"type\":\"object\",\r",
-                      "                            \"required\" : [\"idProduto\", \"quantidade\", \"precoUnitario\"],\r",
-                      "                            \"properties\": {\r",
-                      "                                \"idProduto\": { \"type\": \"string\" },\r",
-                      "                                \"quantidade\": { \"type\": \"integer\" },\r",
-                      "                                \"precoUnitario\": { \"type\": \"integer\" }\r",
-                      "                            }\r",
-                      "                        }\r",
-                      "                    }\r",
-                      "                }\r",
-                      "            }\r",
-                      "        }\r",
-                      "    }\r",
-                      "}\r",
-                      "\r",
-                      "pm.test(\"Valida o schema e status code\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(200);\r",
-                      "    //Valida o json schema\r",
-                      "    pm.response.to.have.jsonSchema(schema);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "ed264937-b7e7-43a4-ba8e-09491fbd14c1"
-                  }
-                }
-              ],
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              }
-            },
-            {
-              "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
-              "name": "Excluir carrinho",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos",
-                    "concluir-compra"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(200);\r",
-                      "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": []
-        },
-        "cursor": {
-          "ref": "259281d0-66c5-4ff6-a6f9-a8ddfa2df7a1",
-          "length": 7,
-          "cycles": 1,
-          "position": 4,
-          "iteration": 0,
-          "httpRequestId": "f68d3b9e-f180-4a96-8b71-ff3ed34f5116",
-          "scriptId": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
-          "execution": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
-        }
-      },
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Deve retornar status 200 com mensagem de sucesso",
-          "message": "expected 401 to deeply equal 200",
-          "stack": "AssertionError: expected 401 to deeply equal 200\n   at Object.eval sandbox-script.js:1:7)",
-          "checksum": "135fead48cef358672b6bb4dc4313f9e",
-          "id": "14828965-2a94-4085-941c-be7a39e54650",
-          "timestamp": 1685116057077,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 7,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
-          "name": "Excluir carrinho",
-          "request": {
-            "url": {
-              "path": [
-                "carrinhos",
-                "concluir-compra"
-              ],
-              "host": [
-                "{{url}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{authorization}}"
-              }
-            ],
-            "method": "DELETE",
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
-                  "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                  "    var responseJson = pm.response.json();\r",
-                  "    //Valido o status code e propriedades do response\r",
-                  "    pm.expect(pm.response.code).to.eql(200);\r",
-                  "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
-                  "});"
-                ],
-                "_lastExecutionId": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "id": "3d5e9b2f-d204-485a-b647-ff55298bb841",
-          "name": "Carrinhos",
-          "item": [
-            {
-              "id": "dbca85f7-f783-426f-9e60-cffbf17c6773",
-              "name": "Cadastrar carrinho",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{idProduto}}\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "9a6e87bd-708d-4f6b-85b4-8bd65addb3fa",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(201);\r",
-                      "    pm.expect(responseJson.message).to.eql('Cadastro realizado com sucesso');\r",
-                      "    pm.expect(responseJson).to.have.property('_id'); \r",
-                      "    //Armazeno o token no environment para utilizar nos próximos testes\r",
-                      "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "704ec76d-90ac-4d57-9f6f-5ca890776b5c"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "06bd46ce-4006-4218-bee9-43a6ae6650a7",
-              "name": "Buscar carrinho por ID",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "_id",
-                      "value": "{{idCarrinho}}"
-                    }
-                  ],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "GET",
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "6792d4fb-0534-4d99-ba3d-5e89b6b561c4",
-                    "type": "text/javascript",
-                    "exec": [
-                      "const schema = {\r",
-                      "    //Valido o primeiro nível do schema\r",
-                      "    \"type\": \"object\",\r",
-                      "    \"required\" : [\"quantidade\", \"carrinhos\"],\r",
-                      "    \"properties\": {\r",
-                      "        \"quantidade\": { \"type\": \"integer\" },\r",
-                      "        \"carrinhos\": {\r",
-                      "            //Valido o segundo nível do schema\r",
-                      "            \"type\": \"array\",\r",
-                      "            \"items\": {\r",
-                      "                \"type\": \"object\",\r",
-                      "                \"required\" : [\"produtos\", \"precoTotal\", \"quantidadeTotal\", \"idUsuario\", \"_id\"],\r",
-                      "                \"properties\": {                    \r",
-                      "                    \"precoTotal\": { \"type\": \"integer\" },\r",
-                      "                    \"quantidadeTotal\": { \"type\": \"integer\" },\r",
-                      "                    \"idUsuario\": { \"type\": \"string\" },\r",
-                      "                    \"_id\": { \"type\": \"string\" },\r",
-                      "                    \"produtos\":{\r",
-                      "                        //Valido o terceiro nível do schema\r",
-                      "                        \"type\": \"array\",\r",
-                      "                        \"items\": {\r",
-                      "                            \"type\":\"object\",\r",
-                      "                            \"required\" : [\"idProduto\", \"quantidade\", \"precoUnitario\"],\r",
-                      "                            \"properties\": {\r",
-                      "                                \"idProduto\": { \"type\": \"string\" },\r",
-                      "                                \"quantidade\": { \"type\": \"integer\" },\r",
-                      "                                \"precoUnitario\": { \"type\": \"integer\" }\r",
-                      "                            }\r",
-                      "                        }\r",
-                      "                    }\r",
-                      "                }\r",
-                      "            }\r",
-                      "        }\r",
-                      "    }\r",
-                      "}\r",
-                      "\r",
-                      "pm.test(\"Valida o schema e status code\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(200);\r",
-                      "    //Valida o json schema\r",
-                      "    pm.response.to.have.jsonSchema(schema);\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "ed264937-b7e7-43a4-ba8e-09491fbd14c1"
-                  }
-                }
-              ],
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              }
-            },
-            {
-              "id": "745d937d-0cda-46d3-9b04-81b29dbe7645",
-              "name": "Excluir carrinho",
-              "request": {
-                "url": {
-                  "path": [
-                    "carrinhos",
-                    "concluir-compra"
-                  ],
-                  "host": [
-                    "{{url}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{authorization}}"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
-                    "type": "text/javascript",
-                    "exec": [
-                      "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
-                      "    //Armazeno o response json em um var para manipular os dados nos testes\r",
-                      "    var responseJson = pm.response.json();\r",
-                      "    //Valido o status code e propriedades do response\r",
-                      "    pm.expect(pm.response.code).to.eql(200);\r",
-                      "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
-                      "});"
-                    ],
-                    "_lastExecutionId": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": []
-        },
-        "cursor": {
-          "ref": "3cc651f7-8571-4368-bcb3-481640b89fe3",
-          "length": 7,
-          "cycles": 1,
-          "position": 6,
-          "iteration": 0,
-          "httpRequestId": "78f45387-c740-48db-877e-d65f4f5097ec",
-          "scriptId": "4b9bbb6f-2c7f-45fe-a552-06866a289786",
-          "execution": "a83665f4-e4a2-4b61-97c1-4adea672bfc7"
-        }
-      }
-    ],
+    "failures": [],
     "error": null
   }
 }

@@ -67,8 +67,8 @@ jobs:
       - name: Display Test Report URL
         run: |
           echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
-
-      - name: Send Slack Notification
+      
+      - name: Send Slack Notification with Test Results
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
@@ -77,8 +77,8 @@ jobs:
             "channel": "'"${SLACK_CHANNEL}"'",
             "attachments": [
               {
-                "title": "Postman + Newman Tests Results",
-                "text": "Total Requests: ${{ env.TOTAL_REQUESTS }}\nTotal Tests: ${{ env.TOTAL_TESTS }}\n:white_check_mark: Passed Tests: ${{ env.PASSED_TESTS }}\n:x: Failed Tests: ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
+                "title": "Postman + Newman Tests",
+                "text": ":page_with_curl: *Total Requests:* ${{ env.TOTAL_REQUESTS }}\n:page_facing_up: *Total Tests:* ${{ env.TOTAL_TESTS }}\n:white_check_mark: *Passed Tests:* ${{ env.PASSED_TESTS }}\n:x: *Failed Tests:* ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Click here to see the test in details>"
               }
             ]
           }' "${SLACK_WEBHOOK_URL}"

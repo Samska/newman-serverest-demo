@@ -9,7 +9,8 @@ on:
   workflow_dispatch:   # Trigger the workflow manually from the Actions tab
 
 jobs:
-  Tests:
+  setup-and-run-tests: # Stage name
+    name: Setup the environment and run the tests
     runs-on: ubuntu-latest  # Run the job on the latest version of Ubuntu
 
     steps:

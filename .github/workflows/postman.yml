@@ -35,6 +35,18 @@ jobs:
         run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra,json --reporter-htmlextra-export report.html --reporter-json-export report.json
         continue-on-error: true   # Continue even if there are errors in the tests
 
+      # Extract JSON Report data to uses in Slack step
+      - name: Extract JSON Report data
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            const fs = require('fs');
+            const jsonData = fs.readFileSync('report.json');
+            const report = JSON.parse(jsonData);
+            const totalAssertions = report.run.stats.assertions.total;
+            console.log(`::set-output name=totalAssertions::${totalAssertions}`);
+
       # Upload the HTML report as an artifact
       - name: Publish HTML Report
         uses: actions/upload-artifact@v3

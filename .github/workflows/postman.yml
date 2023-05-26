@@ -47,13 +47,6 @@ jobs:
           echo "FAILED_TESTS=$failedTests" >> $GITHUB_ENV
           echo "PASSED_TESTS=$passedTests" >> $GITHUB_ENV
 
-      - name: Print var values
-        run: |
-          echo "Total de requests: $TOTAL_REQUESTS"
-          echo "Total de testes: $TOTAL_TESTS"
-          echo "Testes que passaram: $PASSED_TESTS"
-          echo "Testes que falharam: $FAILED_TESTS"
-
       # Upload the HTML report as an artifact
       - name: Publish HTML Report
         uses: actions/upload-artifact@v3
@@ -86,7 +79,7 @@ jobs:
             "attachments": [
               {
                 "title": "Resultado dos testes",
-                "text": "https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
+                "text": "Total Requests: $TOTAL_REQUESTS\nTotal Tests: $TOTAL_TESTS\nPassed Tests: :white_check_mark: $PASSED_TESTS\nFailed Tests: :x: $FAILED_TESTS\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
               }
             ]
           }' "${SLACK_WEBHOOK_URL}"

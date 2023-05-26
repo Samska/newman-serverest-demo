@@ -83,7 +83,7 @@ jobs:
             "attachments": [
               {
                 "title": "Resultado dos testes",
-                "text": "Total Requests: $TOTAL_REQUESTS\nTotal Tests: $TOTAL_TESTS\nPassed Tests: :white_check_mark: $PASSED_TESTS\nFailed Tests: :x: $FAILED_TESTS\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
+                "text": "Total Requests: ${{ env.TOTAL_REQUESTS }}\nTotal Tests: ${{ env.TOTAL_TESTS }}\nPassed Tests: :white_check_mark: ${{ env.PASSED_TESTS }}\nFailed Tests: :x: ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
               }
             ]
           }' "${SLACK_WEBHOOK_URL}"

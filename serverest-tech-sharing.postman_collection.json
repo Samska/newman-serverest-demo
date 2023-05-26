@@ -79,7 +79,7 @@
 									"    //Armazeno o response json em um var para manipular os dados nos testes\r",
 									"    var responseJson = pm.response.json();\r",
 									"    //Valido o status code e propriedades do response\r",
-									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    pm.expect(pm.response.code).to.eql(201);\r",
 									"    pm.expect(responseJson.message).to.eql('Login realizado com sucesso');\r",
 									"    pm.expect(responseJson).to.have.property('authorization'); \r",
 									"    //Armazeno o token no environment para utilizar nos próximos testes\r",

@@ -41,14 +41,14 @@ jobs:
           echo "TOTAL_REQUESTS=$(jq -r '.run.stats.requests.total' report.json)" >> $GITHUB_ENV
           echo "TOTAL_TESTS=$(jq -r '.run.stats.assertions.total' report.json)" >> $GITHUB_ENV
           echo "FAILED_TESTS=$(jq -r '.run.stats.assertions.failed' report.json)" >> $GITHUB_ENV
-          echo "PASSED_TESTS=$((TOTAL_TESTS - FAILED_TESTS))" >> $GITHUB_ENV
+          echo "PASSED_TESTS=$(($TOTAL_TESTS - $FAILED_TESTS))" >> $GITHUB_ENV
 
       - name: Print var values
         run: |
-          echo "O valor da propriedade é: $TOTAL_REQUESTS"
-          echo "O valor da propriedade é: $TOTAL_TESTS"
-          echo "O valor da propriedade é: $PASSED_TESTS"
-          echo "O valor da propriedade é: $FAILED_TESTS"
+          echo "Total de requests: $TOTAL_REQUESTS"
+          echo "Total de testes: $TOTAL_TESTS"
+          echo "Testes que passaram: $PASSED_TESTS"
+          echo "Testes que falharam: $FAILED_TESTS"
 
       # Upload the HTML report as an artifact
       - name: Publish HTML Report

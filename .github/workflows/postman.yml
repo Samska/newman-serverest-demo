@@ -37,14 +37,12 @@ jobs:
 
       # Read the JSON report to get tests data
       - name: Read report.json and set test results into env variables
-        id: extract_value
         run: |
-          totalRequests=$(jq -r '.run.stats.requests.total' report.json)
-          TOTAL_REQUESTS=$totalRequests >> $GITHUB_ENV
+          echo "TOTAL_REQUESTS=$(jq -r '.run.stats.requests.total' report.json) >> $GITHUB_ENV
 
       - name: Usar o valor em outro step
         run: |
-          echo "O total de requests é: ${{ env.TOTAL_REQUESTS }}"
+          echo "O total de requests é: $TOTAL_REQUESTS"
 
       # Upload the HTML report as an artifact
       - name: Publish HTML Report

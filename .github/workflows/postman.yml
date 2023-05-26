@@ -43,7 +43,8 @@ jobs:
           echo "TOTAL_REQUESTS=$totalRequests" >> $GITHUB_ENV
 
       - name: Usar o valor em outro step
-        run: echo "O total de requests é: ${{ env.TOTAL_REQUESTS }}"
+        run: |
+          echo "O total de requests é: ${{ env.TOTAL_REQUESTS }}"
 
       # Upload the HTML report as an artifact
       - name: Publish HTML Report

@@ -32,7 +32,7 @@ jobs:
 
       # Run Postman Collection using Newman and export an HTML report
       - name: Run Postman Collection
-        run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
+        run: newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-sharing.postman_environment.json --reporters cli,htmlextra,json --reporter-htmlextra-export report.html --reporter-json-export report.json
         continue-on-error: true   # Continue even if there are errors in the tests
 
       # Upload the HTML report as an artifact

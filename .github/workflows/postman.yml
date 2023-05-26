@@ -39,10 +39,16 @@ jobs:
       - name: Read report.json and set test results into env variables
         run: |
           echo "TOTAL_REQUESTS=$(jq -r '.run.stats.requests.total' report.json)" >> $GITHUB_ENV
+          echo "TOTAL_TESTS=$(jq -r '.run.stats.assertions.total' report.json)" >> $GITHUB_ENV
+          echo "FAILED_TESTS=$(jq -r '.run.stats.assertions.failed' report.json)" >> $GITHUB_ENV
+          echo "PASSED_TESTS=$((TOTAL_TESTS - FAILED_TESTS))" >> $GITHUB_ENV
 
-      - name: Usar o valor em outro step
+      - name: Print var values
         run: |
-          echo "O total de requests é: $TOTAL_REQUESTS"
+          echo "O valor da propriedade é: $TOTAL_REQUESTS"
+          echo "O valor da propriedade é: $TOTAL_TESTS"
+          echo "O valor da propriedade é: $PASSED_TESTS"
+          echo "O valor da propriedade é: $FAILED_TESTS"
 
       # Upload the HTML report as an artifact
       - name: Publish HTML Report

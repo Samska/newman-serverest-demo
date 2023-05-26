@@ -72,18 +72,13 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-          TOTAL_REQUESTS: ${{ env.TOTAL_REQUESTS }}
-          TOTAL_TESTS: ${{ env.TOTAL_TESTS }}
-          PASSED_TESTS: ${{ env.PASSED_TESTS }}
-          FAILED_TESTS: ${{ env.FAILED_TESTS }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "channel": "'"${SLACK_CHANNEL}"'",
-            "text": "Postman + Newman Test Results",
             "attachments": [
               {
-                "title": "Resultado dos testes",
-                "text": "Total Requests: ${{ env.TOTAL_REQUESTS }}\nTotal Tests: ${{ env.TOTAL_TESTS }}\nPassed Tests: :white_check_mark: ${{ env.PASSED_TESTS }}\nFailed Tests: :x: ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
+                "title": "Postman + Newman Tests Results",
+                "text": "Total Requests: ${{ env.TOTAL_REQUESTS }}\nTotal Tests: ${{ env.TOTAL_TESTS }}\n:white_check_mark: Passed Tests: ${{ env.PASSED_TESTS }}\n:x: Failed Tests: ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Visualize the test result details>"
               }
             ]
           }' "${SLACK_WEBHOOK_URL}"

@@ -77,7 +77,7 @@ jobs:
             "channel": "'"${SLACK_CHANNEL}"'",
             "attachments": [
               {
-                "title": "Postman + Newman Tests",
+                "title": "Test Results",
                 "text": ":page_with_curl: *Total Requests:* ${{ env.TOTAL_REQUESTS }}\n:page_facing_up: *Total Tests:* ${{ env.TOTAL_TESTS }}\n:white_check_mark: *Passed Tests:* ${{ env.PASSED_TESTS }}\n:x: *Failed Tests:* ${{ env.FAILED_TESTS }}\n\n<https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html|Click here to see the test in details>"
               }
             ]

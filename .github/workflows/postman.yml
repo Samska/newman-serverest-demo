@@ -43,7 +43,8 @@ jobs:
         id: extrair_valor
 
       - name: Usar o valor em outro step
-        run: echo "O valor da propriedade é: ${{ steps.extrair_valor.outputs.valorPropriedade }}"
+        run: |
+          echo "O valor da propriedade é: ${{ steps.extrair_valor.outputs.valorPropriedade }}"
 
       # Upload the HTML report as an artifact
       - name: Publish HTML Report

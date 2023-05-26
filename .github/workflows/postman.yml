@@ -72,6 +72,10 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          TOTAL_REQUESTS: ${{ env.TOTAL_REQUESTS }}
+          TOTAL_TESTS: ${{ env.TOTAL_TESTS }}
+          PASSED_TESTS: ${{ env.PASSED_TESTS }}
+          FAILED_TESTS: ${{ env.FAILED_TESTS }}
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
             "channel": "'"${SLACK_CHANNEL}"'",

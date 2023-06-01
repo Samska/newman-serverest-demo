@@ -6,11 +6,11 @@
     },
     "item": [
       {
-        "id": "72403b32-15ba-4f60-99f6-07d5ba5bec78",
+        "id": "da38c309-77bf-4b67-a69d-f5ed23fcb207",
         "name": "Usuários",
         "item": [
           {
-            "id": "ca35184a-034c-4a5d-a161-2cf4936835ed",
+            "id": "80edb9f3-01ea-4567-adce-c56587f8171a",
             "name": "Cadastrar usuário",
             "request": {
               "url": {
@@ -39,18 +39,18 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "4298530c-8da2-4f1b-9a4c-92f7e77fc8cb",
+                  "id": "56a6e844-e304-47ab-997e-e04d8629e846",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "91a38dc3-865b-4fc5-a9ea-8f656e7ffce6"
+                  "_lastExecutionId": "f3212046-7927-4c96-868d-eccb1db6b21b"
                 }
               },
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "cc26472d-f04f-43b9-82c1-446689b55d56",
+                  "id": "922c1e95-cb55-4661-b168-929b53261b11",
                   "type": "text/javascript",
                   "exec": [
                     "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -62,7 +62,7 @@
                     "pm.environment.set(\"email\", email);\r",
                     "pm.environment.set(\"password\", password);"
                   ],
-                  "_lastExecutionId": "9b70380f-9b51-4ecc-8f79-f5f3aa6e7001"
+                  "_lastExecutionId": "1b6182b0-d95c-4c31-b87d-954d753643db"
                 }
               }
             ]
@@ -71,11 +71,11 @@
         "event": []
       },
       {
-        "id": "ab23ea6a-ef5b-47ef-bd20-89390f36017e",
+        "id": "bf3a07da-bb3e-450a-a901-6fa3a3fd615a",
         "name": "Login",
         "item": [
           {
-            "id": "439810c2-c877-45ad-93a0-b90f96bd49d6",
+            "id": "dc584d45-6db6-4000-9dd4-0d70e1084cc9",
             "name": "Login",
             "request": {
               "url": {
@@ -104,7 +104,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "3382a1d1-5581-4249-ab16-31c6b55f02b0",
+                  "id": "8f17018d-da72-4ae1-aa19-93337ea49d44",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
@@ -118,7 +118,7 @@
                     "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "fdb07695-270e-49cb-8a5b-aa11feed655f"
+                  "_lastExecutionId": "2967774c-0dbe-42ed-a66b-226a9da5691a"
                 }
               }
             ]
@@ -127,11 +127,11 @@
         "event": []
       },
       {
-        "id": "432af037-f112-421d-9b7e-43a57d92c5eb",
+        "id": "ae2706bd-022d-41e9-bd0d-f88a8931ca46",
         "name": "Produtos",
         "item": [
           {
-            "id": "7727fb76-5908-4212-88c2-eb4848778df7",
+            "id": "87bc6447-f185-4952-9c44-9ad005932f26",
             "name": "Listar produtos cadastrados",
             "request": {
               "url": {
@@ -151,7 +151,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "17678f7e-c44b-493b-9a72-433735c25486",
+                  "id": "ffbf7213-dd61-452b-8513-4b2f647bedf4",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -187,13 +187,13 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "b3de3d31-57b2-40f7-9cf1-fdba96ba02b5"
+                  "_lastExecutionId": "0260ea79-e1ac-485c-b8b2-86d756a63731"
                 }
               }
             ]
           },
           {
-            "id": "9606ef77-64fb-4332-9ead-ac883cf45f26",
+            "id": "0c15c489-98d7-4f17-829d-183e4eee3e9e",
             "name": "Cadastrar produto",
             "request": {
               "url": {
@@ -228,18 +228,18 @@
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "4a3f20df-227f-4239-9916-c91dde895377",
+                  "id": "15d56c7a-73a4-48e3-a0b4-5c9b61b77a60",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "cbd6bb2e-853d-4b52-be52-2197cd2686ab"
+                  "_lastExecutionId": "0683bb07-f83b-4e6e-9965-c68007cb2f57"
                 }
               },
               {
                 "listen": "test",
                 "script": {
-                  "id": "fc035c66-23e8-4623-8687-00b218bb323a",
+                  "id": "fe8b95c7-7471-43d0-b417-263083e96049",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -253,7 +253,7 @@
                     "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "ea0b4c3c-f9e2-4f80-925f-c95e35a5cdd5"
+                  "_lastExecutionId": "5dfabe6e-46ba-42c5-bf5e-aed80ed3ba9f"
                 }
               }
             ]
@@ -262,11 +262,11 @@
         "event": []
       },
       {
-        "id": "f4c60ca0-e6a1-42fd-a132-303a3d65fd00",
+        "id": "07f7c2b6-7e38-4bea-af6f-b6db31a1eb86",
         "name": "Carrinhos",
         "item": [
           {
-            "id": "5bcf1d9e-8a43-4030-9896-2406fe005bbd",
+            "id": "d71a4056-5c3b-43ff-857b-3cc648e80038",
             "name": "Cadastrar carrinho",
             "request": {
               "url": {
@@ -301,7 +301,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "6f9d0c25-1139-4c50-976f-2c63104ea548",
+                  "id": "7c211059-7600-4ba4-ab31-6bd35b3f4d61",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -315,13 +315,13 @@
                     "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "9870c7ad-02ae-4d2b-a481-b4f1390ad7c8"
+                  "_lastExecutionId": "38444031-db10-4b94-ab6d-7d9e4bd3e56e"
                 }
               }
             ]
           },
           {
-            "id": "cf8cf2f6-946d-400b-9bbb-a0adb5f99f11",
+            "id": "81b0b01d-8a71-4bea-b31a-450cc3d5332b",
             "name": "Buscar carrinho por ID",
             "request": {
               "url": {
@@ -361,7 +361,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "94f4d1b3-0b4d-4e5d-a013-c9ff8e0bb4f8",
+                  "id": "1cece0e8-8acf-4de3-964c-01dac67a1643",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -409,7 +409,7 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "d8708723-c431-4145-ae5c-c0f7f9edfc2b"
+                  "_lastExecutionId": "5f5798af-56ce-4d87-b95c-4203a38af669"
                 }
               }
             ],
@@ -418,7 +418,7 @@
             }
           },
           {
-            "id": "8498a81c-2f7f-47ed-ae17-8839b434b823",
+            "id": "0ffdd2f8-4a1a-4623-8529-bf70ce3e1d53",
             "name": "Excluir carrinho",
             "request": {
               "url": {
@@ -454,7 +454,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "ca5816a5-f12d-490e-8e68-a09f5fce2dc6",
+                  "id": "0a9c64fc-a631-45df-bc5d-b71b0a907d96",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -465,7 +465,7 @@
                     "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                     "});"
                   ],
-                  "_lastExecutionId": "0546d6e1-3cad-4179-b0ad-797908dc2850"
+                  "_lastExecutionId": "a9a35af0-0355-4286-ad7b-3f93d57890e9"
                 }
               }
             ]
@@ -497,17 +497,17 @@
     "values": [
       {
         "type": "any",
-        "value": "Kara@qa.com.br",
+        "value": "Jodie@qa.com.br",
         "key": "email"
       },
       {
         "type": "any",
-        "value": "20ldVEFlk5ewCvI",
+        "value": "3onkUz5ipDWE6lF",
         "key": "password"
       },
       {
         "type": "any",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkthcmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiIyMGxkVkVGbGs1ZXdDdkkiLCJpYXQiOjE2ODU1ODM3MzAsImV4cCI6MTY4NTU4NDMzMH0.rOoviF4Gy3-H2-IAAF3UYySuzGi2-LA_R0ovt_Y8Wc0",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvZGllQHFhLmNvbS5iciIsInBhc3N3b3JkIjoiM29ua1V6NWlwRFdFNmxGIiwiaWF0IjoxNjg1NjI4NzkyLCJleHAiOjE2ODU2MjkzOTJ9.8tmRCKBlkw3bAjpJ618YZxxIwCVZl1SKrchHyBmWkeY",
         "key": "authorization"
       },
       {
@@ -517,18 +517,18 @@
       },
       {
         "type": "any",
-        "value": "LqVDAULrszP10jLW",
+        "value": "12eGyBg3QymVSlh0",
         "key": "idProduto"
       },
       {
         "type": "any",
-        "value": "Oq7ESp7Cw4Cq76E5",
+        "value": "z0CaFzFD3uaXZaFU",
         "key": "idCarrinho"
       }
     ]
   },
   "globals": {
-    "id": "b459a808-de4c-4296-9e32-6c51fa2d6028",
+    "id": "77f10abb-cc4e-4d9f-9b6c-bcd8c883b6da",
     "values": []
   },
   "run": {
@@ -580,10 +580,10 @@
       }
     },
     "timings": {
-      "responseAverage": 66.14285714285714,
-      "responseMin": 44,
-      "responseMax": 166,
-      "responseSd": 40.91953278405444,
+      "responseAverage": 58.714285714285715,
+      "responseMin": 38,
+      "responseMax": 172,
+      "responseSd": 46.265427653036646,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -592,8 +592,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1685583729995,
-      "completed": 1685583730684
+      "started": 1685628792496,
+      "completed": 1685628793143
     },
     "executions": [
       {
@@ -606,11 +606,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "2ac1e574-f28b-499e-b12c-3323d7f879a5",
-          "httpRequestId": "56f90fe1-901d-467d-bc67-487939f6e9fe"
+          "ref": "48fe6199-e2ce-4546-b25f-c1263433b0de",
+          "httpRequestId": "e80823ba-4c6d-44ed-9bdb-62c0bf8ca0ef"
         },
         "item": {
-          "id": "ca35184a-034c-4a5d-a161-2cf4936835ed",
+          "id": "80edb9f3-01ea-4567-adce-c56587f8171a",
           "name": "Cadastrar usuário",
           "request": {
             "url": {
@@ -639,18 +639,18 @@
             {
               "listen": "test",
               "script": {
-                "id": "4298530c-8da2-4f1b-9a4c-92f7e77fc8cb",
+                "id": "56a6e844-e304-47ab-997e-e04d8629e846",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "91a38dc3-865b-4fc5-a9ea-8f656e7ffce6"
+                "_lastExecutionId": "f3212046-7927-4c96-868d-eccb1db6b21b"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "cc26472d-f04f-43b9-82c1-446689b55d56",
+                "id": "922c1e95-cb55-4661-b168-929b53261b11",
                 "type": "text/javascript",
                 "exec": [
                   "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -662,7 +662,7 @@
                   "pm.environment.set(\"email\", email);\r",
                   "pm.environment.set(\"password\", password);"
                 ],
-                "_lastExecutionId": "9b70380f-9b51-4ecc-8f79-f5f3aa6e7001"
+                "_lastExecutionId": "1b6182b0-d95c-4c31-b87d-954d753643db"
               }
             }
           ]
@@ -703,7 +703,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "cb3343d5-9f66-4340-8d5b-8c81edb74fe5",
+              "value": "91060dc5-8e69-4d1c-a72e-c9b45e0d8918",
               "system": true
             },
             {
@@ -723,14 +723,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "118",
+              "value": "119",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Kara@qa.com.br\",\r\n  \"password\": \"20ldVEFlk5ewCvI\",\r\n  \"administrador\": \"true\"\r\n}",
+            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Jodie@qa.com.br\",\r\n  \"password\": \"3onkUz5ipDWE6lF\",\r\n  \"administrador\": \"true\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -739,7 +739,7 @@
           }
         },
         "response": {
-          "id": "aa308196-a711-47e7-932d-2ec0ab302d94",
+          "id": "049dc8c2-389a-4216-a23f-d42b843b63bb",
           "status": "Created",
           "code": 201,
           "header": [
@@ -773,7 +773,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "41aaaec4-b5b6-461d-b2ae-2e1f367392ae"
+              "value": "31c1360a-0606-4340-b73b-07ad82373a05"
             },
             {
               "key": "content-type",
@@ -781,11 +781,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "e81b2eda1963a5da7bda1eced7601839;o=1"
+              "value": "99bf72568154294d46be3fa5d4bf5bc8;o=1"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:12 GMT"
             },
             {
               "key": "Server",
@@ -862,44 +862,44 @@
               58,
               32,
               34,
-              88,
-              81,
-              117,
-              48,
-              102,
-              57,
-              99,
-              75,
-              66,
-              48,
-              107,
-              53,
               101,
+              101,
+              98,
+              105,
+              82,
               66,
-              114,
-              54,
+              81,
+              122,
+              120,
+              65,
+              102,
+              106,
+              119,
+              66,
+              117,
+              100,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 166,
+          "responseTime": 172,
           "responseSize": 82
         },
-        "id": "ca35184a-034c-4a5d-a161-2cf4936835ed"
+        "id": "80edb9f3-01ea-4567-adce-c56587f8171a"
       },
       {
         "cursor": {
-          "ref": "fd6b8d20-d9e2-4cc6-9d39-37273d80194d",
+          "ref": "9d52d834-ef88-4881-ae25-2c91b22f9830",
           "length": 7,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "1a086fe7-8d57-4713-a5dc-9a4dfb5fc8bb"
+          "httpRequestId": "1e4a9c5a-1918-4423-80eb-0349ab4451e1"
         },
         "item": {
-          "id": "439810c2-c877-45ad-93a0-b90f96bd49d6",
+          "id": "dc584d45-6db6-4000-9dd4-0d70e1084cc9",
           "name": "Login",
           "request": {
             "url": {
@@ -928,7 +928,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "3382a1d1-5581-4249-ab16-31c6b55f02b0",
+                "id": "8f17018d-da72-4ae1-aa19-93337ea49d44",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
@@ -942,7 +942,7 @@
                   "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                   "});"
                 ],
-                "_lastExecutionId": "fdb07695-270e-49cb-8a5b-aa11feed655f"
+                "_lastExecutionId": "2967774c-0dbe-42ed-a66b-226a9da5691a"
               }
             }
           ]
@@ -983,7 +983,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "8c9dd093-e886-42fa-b820-e33e608c7c67",
+              "value": "36aee49f-24f5-4542-9e33-c27d0c58f88d",
               "system": true
             },
             {
@@ -1003,14 +1003,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "67",
+              "value": "68",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"email\": \"Kara@qa.com.br\",\r\n  \"password\": \"20ldVEFlk5ewCvI\"\r\n}",
+            "raw": "{\r\n  \"email\": \"Jodie@qa.com.br\",\r\n  \"password\": \"3onkUz5ipDWE6lF\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -1019,7 +1019,7 @@
           }
         },
         "response": {
-          "id": "11e86af7-58ae-4436-ae4c-5894b7b7d7b4",
+          "id": "b7a10e1b-3039-47d6-a6d0-2fd5a0dcd4bf",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1053,7 +1053,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "dcd70199-fa1d-4084-98f1-ad3dedd6cb6a"
+              "value": "98e60a9a-36e0-4a80-98d0-34fe4a8f3c1e"
             },
             {
               "key": "content-type",
@@ -1061,11 +1061,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "7685337e47bde1504c3fe7d8f6d04d07"
+              "value": "28ee2578b9cde2250030d6a5f58495ed"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:12 GMT"
             },
             {
               "key": "Server",
@@ -1073,7 +1073,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "280"
+              "value": "281"
             }
           ],
           "stream": {
@@ -1207,71 +1207,95 @@
               54,
               73,
               107,
-              116,
-              104,
-              99,
-              109,
+              112,
+              118,
+              90,
+              71,
+              108,
+              108,
+              81,
+              72,
               70,
-              65,
-              99,
-              87,
-              69,
-              117,
-              89,
-              50,
-              57,
-              116,
+              104,
               76,
               109,
+              78,
+              118,
+              98,
+              83,
+              53,
+              105,
+              99,
+              105,
+              73,
+              115,
+              73,
+              110,
+              66,
+              104,
+              99,
+              51,
+              78,
+              51,
+              98,
+              51,
               74,
-              121,
+              107,
+              73,
+              106,
+              111,
+              105,
+              77,
+              50,
+              57,
+              117,
+              97,
+              49,
+              86,
+              54,
+              78,
+              87,
+              108,
+              119,
+              82,
+              70,
+              100,
+              70,
+              78,
+              109,
+              120,
+              71,
               73,
               105,
               119,
               105,
-              99,
-              71,
+              97,
+              87,
               70,
-              122,
-              99,
-              51,
-              100,
-              118,
-              99,
-              109,
-              81,
-              105,
-              79,
-              105,
+              48,
               73,
-              121,
-              77,
-              71,
+              106,
+              111,
               120,
-              107,
-              86,
-              107,
-              86,
-              71,
-              98,
-              71,
-              115,
+              78,
+              106,
+              103,
               49,
-              90,
-              88,
-              100,
-              68,
-              100,
+              78,
+              106,
+              73,
+              52,
+              78,
+              122,
               107,
-              107,
-              105,
+              121,
               76,
               67,
               74,
-              112,
-              89,
-              88,
-              81,
+              108,
+              101,
+              72,
+              65,
               105,
               79,
               106,
@@ -1280,92 +1304,69 @@
               79,
               68,
               85,
-              49,
+              50,
+              77,
+              106,
+              107,
+              122,
               79,
-              68,
-              77,
-              51,
-              77,
-              122,
-              65,
-              115,
-              73,
-              109,
-              86,
-              52,
-              99,
-              67,
-              73,
-              54,
-              77,
               84,
-              89,
-              52,
-              78,
-              84,
-              85,
-              52,
-              78,
-              68,
-              77,
-              122,
-              77,
-              72,
-              48,
+              74,
+              57,
               46,
-              114,
-              79,
-              111,
-              118,
-              105,
-              70,
-              52,
-              71,
-              121,
-              51,
-              45,
-              72,
-              50,
-              45,
-              73,
-              65,
-              65,
-              70,
-              51,
-              85,
-              89,
-              121,
-              83,
-              117,
-              122,
-              71,
-              105,
-              50,
-              45,
-              76,
-              65,
-              95,
-              82,
-              48,
-              111,
-              118,
-              116,
-              95,
-              89,
               56,
-              87,
+              116,
+              109,
+              82,
+              67,
+              75,
+              66,
+              108,
+              107,
+              119,
+              51,
+              98,
+              65,
+              106,
+              112,
+              74,
+              54,
+              49,
+              56,
+              89,
+              90,
+              120,
+              120,
+              73,
+              119,
+              67,
+              86,
+              90,
+              108,
+              49,
+              83,
+              75,
+              114,
               99,
-              48,
+              104,
+              72,
+              121,
+              66,
+              109,
+              87,
+              107,
+              101,
+              89,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 51,
-          "responseSize": 280
+          "responseTime": 39,
+          "responseSize": 281
         },
-        "id": "439810c2-c877-45ad-93a0-b90f96bd49d6",
+        "id": "dc584d45-6db6-4000-9dd4-0d70e1084cc9",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso e token de auth",
@@ -1375,15 +1376,15 @@
       },
       {
         "cursor": {
-          "ref": "8e49ab27-ac05-4808-aebd-7f92c2118dd5",
+          "ref": "973be892-fa79-4ad3-b23f-afd40d3eebdd",
           "length": 7,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "537a8edd-4ce8-48fd-9ca3-03b60ef45979"
+          "httpRequestId": "741406b0-f1d7-4899-9681-bd204c030538"
         },
         "item": {
-          "id": "7727fb76-5908-4212-88c2-eb4848778df7",
+          "id": "87bc6447-f185-4952-9c44-9ad005932f26",
           "name": "Listar produtos cadastrados",
           "request": {
             "url": {
@@ -1403,7 +1404,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "17678f7e-c44b-493b-9a72-433735c25486",
+                "id": "ffbf7213-dd61-452b-8513-4b2f647bedf4",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -1439,7 +1440,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "b3de3d31-57b2-40f7-9cf1-fdba96ba02b5"
+                "_lastExecutionId": "0260ea79-e1ac-485c-b8b2-86d756a63731"
               }
             }
           ]
@@ -1475,7 +1476,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "86817b04-6a0d-44f8-8b8c-5b9e62fec701",
+              "value": "ba9c7c0f-c69a-4841-a63c-edf9cb3b1f2f",
               "system": true
             },
             {
@@ -1497,7 +1498,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "cd231fee-1ab8-4912-a8be-b35cbe3aae06",
+          "id": "fef99f5a-de7b-417e-b19c-215cc8cd26a0",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1531,7 +1532,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "1e45fdd8-d01e-4dd8-b825-c48fc5e1470f"
+              "value": "bdb8cccf-1043-4942-86aa-504470d67d7d"
             },
             {
               "key": "content-type",
@@ -1539,11 +1540,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "d03c516635c675aa644450a4eb27bfa6"
+              "value": "3de7b7001b8840abea67b414e7c7b311"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:12 GMT"
             },
             {
               "key": "Server",
@@ -1551,7 +1552,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "435"
+              "value": "1104"
             }
           ],
           "stream": {
@@ -1577,7 +1578,7 @@
               34,
               58,
               32,
-              50,
+              52,
               44,
               10,
               32,
@@ -1984,6 +1985,675 @@
               32,
               32,
               125,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              110,
+              111,
+              109,
+              101,
+              34,
+              58,
+              32,
+              34,
+              82,
+              117,
+              115,
+              116,
+              105,
+              99,
+              32,
+              83,
+              111,
+              102,
+              116,
+              32,
+              77,
+              111,
+              117,
+              115,
+              101,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              112,
+              114,
+              101,
+              99,
+              111,
+              34,
+              58,
+              32,
+              54,
+              52,
+              50,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              100,
+              101,
+              115,
+              99,
+              114,
+              105,
+              99,
+              97,
+              111,
+              34,
+              58,
+              32,
+              34,
+              78,
+              101,
+              119,
+              32,
+              65,
+              66,
+              67,
+              32,
+              49,
+              51,
+              32,
+              57,
+              51,
+              55,
+              48,
+              44,
+              32,
+              49,
+              51,
+              46,
+              51,
+              44,
+              32,
+              53,
+              116,
+              104,
+              32,
+              71,
+              101,
+              110,
+              32,
+              67,
+              111,
+              114,
+              101,
+              65,
+              53,
+              45,
+              56,
+              50,
+              53,
+              48,
+              85,
+              44,
+              32,
+              56,
+              71,
+              66,
+              32,
+              82,
+              65,
+              77,
+              44,
+              32,
+              50,
+              53,
+              54,
+              71,
+              66,
+              32,
+              83,
+              83,
+              68,
+              44,
+              32,
+              112,
+              111,
+              119,
+              101,
+              114,
+              32,
+              85,
+              72,
+              68,
+              32,
+              71,
+              114,
+              97,
+              112,
+              104,
+              105,
+              99,
+              115,
+              44,
+              32,
+              79,
+              83,
+              32,
+              49,
+              48,
+              32,
+              72,
+              111,
+              109,
+              101,
+              44,
+              32,
+              79,
+              83,
+              32,
+              79,
+              102,
+              102,
+              105,
+              99,
+              101,
+              32,
+              65,
+              32,
+              38,
+              32,
+              74,
+              32,
+              50,
+              48,
+              49,
+              54,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              113,
+              117,
+              97,
+              110,
+              116,
+              105,
+              100,
+              97,
+              100,
+              101,
+              34,
+              58,
+              32,
+              49,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              105,
+              109,
+              97,
+              103,
+              101,
+              109,
+              34,
+              58,
+              32,
+              34,
+              67,
+              58,
+              92,
+              92,
+              102,
+              97,
+              107,
+              101,
+              112,
+              97,
+              116,
+              104,
+              92,
+              92,
+              109,
+              105,
+              97,
+              109,
+              105,
+              71,
+              117,
+              97,
+              114,
+              100,
+              72,
+              111,
+              117,
+              115,
+              101,
+              46,
+              112,
+              110,
+              103,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              95,
+              105,
+              100,
+              34,
+              58,
+              32,
+              34,
+              118,
+              83,
+              105,
+              105,
+              76,
+              66,
+              86,
+              88,
+              54,
+              52,
+              106,
+              76,
+              106,
+              81,
+              68,
+              70,
+              34,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              125,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              110,
+              111,
+              109,
+              101,
+              34,
+              58,
+              32,
+              34,
+              76,
+              105,
+              99,
+              101,
+              110,
+              115,
+              101,
+              100,
+              32,
+              70,
+              114,
+              101,
+              115,
+              104,
+              32,
+              66,
+              97,
+              99,
+              111,
+              110,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              112,
+              114,
+              101,
+              99,
+              111,
+              34,
+              58,
+              32,
+              53,
+              48,
+              48,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              100,
+              101,
+              115,
+              99,
+              114,
+              105,
+              99,
+              97,
+              111,
+              34,
+              58,
+              32,
+              34,
+              69,
+              114,
+              103,
+              111,
+              110,
+              111,
+              109,
+              105,
+              99,
+              32,
+              101,
+              120,
+              101,
+              99,
+              117,
+              116,
+              105,
+              118,
+              101,
+              32,
+              99,
+              104,
+              97,
+              105,
+              114,
+              32,
+              117,
+              112,
+              104,
+              111,
+              108,
+              115,
+              116,
+              101,
+              114,
+              101,
+              100,
+              32,
+              105,
+              110,
+              32,
+              98,
+              111,
+              110,
+              100,
+              101,
+              100,
+              32,
+              98,
+              108,
+              97,
+              99,
+              107,
+              32,
+              108,
+              101,
+              97,
+              116,
+              104,
+              101,
+              114,
+              32,
+              97,
+              110,
+              100,
+              32,
+              80,
+              86,
+              67,
+              32,
+              112,
+              97,
+              100,
+              100,
+              101,
+              100,
+              32,
+              115,
+              101,
+              97,
+              116,
+              32,
+              97,
+              110,
+              100,
+              32,
+              98,
+              97,
+              99,
+              107,
+              32,
+              102,
+              111,
+              114,
+              32,
+              97,
+              108,
+              108,
+              45,
+              100,
+              97,
+              121,
+              32,
+              99,
+              111,
+              109,
+              102,
+              111,
+              114,
+              116,
+              32,
+              97,
+              110,
+              100,
+              32,
+              115,
+              117,
+              112,
+              112,
+              111,
+              114,
+              116,
+              34,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              113,
+              117,
+              97,
+              110,
+              116,
+              105,
+              100,
+              97,
+              100,
+              101,
+              34,
+              58,
+              32,
+              48,
+              44,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              95,
+              105,
+              100,
+              34,
+              58,
+              32,
+              34,
+              118,
+              87,
+              114,
+              80,
+              77,
+              109,
+              77,
+              87,
+              86,
+              116,
+              57,
+              101,
+              50,
+              75,
+              118,
+              55,
+              34,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              125,
               10,
               32,
               32,
@@ -1995,10 +2665,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 50,
-          "responseSize": 435
+          "responseTime": 39,
+          "responseSize": 1104
         },
-        "id": "7727fb76-5908-4212-88c2-eb4848778df7",
+        "id": "87bc6447-f185-4952-9c44-9ad005932f26",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -2008,15 +2678,15 @@
       },
       {
         "cursor": {
-          "ref": "381b68d1-850e-468a-b9e9-177197f90d3f",
+          "ref": "d377b65d-6c47-46a8-bedd-77aa5a809107",
           "length": 7,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "f95d145b-5a22-4275-873f-ebb6211d0067"
+          "httpRequestId": "f845db4c-ec12-4b1d-acac-7a58991eaee1"
         },
         "item": {
-          "id": "9606ef77-64fb-4332-9ead-ac883cf45f26",
+          "id": "0c15c489-98d7-4f17-829d-183e4eee3e9e",
           "name": "Cadastrar produto",
           "request": {
             "url": {
@@ -2051,18 +2721,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "4a3f20df-227f-4239-9916-c91dde895377",
+                "id": "15d56c7a-73a4-48e3-a0b4-5c9b61b77a60",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "cbd6bb2e-853d-4b52-be52-2197cd2686ab"
+                "_lastExecutionId": "0683bb07-f83b-4e6e-9965-c68007cb2f57"
               }
             },
             {
               "listen": "test",
               "script": {
-                "id": "fc035c66-23e8-4623-8687-00b218bb323a",
+                "id": "fe8b95c7-7471-43d0-b417-263083e96049",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -2076,7 +2746,7 @@
                   "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "ea0b4c3c-f9e2-4f80-925f-c95e35a5cdd5"
+                "_lastExecutionId": "5dfabe6e-46ba-42c5-bf5e-aed80ed3ba9f"
               }
             }
           ]
@@ -2097,7 +2767,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkthcmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiIyMGxkVkVGbGs1ZXdDdkkiLCJpYXQiOjE2ODU1ODM3MzAsImV4cCI6MTY4NTU4NDMzMH0.rOoviF4Gy3-H2-IAAF3UYySuzGi2-LA_R0ovt_Y8Wc0"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvZGllQHFhLmNvbS5iciIsInBhc3N3b3JkIjoiM29ua1V6NWlwRFdFNmxGIiwiaWF0IjoxNjg1NjI4NzkyLCJleHAiOjE2ODU2MjkzOTJ9.8tmRCKBlkw3bAjpJ618YZxxIwCVZl1SKrchHyBmWkeY"
             },
             {
               "key": "Content-Type",
@@ -2121,7 +2791,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "7cb6de1a-b8a7-461b-b029-35efd0c4bc8c",
+              "value": "3fd6d91e-13a6-478a-8e68-9b62c3b9b301",
               "system": true
             },
             {
@@ -2141,14 +2811,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "119",
+              "value": "118",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"Handcrafted Rubber Bike\",\r\n  \"preco\": 742,\r\n  \"descricao\": \"Sleek Concrete Fish\",\r\n  \"quantidade\": 715\r\n}",
+            "raw": "{\r\n  \"nome\": \"Sleek Metal Computer\",\r\n  \"preco\": 213,\r\n  \"descricao\": \"Gorgeous Cotton Table\",\r\n  \"quantidade\": 809\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -2157,7 +2827,7 @@
           }
         },
         "response": {
-          "id": "2d61490e-000c-441e-a256-86a6f5e68bca",
+          "id": "661f60a7-e7dd-43a9-b25f-4b724d73c975",
           "status": "Created",
           "code": 201,
           "header": [
@@ -2191,7 +2861,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "0ca8e5bd-812b-41ed-b85d-f48b8c81739e"
+              "value": "42b2db43-70b1-4764-99b3-781cf98afab9"
             },
             {
               "key": "content-type",
@@ -2199,11 +2869,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "ebdc9228a7a980232846d1560c698a44"
+              "value": "87b74c69e6384a6ae18c1c3d67dfdfcd"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:12 GMT"
             },
             {
               "key": "Server",
@@ -2280,32 +2950,32 @@
               58,
               32,
               34,
-              76,
-              113,
-              86,
-              68,
-              65,
-              85,
-              76,
-              114,
-              115,
-              122,
-              80,
               49,
+              50,
+              101,
+              71,
+              121,
+              66,
+              103,
+              51,
+              81,
+              121,
+              109,
+              86,
+              83,
+              108,
+              104,
               48,
-              106,
-              76,
-              87,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 50,
+          "responseTime": 40,
           "responseSize": 82
         },
-        "id": "9606ef77-64fb-4332-9ead-ac883cf45f26",
+        "id": "0c15c489-98d7-4f17-829d-183e4eee3e9e",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do produto",
@@ -2315,15 +2985,15 @@
       },
       {
         "cursor": {
-          "ref": "d9784c1f-fb6b-4185-9605-2f49abf1c0a2",
+          "ref": "a8163065-462d-4f12-acf1-2c03e180cf72",
           "length": 7,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "10e6d5aa-ae68-4bd9-b572-c9a5500667ba"
+          "httpRequestId": "4b7c95ac-c2a4-4c66-b8b4-4394f56a3218"
         },
         "item": {
-          "id": "5bcf1d9e-8a43-4030-9896-2406fe005bbd",
+          "id": "d71a4056-5c3b-43ff-857b-3cc648e80038",
           "name": "Cadastrar carrinho",
           "request": {
             "url": {
@@ -2358,7 +3028,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "6f9d0c25-1139-4c50-976f-2c63104ea548",
+                "id": "7c211059-7600-4ba4-ab31-6bd35b3f4d61",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -2372,7 +3042,7 @@
                   "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "9870c7ad-02ae-4d2b-a481-b4f1390ad7c8"
+                "_lastExecutionId": "38444031-db10-4b94-ab6d-7d9e4bd3e56e"
               }
             }
           ]
@@ -2393,7 +3063,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkthcmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiIyMGxkVkVGbGs1ZXdDdkkiLCJpYXQiOjE2ODU1ODM3MzAsImV4cCI6MTY4NTU4NDMzMH0.rOoviF4Gy3-H2-IAAF3UYySuzGi2-LA_R0ovt_Y8Wc0"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvZGllQHFhLmNvbS5iciIsInBhc3N3b3JkIjoiM29ua1V6NWlwRFdFNmxGIiwiaWF0IjoxNjg1NjI4NzkyLCJleHAiOjE2ODU2MjkzOTJ9.8tmRCKBlkw3bAjpJ618YZxxIwCVZl1SKrchHyBmWkeY"
             },
             {
               "key": "Content-Type",
@@ -2417,7 +3087,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "254fece8-8e32-4597-9762-55909896772b",
+              "value": "554325a9-e7b4-4d5b-9cfe-c5fd07966eab",
               "system": true
             },
             {
@@ -2444,7 +3114,7 @@
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"LqVDAULrszP10jLW\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
+            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"12eGyBg3QymVSlh0\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -2453,7 +3123,7 @@
           }
         },
         "response": {
-          "id": "d6dcae41-4cda-4eca-b8fc-0d777cd8b143",
+          "id": "646c9452-1aa7-40ab-a16d-fad0bf48e814",
           "status": "Created",
           "code": 201,
           "header": [
@@ -2487,7 +3157,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "7a06b559-5d22-47c7-a9b5-1ee66faeace5"
+              "value": "575768e5-11c7-44be-95a8-91492d4894f5"
             },
             {
               "key": "content-type",
@@ -2495,11 +3165,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "ae4a4786675ddd46b5314a70ece7ec8d"
+              "value": "a130e5574779986ce41f1dbbce405c2f"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:12 GMT"
             },
             {
               "key": "Server",
@@ -2576,32 +3246,32 @@
               58,
               32,
               34,
-              79,
-              113,
-              55,
-              69,
-              83,
-              112,
-              55,
+              122,
+              48,
               67,
-              119,
-              52,
-              67,
-              113,
-              55,
-              54,
-              69,
-              53,
+              97,
+              70,
+              122,
+              70,
+              68,
+              51,
+              117,
+              97,
+              88,
+              90,
+              97,
+              70,
+              85,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 56,
+          "responseTime": 42,
           "responseSize": 82
         },
-        "id": "5bcf1d9e-8a43-4030-9896-2406fe005bbd",
+        "id": "d71a4056-5c3b-43ff-857b-3cc648e80038",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do carrinho",
@@ -2611,15 +3281,15 @@
       },
       {
         "cursor": {
-          "ref": "7b62d5e7-15fb-419b-b075-b744eac497c4",
+          "ref": "1fb9364a-03e7-485a-8196-1dc454e663e7",
           "length": 7,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "1e93ddb1-fcde-4b1e-84d5-f277f9b4ec85"
+          "httpRequestId": "7b83acc2-8aa4-4e24-88b9-d208e38d36ed"
         },
         "item": {
-          "id": "cf8cf2f6-946d-400b-9bbb-a0adb5f99f11",
+          "id": "81b0b01d-8a71-4bea-b31a-450cc3d5332b",
           "name": "Buscar carrinho por ID",
           "request": {
             "url": {
@@ -2659,7 +3329,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "94f4d1b3-0b4d-4e5d-a013-c9ff8e0bb4f8",
+                "id": "1cece0e8-8acf-4de3-964c-01dac67a1643",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -2707,7 +3377,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "d8708723-c431-4145-ae5c-c0f7f9edfc2b"
+                "_lastExecutionId": "5f5798af-56ce-4d87-b95c-4203a38af669"
               }
             }
           ],
@@ -2728,7 +3398,7 @@
             "query": [
               {
                 "key": "_id",
-                "value": "Oq7ESp7Cw4Cq76E5"
+                "value": "z0CaFzFD3uaXZaFU"
               }
             ],
             "variable": []
@@ -2736,7 +3406,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkthcmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiIyMGxkVkVGbGs1ZXdDdkkiLCJpYXQiOjE2ODU1ODM3MzAsImV4cCI6MTY4NTU4NDMzMH0.rOoviF4Gy3-H2-IAAF3UYySuzGi2-LA_R0ovt_Y8Wc0"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvZGllQHFhLmNvbS5iciIsInBhc3N3b3JkIjoiM29ua1V6NWlwRFdFNmxGIiwiaWF0IjoxNjg1NjI4NzkyLCJleHAiOjE2ODU2MjkzOTJ9.8tmRCKBlkw3bAjpJ618YZxxIwCVZl1SKrchHyBmWkeY"
             },
             {
               "key": "User-Agent",
@@ -2755,7 +3425,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "e8b094b6-f370-451f-9038-41a42f995c72",
+              "value": "b6043cbd-2549-4166-bb3e-707c9d525c3a",
               "system": true
             },
             {
@@ -2786,7 +3456,7 @@
           }
         },
         "response": {
-          "id": "57f4c57f-b93c-458f-871e-9abae6119b99",
+          "id": "d4d57f59-d7d7-4ef7-9cc0-22d8cbde8536",
           "status": "OK",
           "code": 200,
           "header": [
@@ -2820,7 +3490,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "d6e86918-c5c9-4760-b01d-6249774dc108"
+              "value": "9f79c9d8-c0e0-4994-b8f5-0c25f6038e49"
             },
             {
               "key": "content-type",
@@ -2828,11 +3498,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "ccdf66c61faa74878485b604619487b6"
+              "value": "5e84b1aea02f0d5ed4ea3f368335036c"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:13 GMT"
             },
             {
               "key": "Server",
@@ -2976,22 +3646,22 @@
               58,
               32,
               34,
-              76,
-              113,
-              86,
-              68,
-              65,
-              85,
-              76,
-              114,
-              115,
-              122,
-              80,
               49,
+              50,
+              101,
+              71,
+              121,
+              66,
+              103,
+              51,
+              81,
+              121,
+              109,
+              86,
+              83,
+              108,
+              104,
               48,
-              106,
-              76,
-              87,
               34,
               44,
               10,
@@ -3069,9 +3739,9 @@
               34,
               58,
               32,
-              55,
-              52,
               50,
+              49,
+              51,
               10,
               32,
               32,
@@ -3132,9 +3802,9 @@
               34,
               58,
               32,
-              55,
-              52,
               50,
+              49,
+              51,
               44,
               10,
               32,
@@ -3197,22 +3867,22 @@
               58,
               32,
               34,
-              88,
-              81,
-              117,
-              48,
-              102,
-              57,
-              99,
-              75,
-              66,
-              48,
-              107,
-              53,
               101,
+              101,
+              98,
+              105,
+              82,
               66,
-              114,
-              54,
+              81,
+              122,
+              120,
+              65,
+              102,
+              106,
+              119,
+              66,
+              117,
+              100,
               34,
               44,
               10,
@@ -3236,22 +3906,22 @@
               58,
               32,
               34,
-              79,
-              113,
-              55,
-              69,
-              83,
-              112,
-              55,
+              122,
+              48,
               67,
-              119,
-              52,
-              67,
-              113,
-              55,
-              54,
-              69,
-              53,
+              97,
+              70,
+              122,
+              70,
+              68,
+              51,
+              117,
+              97,
+              88,
+              90,
+              97,
+              70,
+              85,
               34,
               10,
               32,
@@ -3274,10 +3944,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 46,
+          "responseTime": 38,
           "responseSize": 425
         },
-        "id": "cf8cf2f6-946d-400b-9bbb-a0adb5f99f11",
+        "id": "81b0b01d-8a71-4bea-b31a-450cc3d5332b",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -3287,15 +3957,15 @@
       },
       {
         "cursor": {
-          "ref": "eafa30c6-9baf-4920-965f-cde0e8706ec2",
+          "ref": "82cfb21f-85a1-4aeb-a23d-9584d180dd21",
           "length": 7,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "3772919f-d722-46b3-a029-64ed2f9aed77"
+          "httpRequestId": "99f68666-6fed-44b8-81a3-a9be844054c2"
         },
         "item": {
-          "id": "8498a81c-2f7f-47ed-ae17-8839b434b823",
+          "id": "0ffdd2f8-4a1a-4623-8529-bf70ce3e1d53",
           "name": "Excluir carrinho",
           "request": {
             "url": {
@@ -3331,7 +4001,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "ca5816a5-f12d-490e-8e68-a09f5fce2dc6",
+                "id": "0a9c64fc-a631-45df-bc5d-b71b0a907d96",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -3342,7 +4012,7 @@
                   "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                   "});"
                 ],
-                "_lastExecutionId": "0546d6e1-3cad-4179-b0ad-797908dc2850"
+                "_lastExecutionId": "a9a35af0-0355-4286-ad7b-3f93d57890e9"
               }
             }
           ]
@@ -3364,7 +4034,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkthcmFAcWEuY29tLmJyIiwicGFzc3dvcmQiOiIyMGxkVkVGbGs1ZXdDdkkiLCJpYXQiOjE2ODU1ODM3MzAsImV4cCI6MTY4NTU4NDMzMH0.rOoviF4Gy3-H2-IAAF3UYySuzGi2-LA_R0ovt_Y8Wc0"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkpvZGllQHFhLmNvbS5iciIsInBhc3N3b3JkIjoiM29ua1V6NWlwRFdFNmxGIiwiaWF0IjoxNjg1NjI4NzkyLCJleHAiOjE2ODU2MjkzOTJ9.8tmRCKBlkw3bAjpJ618YZxxIwCVZl1SKrchHyBmWkeY"
             },
             {
               "key": "User-Agent",
@@ -3383,7 +4053,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "837bd449-a0ff-4751-8cd2-150245c67fa9",
+              "value": "caf46eda-97bc-404b-a286-78a81b0cc0b8",
               "system": true
             },
             {
@@ -3414,7 +4084,7 @@
           }
         },
         "response": {
-          "id": "efb89624-329a-49a5-95a3-6e7d1fec6cf9",
+          "id": "9b0978fa-1e34-4a9c-b4aa-c73d5f741377",
           "status": "OK",
           "code": 200,
           "header": [
@@ -3448,7 +4118,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "63bb96df-1d6c-4543-985e-877aaded4f4b"
+              "value": "86ee4b79-5c98-411d-8d3a-df82f3885daa"
             },
             {
               "key": "content-type",
@@ -3456,11 +4126,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "39f57c3a52e71a573a8550505993dfda"
+              "value": "27acf1082d3337c9ce058e028c4717ef"
             },
             {
               "key": "Date",
-              "value": "Thu, 01 Jun 2023 01:42:10 GMT"
+              "value": "Thu, 01 Jun 2023 14:13:13 GMT"
             },
             {
               "key": "Server",
@@ -3528,10 +4198,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 44,
+          "responseTime": 41,
           "responseSize": 51
         },
-        "id": "8498a81c-2f7f-47ed-ae17-8839b434b823",
+        "id": "0ffdd2f8-4a1a-4623-8529-bf70ce3e1d53",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso",
@@ -3541,7 +4211,7 @@
       }
     ],
     "transfers": {
-      "responseTotal": 1437
+      "responseTotal": 2107
     },
     "failures": [],
     "error": null

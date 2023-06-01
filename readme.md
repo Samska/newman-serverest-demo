@@ -6,10 +6,10 @@ To demonstrate to the team how to use Postman for API testing, I used Paulo Gon√
 
 Concepts used in the tests:
 
-Dynamic variables
-Pre-request scripts
-Test scripts
-JSON schema validation
+- Dynamic variables
+- Pre-request scripts
+- Test scripts
+- JSON schema validation
 
 ### Setup
 

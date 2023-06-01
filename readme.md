@@ -1,3 +1,6 @@
+[![Run API Tests with Postman and Newman](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml/badge.svg)](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml)
+[![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
+
 # Content created for Daruk team Tech Sharing
 
 ## API Testing using Postman + Newman Reporter HTMLextra
@@ -35,8 +38,3 @@ newman run serverest-tech-sharing.postman_collection.json -e serverest-tech-shar
 To view the test results, simply open the report that was created in newman folder in the project root.
 
 You can also consult the test results on this [page](https://samska.github.io/serverest-tech-sharing/report.html) as it is published with each new pipeline run.
-
-### Badges
-
-[![Run API Tests with Postman and Newman](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml/badge.svg)](https://github.com/Samska/serverest-tech-sharing/actions/workflows/postman.yml)
-[![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)

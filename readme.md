@@ -14,7 +14,7 @@ Concepts used in the tests:
 - Test scripts
 - JSON schema validation
 
-### Setup
+## Setup
 
 To view the tests and scripts used, simply import the collection and environment files that were used here directly into Postman. To execute the tests via Newman, follow these steps:
 

@@ -58,7 +58,7 @@ jobs:
 
       - name: Display Test Report URL
         run: |
-          echo "Test report: https://${{ github.actor }}.github.io/serverest-tech-sharing/report.html"
+          echo "Test report: https://${{ github.actor }}.github.io/newman-serverest-demo/report.html"
       
       - name: Send Slack Notification with Test Results
         env:

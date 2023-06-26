@@ -6,11 +6,11 @@
     },
     "item": [
       {
-        "id": "d3670637-47b0-4650-ba54-8ccc8d5b610a",
+        "id": "b818ec6f-b64d-49ac-bc56-5cd951893a14",
         "name": "Usuários",
         "item": [
           {
-            "id": "6973d649-b717-4fd3-b345-21f8d4f907fe",
+            "id": "9d5a086e-2c06-4884-a25c-700c6bb16318",
             "name": "Cadastrar usuário",
             "request": {
               "url": {
@@ -39,18 +39,18 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "700ee3f6-fb15-4bc2-a092-496371ca4d82",
+                  "id": "2af94b42-4afd-4eb7-ba4f-388c6e9eb555",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "51a281ef-d05b-487f-8372-98707a78b72f"
+                  "_lastExecutionId": "028e93bd-c540-4341-9938-9aec5f86674f"
                 }
               },
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "796e5c67-381c-4818-93cb-e9f812a0e049",
+                  "id": "1041f811-224d-4274-af70-d8d804bc6517",
                   "type": "text/javascript",
                   "exec": [
                     "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -62,7 +62,7 @@
                     "pm.environment.set(\"email\", email);\r",
                     "pm.environment.set(\"password\", password);"
                   ],
-                  "_lastExecutionId": "5ef2fc3f-e58e-4ac5-bffc-40c0a5c4cc04"
+                  "_lastExecutionId": "74ada8da-f2d1-4c5c-bfd0-2b0b28a94065"
                 }
               }
             ]
@@ -71,11 +71,11 @@
         "event": []
       },
       {
-        "id": "450aba29-3863-4f3a-b4bf-446a1c2ebdd0",
+        "id": "7722ab49-2094-4e16-9530-131bc3cdc57c",
         "name": "Login",
         "item": [
           {
-            "id": "9934654d-0d64-430b-a7b5-f01953fd9287",
+            "id": "724fd2d0-b6e8-41c6-8bd6-5179a9bc35cf",
             "name": "Login",
             "request": {
               "url": {
@@ -104,7 +104,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "71aa02a3-847b-4cd7-a442-1d00d9a2a538",
+                  "id": "df6d1eb4-ec95-49f4-b104-f297865540f3",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
@@ -118,7 +118,7 @@
                     "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "f4780bf5-de27-4fa7-a93a-4c0a3a4d43bf"
+                  "_lastExecutionId": "d9f89a02-061e-403d-85a1-103445c748de"
                 }
               }
             ]
@@ -127,11 +127,11 @@
         "event": []
       },
       {
-        "id": "68f2675d-4496-41be-a36c-5c90bda57350",
+        "id": "78527d8a-b758-4466-af81-fdab7d47398e",
         "name": "Produtos",
         "item": [
           {
-            "id": "3f83274c-e635-44ed-9c72-fe65fe40c5d0",
+            "id": "53e5ef3f-8760-4be5-a272-873aef82a185",
             "name": "Listar produtos cadastrados",
             "request": {
               "url": {
@@ -151,7 +151,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "5e801ddc-43db-4e19-b94e-5a7cbc7a18eb",
+                  "id": "028b6164-e1c8-49cd-89f8-6a8a47fe3305",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -187,13 +187,13 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "7537fed9-9ef5-4c8e-9228-01fe80f8ba06"
+                  "_lastExecutionId": "00fa5ba8-0c1f-4e3d-bef0-41e7a1cadc92"
                 }
               }
             ]
           },
           {
-            "id": "d1244b94-18db-445d-998d-d00eda3b528a",
+            "id": "4a41b2ff-5058-4c0a-8114-a55d48929f6a",
             "name": "Cadastrar produto",
             "request": {
               "url": {
@@ -228,18 +228,18 @@
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "ff78bfbe-0f5a-4f9d-85da-39d004171040",
+                  "id": "e9f9f661-c50e-408e-bb96-cdbba6de3dc4",
                   "type": "text/javascript",
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "2098ed01-9e5d-452b-af29-ecaa3e7b9ccb"
+                  "_lastExecutionId": "d911ad9b-c620-430f-aa1e-18d93fdd430c"
                 }
               },
               {
                 "listen": "test",
                 "script": {
-                  "id": "957f8c56-6e65-4936-af72-61d534df7df7",
+                  "id": "d830dee4-9ef4-499f-8140-c5171158c216",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -253,7 +253,7 @@
                     "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "9e35b214-6118-4325-bd8a-c06be46d3e3c"
+                  "_lastExecutionId": "100b56f2-2400-4d00-ad0f-ef1c1da084d4"
                 }
               }
             ]
@@ -262,11 +262,11 @@
         "event": []
       },
       {
-        "id": "6ea87126-6c0e-448f-8bd1-e27db5fd39a6",
+        "id": "1c355b95-557e-4ae2-8f8e-2e3ab0f5596e",
         "name": "Carrinhos",
         "item": [
           {
-            "id": "625c910a-2b1c-4c7a-91ab-724df0601529",
+            "id": "e172b4dd-05fe-47d7-91e6-fbb660c7ddf8",
             "name": "Cadastrar carrinho",
             "request": {
               "url": {
@@ -301,7 +301,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "54731e21-41c5-4514-8ab5-3f99109e6565",
+                  "id": "a623132f-1b46-4a87-b01e-201a673af0fe",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -315,13 +315,13 @@
                     "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "d7107bcf-6ef0-49fa-aa15-2e224fd9f7b4"
+                  "_lastExecutionId": "b17e8527-3a55-4d59-b791-ff0355fdc7c7"
                 }
               }
             ]
           },
           {
-            "id": "006f74c8-ce54-4a59-a33c-883f015cae64",
+            "id": "958c1367-ec85-41d5-9bbb-22fee1ead79b",
             "name": "Buscar carrinho por ID",
             "request": {
               "url": {
@@ -361,7 +361,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "faf59bbf-922f-4c52-a5e6-a1ef0d9ce94d",
+                  "id": "970ea83b-53df-48c0-8636-8064694bb60c",
                   "type": "text/javascript",
                   "exec": [
                     "const schema = {\r",
@@ -409,7 +409,7 @@
                     "    pm.response.to.have.jsonSchema(schema);\r",
                     "});"
                   ],
-                  "_lastExecutionId": "5a6972f0-de46-47f2-a9bc-1cfe7900cae3"
+                  "_lastExecutionId": "9d75aaaf-e504-4786-8512-b4504d36e900"
                 }
               }
             ],
@@ -418,7 +418,7 @@
             }
           },
           {
-            "id": "30831312-15d8-4dc6-9df9-5f71ff6c60a4",
+            "id": "37a2ff86-e0bb-49c1-8739-3eb9aae94be3",
             "name": "Excluir carrinho",
             "request": {
               "url": {
@@ -454,7 +454,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "1abb490a-1299-42f3-926f-a5636a3a5950",
+                  "id": "a4c8c9a4-e6b8-4651-a784-de454851a012",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -465,7 +465,7 @@
                     "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                     "});"
                   ],
-                  "_lastExecutionId": "015f0651-05cb-46f3-a94e-2495662481e0"
+                  "_lastExecutionId": "b1e0ea6e-b6e6-4b9a-8703-50c689d94df6"
                 }
               }
             ]
@@ -497,17 +497,17 @@
     "values": [
       {
         "type": "any",
-        "value": "Margot@qa.com.br",
+        "value": "Maye@qa.com.br",
         "key": "email"
       },
       {
         "type": "any",
-        "value": "i5GRDlHwX7GBFLE",
+        "value": "jRQISicEbfoJBvv",
         "key": "password"
       },
       {
         "type": "any",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1hcmdvdEBxYS5jb20uYnIiLCJwYXNzd29yZCI6Imk1R1JEbEh3WDdHQkZMRSIsImlhdCI6MTY4NzM5NjA0MSwiZXhwIjoxNjg3Mzk2NjQxfQ.PZ0IFWfqYmhaTkj7yNDy5eE0Y7eXv0kHfxSmOW0US9I",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1heWVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJqUlFJU2ljRWJmb0pCdnYiLCJpYXQiOjE2ODc3NDQ2OTksImV4cCI6MTY4Nzc0NTI5OX0.1-fIBbiyxof9eyn8oQcCW2YVpQodAKB_y_gCq1JB6HQ",
         "key": "authorization"
       },
       {
@@ -517,18 +517,18 @@
       },
       {
         "type": "any",
-        "value": "tHa3OnyeLaler2og",
+        "value": "HK1DwYlUwICpwLli",
         "key": "idProduto"
       },
       {
         "type": "any",
-        "value": "xXjAnWdyvFSbajY2",
+        "value": "n9NcC84jR8obpzIB",
         "key": "idCarrinho"
       }
     ]
   },
   "globals": {
-    "id": "c1ed1216-e2d2-4723-b1e2-77b2c2deb455",
+    "id": "1f8e6c04-e5d7-4a62-bf1d-5071f587f438",
     "values": []
   },
   "run": {
@@ -580,10 +580,10 @@
       }
     },
     "timings": {
-      "responseAverage": 71,
-      "responseMin": 39,
-      "responseMax": 215,
-      "responseSd": 59.1970076463812,
+      "responseAverage": 110.57142857142857,
+      "responseMin": 73,
+      "responseMax": 306,
+      "responseSd": 79.84423611517819,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -592,8 +592,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1687396041623,
-      "completed": 1687396042338
+      "started": 1687744698865,
+      "completed": 1687744699884
     },
     "executions": [
       {
@@ -606,11 +606,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "f0bd7282-beca-42cd-b846-b8a3afcab903",
-          "httpRequestId": "659437d9-0641-4753-a6b3-02647ae6b7c4"
+          "ref": "21817ed9-a21e-46ae-a07c-ec2438bda39f",
+          "httpRequestId": "c22183ad-e175-4546-b1c3-1eb0ccd4df77"
         },
         "item": {
-          "id": "6973d649-b717-4fd3-b345-21f8d4f907fe",
+          "id": "9d5a086e-2c06-4884-a25c-700c6bb16318",
           "name": "Cadastrar usuário",
           "request": {
             "url": {
@@ -639,18 +639,18 @@
             {
               "listen": "test",
               "script": {
-                "id": "700ee3f6-fb15-4bc2-a092-496371ca4d82",
+                "id": "2af94b42-4afd-4eb7-ba4f-388c6e9eb555",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "51a281ef-d05b-487f-8372-98707a78b72f"
+                "_lastExecutionId": "028e93bd-c540-4341-9938-9aec5f86674f"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "796e5c67-381c-4818-93cb-e9f812a0e049",
+                "id": "1041f811-224d-4274-af70-d8d804bc6517",
                 "type": "text/javascript",
                 "exec": [
                   "//Recebo da biblioteca faker: nome e password, e utilizo o nome como base para criar o email\r",
@@ -662,7 +662,7 @@
                   "pm.environment.set(\"email\", email);\r",
                   "pm.environment.set(\"password\", password);"
                 ],
-                "_lastExecutionId": "5ef2fc3f-e58e-4ac5-bffc-40c0a5c4cc04"
+                "_lastExecutionId": "74ada8da-f2d1-4c5c-bfd0-2b0b28a94065"
               }
             }
           ]
@@ -703,7 +703,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "e9dfdad7-1264-4cf4-8134-ac1641f2ed05",
+              "value": "0e77e37d-ebc0-40eb-861e-c0a2dd52c6f1",
               "system": true
             },
             {
@@ -723,14 +723,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "120",
+              "value": "118",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Margot@qa.com.br\",\r\n  \"password\": \"i5GRDlHwX7GBFLE\",\r\n  \"administrador\": \"true\"\r\n}",
+            "raw": "{\r\n  \"nome\": \"{{nome}}\",\r\n  \"email\": \"Maye@qa.com.br\",\r\n  \"password\": \"jRQISicEbfoJBvv\",\r\n  \"administrador\": \"true\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -739,7 +739,7 @@
           }
         },
         "response": {
-          "id": "0ad71835-8927-46b2-b1e5-28896ea8cfd5",
+          "id": "06319420-6c09-41df-8b42-2333c3bc5a8d",
           "status": "Created",
           "code": 201,
           "header": [
@@ -773,7 +773,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "da9ad443-c264-447d-98b1-06554d54b435"
+              "value": "33e8e8ba-311a-41cf-b0ed-2d55c133a5ae"
             },
             {
               "key": "content-type",
@@ -781,11 +781,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "75ee08bde15f847d65d96b40230488d0;o=1"
+              "value": "1e69d8b643789a4d88f21b686d159ab8;o=1"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:21 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -862,44 +862,44 @@
               58,
               32,
               34,
-              67,
-              112,
-              107,
-              51,
-              78,
-              113,
-              49,
-              84,
               69,
-              55,
+              56,
+              54,
               104,
+              87,
+              119,
+              102,
+              49,
+              87,
+              122,
+              114,
+              116,
+              108,
               75,
-              48,
-              89,
-              98,
-              69,
+              57,
+              78,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 215,
+          "responseTime": 306,
           "responseSize": 82
         },
-        "id": "6973d649-b717-4fd3-b345-21f8d4f907fe"
+        "id": "9d5a086e-2c06-4884-a25c-700c6bb16318"
       },
       {
         "cursor": {
-          "ref": "b2707248-76c3-45b4-af77-b62bb06c1a33",
+          "ref": "8df61d2d-5d5a-4e7c-81d9-2f1b434264ef",
           "length": 7,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "6899f005-1749-4af3-b1a6-1cbc328a9a09"
+          "httpRequestId": "8036708f-eaca-4388-8f75-d508f03ea8f7"
         },
         "item": {
-          "id": "9934654d-0d64-430b-a7b5-f01953fd9287",
+          "id": "724fd2d0-b6e8-41c6-8bd6-5179a9bc35cf",
           "name": "Login",
           "request": {
             "url": {
@@ -928,7 +928,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "71aa02a3-847b-4cd7-a442-1d00d9a2a538",
+                "id": "df6d1eb4-ec95-49f4-b104-f297865540f3",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso e token de auth\", () => {\r",
@@ -942,7 +942,7 @@
                   "    pm.environment.set(\"authorization\",responseJson.authorization);\r",
                   "});"
                 ],
-                "_lastExecutionId": "f4780bf5-de27-4fa7-a93a-4c0a3a4d43bf"
+                "_lastExecutionId": "d9f89a02-061e-403d-85a1-103445c748de"
               }
             }
           ]
@@ -983,7 +983,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "b8404edc-c5a5-4d4e-b839-d078870fbc7f",
+              "value": "76b4dca7-f225-4cf1-9f53-6acbcdb5e35c",
               "system": true
             },
             {
@@ -1003,14 +1003,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "69",
+              "value": "67",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"email\": \"Margot@qa.com.br\",\r\n  \"password\": \"i5GRDlHwX7GBFLE\"\r\n}",
+            "raw": "{\r\n  \"email\": \"Maye@qa.com.br\",\r\n  \"password\": \"jRQISicEbfoJBvv\"\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -1019,7 +1019,7 @@
           }
         },
         "response": {
-          "id": "9021621d-4853-4862-9957-04c6dd3aac73",
+          "id": "8986b213-b537-4db0-b141-6ea85a549a89",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1053,7 +1053,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "fc406471-689e-46e2-9f18-985b3bbbc151"
+              "value": "d3cd427f-b573-41b6-b269-a0ac889c3b1f"
             },
             {
               "key": "content-type",
@@ -1061,11 +1061,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "6509cc519d0ae595bc083e8aaf37df73"
+              "value": "9202e9ca83de77d6cc438b5a00827d71"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:21 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -1073,7 +1073,7 @@
             },
             {
               "key": "Content-Length",
-              "value": "283"
+              "value": "280"
             }
           ],
           "stream": {
@@ -1209,71 +1209,91 @@
               107,
               49,
               104,
+              101,
+              87,
+              86,
+              65,
               99,
-              109,
-              100,
-              118,
-              100,
+              87,
               69,
-              66,
-              120,
-              89,
-              83,
-              53,
-              106,
-              98,
-              50,
-              48,
               117,
               89,
-              110,
+              50,
+              57,
+              116,
+              76,
+              109,
+              74,
+              121,
               73,
+              105,
+              119,
+              105,
+              99,
+              71,
+              70,
+              122,
+              99,
+              51,
+              100,
+              118,
+              99,
+              109,
+              81,
+              105,
+              79,
+              105,
+              74,
+              113,
+              85,
+              108,
+              70,
+              74,
+              85,
+              50,
+              108,
+              106,
+              82,
+              87,
+              74,
+              109,
+              98,
+              48,
+              112,
+              67,
+              100,
+              110,
+              89,
               105,
               76,
               67,
               74,
-              119,
+              112,
               89,
               88,
-              78,
-              122,
-              100,
-              50,
-              57,
-              121,
-              90,
-              67,
-              73,
-              54,
-              73,
-              109,
-              107,
-              49,
-              82,
-              49,
-              74,
-              69,
-              98,
-              69,
-              104,
-              51,
-              87,
-              68,
-              100,
-              72,
               81,
+              105,
+              79,
+              106,
+              69,
+              50,
+              79,
+              68,
+              99,
+              51,
+              78,
+              68,
+              81,
+              50,
+              79,
+              84,
               107,
-              90,
-              77,
-              82,
-              83,
-              73,
               115,
               73,
               109,
-              108,
-              104,
-              100,
+              86,
+              52,
+              99,
               67,
               73,
               54,
@@ -1283,92 +1303,69 @@
               52,
               78,
               122,
-              77,
-              53,
-              78,
-              106,
-              65,
+              99,
               48,
-              77,
-              83,
-              119,
-              105,
-              90,
-              88,
-              104,
-              119,
-              73,
-              106,
-              111,
-              120,
               78,
-              106,
-              103,
-              51,
-              77,
-              122,
-              107,
-              50,
-              78,
-              106,
-              81,
-              120,
-              102,
-              81,
-              46,
-              80,
-              90,
-              48,
-              73,
-              70,
-              87,
-              102,
-              113,
-              89,
-              109,
-              104,
-              97,
               84,
-              107,
-              106,
-              55,
-              121,
-              78,
-              68,
-              121,
-              53,
-              101,
-              69,
-              48,
-              89,
-              55,
-              101,
-              88,
-              118,
-              48,
-              107,
-              72,
-              102,
-              120,
-              83,
-              109,
-              79,
-              87,
-              48,
-              85,
-              83,
-              57,
               73,
+              53,
+              79,
+              88,
+              48,
+              46,
+              49,
+              45,
+              102,
+              73,
+              66,
+              98,
+              105,
+              121,
+              120,
+              111,
+              102,
+              57,
+              101,
+              121,
+              110,
+              56,
+              111,
+              81,
+              99,
+              67,
+              87,
+              50,
+              89,
+              86,
+              112,
+              81,
+              111,
+              100,
+              65,
+              75,
+              66,
+              95,
+              121,
+              95,
+              103,
+              67,
+              113,
+              49,
+              74,
+              66,
+              54,
+              72,
+              81,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 39,
-          "responseSize": 283
+          "responseTime": 77,
+          "responseSize": 280
         },
-        "id": "9934654d-0d64-430b-a7b5-f01953fd9287",
+        "id": "724fd2d0-b6e8-41c6-8bd6-5179a9bc35cf",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso e token de auth",
@@ -1378,15 +1375,15 @@
       },
       {
         "cursor": {
-          "ref": "03de3474-6013-4ad9-9b0a-d0b9dfd1e48f",
+          "ref": "6cf8d512-13f1-46d0-8482-84b13ae3c74d",
           "length": 7,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "22e9e1b3-56c0-4a55-a3d8-6b49df2e2da5"
+          "httpRequestId": "622b8d1f-7b60-455c-8a23-cc1eaeda4969"
         },
         "item": {
-          "id": "3f83274c-e635-44ed-9c72-fe65fe40c5d0",
+          "id": "53e5ef3f-8760-4be5-a272-873aef82a185",
           "name": "Listar produtos cadastrados",
           "request": {
             "url": {
@@ -1406,7 +1403,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "5e801ddc-43db-4e19-b94e-5a7cbc7a18eb",
+                "id": "028b6164-e1c8-49cd-89f8-6a8a47fe3305",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -1442,7 +1439,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "7537fed9-9ef5-4c8e-9228-01fe80f8ba06"
+                "_lastExecutionId": "00fa5ba8-0c1f-4e3d-bef0-41e7a1cadc92"
               }
             }
           ]
@@ -1478,7 +1475,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ad2d1d47-6922-41ca-9b2e-3c6d385b7fe2",
+              "value": "8bc4b8eb-0f47-450a-9c82-e30cc7073641",
               "system": true
             },
             {
@@ -1500,7 +1497,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "09d02bc2-20e4-4a38-aefe-e936e4c3bf60",
+          "id": "bad2e0e6-4c47-48e6-abf2-112677b05ed0",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1534,7 +1531,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "39854853-fa7c-4b7c-94d0-2666349b2b4f"
+              "value": "0ed7e964-8221-4cd2-b08d-6aa89b8e3af2"
             },
             {
               "key": "content-type",
@@ -1542,11 +1539,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "717edfb193af33b14ede01e819e62dc2"
+              "value": "b140229450b20f01ea783c22f42b3ad4"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:21 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -1998,10 +1995,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 47,
+          "responseTime": 82,
           "responseSize": 435
         },
-        "id": "3f83274c-e635-44ed-9c72-fe65fe40c5d0",
+        "id": "53e5ef3f-8760-4be5-a272-873aef82a185",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -2011,15 +2008,15 @@
       },
       {
         "cursor": {
-          "ref": "db9348ec-3b33-44af-9ca3-11856f16ed86",
+          "ref": "051372b6-1e04-4faa-af73-01a105349c55",
           "length": 7,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "3c55c2e1-5c81-4fde-8b1b-d57f3f11b7e1"
+          "httpRequestId": "d5bab9c1-1ec5-4368-8990-94b3b209380a"
         },
         "item": {
-          "id": "d1244b94-18db-445d-998d-d00eda3b528a",
+          "id": "4a41b2ff-5058-4c0a-8114-a55d48929f6a",
           "name": "Cadastrar produto",
           "request": {
             "url": {
@@ -2054,18 +2051,18 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "ff78bfbe-0f5a-4f9d-85da-39d004171040",
+                "id": "e9f9f661-c50e-408e-bb96-cdbba6de3dc4",
                 "type": "text/javascript",
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "2098ed01-9e5d-452b-af29-ecaa3e7b9ccb"
+                "_lastExecutionId": "d911ad9b-c620-430f-aa1e-18d93fdd430c"
               }
             },
             {
               "listen": "test",
               "script": {
-                "id": "957f8c56-6e65-4936-af72-61d534df7df7",
+                "id": "d830dee4-9ef4-499f-8140-c5171158c216",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do produto\", () => {\r",
@@ -2079,7 +2076,7 @@
                   "    pm.environment.set(\"idProduto\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "9e35b214-6118-4325-bd8a-c06be46d3e3c"
+                "_lastExecutionId": "100b56f2-2400-4d00-ad0f-ef1c1da084d4"
               }
             }
           ]
@@ -2100,7 +2097,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1hcmdvdEBxYS5jb20uYnIiLCJwYXNzd29yZCI6Imk1R1JEbEh3WDdHQkZMRSIsImlhdCI6MTY4NzM5NjA0MSwiZXhwIjoxNjg3Mzk2NjQxfQ.PZ0IFWfqYmhaTkj7yNDy5eE0Y7eXv0kHfxSmOW0US9I"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1heWVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJqUlFJU2ljRWJmb0pCdnYiLCJpYXQiOjE2ODc3NDQ2OTksImV4cCI6MTY4Nzc0NTI5OX0.1-fIBbiyxof9eyn8oQcCW2YVpQodAKB_y_gCq1JB6HQ"
             },
             {
               "key": "Content-Type",
@@ -2124,7 +2121,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "11b567ef-36e3-4099-8987-2139ec457225",
+              "value": "f04afbe2-cda8-49a3-bd6f-d41a36099c43",
               "system": true
             },
             {
@@ -2144,14 +2141,14 @@
             },
             {
               "key": "Content-Length",
-              "value": "120",
+              "value": "121",
               "system": true
             }
           ],
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"nome\": \"Small Granite Gloves\",\r\n  \"preco\": 729,\r\n  \"descricao\": \"Incredible Granite Soap\",\r\n  \"quantidade\": 966\r\n}",
+            "raw": "{\r\n  \"nome\": \"Practical Frozen Table\",\r\n  \"preco\": 254,\r\n  \"descricao\": \"Unbranded Wooden Shirt\",\r\n  \"quantidade\": 203\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -2160,7 +2157,7 @@
           }
         },
         "response": {
-          "id": "908bc459-78f4-4cf8-87f7-dab3c977ac1b",
+          "id": "6d7a7ff5-f0c0-4882-8995-06133d894a75",
           "status": "Created",
           "code": 201,
           "header": [
@@ -2194,7 +2191,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "b55c8714-141d-41f5-87b2-0e41e7afd14a"
+              "value": "fc7a552a-34bb-4389-8d88-74f9f623dc5d"
             },
             {
               "key": "content-type",
@@ -2202,11 +2199,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "158b1c5b1958903a582607116b5ccfb0"
+              "value": "781470539a593cb4179bc61680db51ba"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:22 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -2283,32 +2280,32 @@
               58,
               32,
               34,
-              116,
               72,
-              97,
-              51,
-              79,
-              110,
-              121,
-              101,
-              76,
-              97,
+              75,
+              49,
+              68,
+              119,
+              89,
               108,
-              101,
-              114,
-              50,
-              111,
-              103,
+              85,
+              119,
+              73,
+              67,
+              112,
+              119,
+              76,
+              108,
+              105,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 58,
+          "responseTime": 79,
           "responseSize": 82
         },
-        "id": "d1244b94-18db-445d-998d-d00eda3b528a",
+        "id": "4a41b2ff-5058-4c0a-8114-a55d48929f6a",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do produto",
@@ -2318,15 +2315,15 @@
       },
       {
         "cursor": {
-          "ref": "7b4f31b7-5255-4bfb-9f3b-20211d5a0ba5",
+          "ref": "1e25f329-d31d-421c-9125-3f35c5035e5e",
           "length": 7,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "1bc483f5-fee6-4113-b04f-ec7653c633b9"
+          "httpRequestId": "651e64ad-99b0-455f-a9af-138d293e7ea0"
         },
         "item": {
-          "id": "625c910a-2b1c-4c7a-91ab-724df0601529",
+          "id": "e172b4dd-05fe-47d7-91e6-fbb660c7ddf8",
           "name": "Cadastrar carrinho",
           "request": {
             "url": {
@@ -2361,7 +2358,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "54731e21-41c5-4514-8ab5-3f99109e6565",
+                "id": "a623132f-1b46-4a87-b01e-201a673af0fe",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 201 com mensagem de sucesso e o id do carrinho\", () => {\r",
@@ -2375,7 +2372,7 @@
                   "    pm.environment.set(\"idCarrinho\",responseJson._id);\r",
                   "});"
                 ],
-                "_lastExecutionId": "d7107bcf-6ef0-49fa-aa15-2e224fd9f7b4"
+                "_lastExecutionId": "b17e8527-3a55-4d59-b791-ff0355fdc7c7"
               }
             }
           ]
@@ -2396,7 +2393,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1hcmdvdEBxYS5jb20uYnIiLCJwYXNzd29yZCI6Imk1R1JEbEh3WDdHQkZMRSIsImlhdCI6MTY4NzM5NjA0MSwiZXhwIjoxNjg3Mzk2NjQxfQ.PZ0IFWfqYmhaTkj7yNDy5eE0Y7eXv0kHfxSmOW0US9I"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1heWVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJqUlFJU2ljRWJmb0pCdnYiLCJpYXQiOjE2ODc3NDQ2OTksImV4cCI6MTY4Nzc0NTI5OX0.1-fIBbiyxof9eyn8oQcCW2YVpQodAKB_y_gCq1JB6HQ"
             },
             {
               "key": "Content-Type",
@@ -2420,7 +2417,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "e83aaf77-115f-40f2-8a0c-28d0a53829ee",
+              "value": "40693424-d766-4190-a611-2d45d4aa6dad",
               "system": true
             },
             {
@@ -2447,7 +2444,7 @@
           "method": "POST",
           "body": {
             "mode": "raw",
-            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"tHa3OnyeLaler2og\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
+            "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"HK1DwYlUwICpwLli\",\r\n      \"quantidade\": 1\r\n    }\r\n  ]\r\n}",
             "options": {
               "raw": {
                 "language": "json"
@@ -2456,7 +2453,7 @@
           }
         },
         "response": {
-          "id": "4b1cd9ef-ccc8-40eb-a37e-10f2ea6a1efe",
+          "id": "885aa7d3-9fb0-4b77-8974-6c1573a63129",
           "status": "Created",
           "code": 201,
           "header": [
@@ -2490,7 +2487,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "9ab0b0ae-7fb2-4896-9c07-fb7cec535a60"
+              "value": "f4ff14a6-5cbb-4963-bb7c-3546957f697e"
             },
             {
               "key": "content-type",
@@ -2498,11 +2495,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "92afa2b5b8a9963a29b6dee6145dc073"
+              "value": "0608bd7803f1c4a18124fdd46170278b"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:22 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -2579,32 +2576,32 @@
               58,
               32,
               34,
-              120,
-              88,
-              106,
-              65,
               110,
-              87,
-              100,
-              121,
-              118,
-              70,
-              83,
-              98,
-              97,
+              57,
+              78,
+              99,
+              67,
+              56,
+              52,
               106,
-              89,
-              50,
+              82,
+              56,
+              111,
+              98,
+              112,
+              122,
+              73,
+              66,
               34,
               10,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 56,
+          "responseTime": 82,
           "responseSize": 82
         },
-        "id": "625c910a-2b1c-4c7a-91ab-724df0601529",
+        "id": "e172b4dd-05fe-47d7-91e6-fbb660c7ddf8",
         "assertions": [
           {
             "assertion": "Deve retornar status 201 com mensagem de sucesso e o id do carrinho",
@@ -2614,15 +2611,15 @@
       },
       {
         "cursor": {
-          "ref": "67cd44fd-78de-47de-9757-8c258ca06394",
+          "ref": "d311b2cb-8d13-4655-a563-dc9042775447",
           "length": 7,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "f08b122d-e481-48bc-947c-b03cbbbef6ab"
+          "httpRequestId": "90adf4f0-8b4a-48ac-8019-e4dd44db3212"
         },
         "item": {
-          "id": "006f74c8-ce54-4a59-a33c-883f015cae64",
+          "id": "958c1367-ec85-41d5-9bbb-22fee1ead79b",
           "name": "Buscar carrinho por ID",
           "request": {
             "url": {
@@ -2662,7 +2659,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "faf59bbf-922f-4c52-a5e6-a1ef0d9ce94d",
+                "id": "970ea83b-53df-48c0-8636-8064694bb60c",
                 "type": "text/javascript",
                 "exec": [
                   "const schema = {\r",
@@ -2710,7 +2707,7 @@
                   "    pm.response.to.have.jsonSchema(schema);\r",
                   "});"
                 ],
-                "_lastExecutionId": "5a6972f0-de46-47f2-a9bc-1cfe7900cae3"
+                "_lastExecutionId": "9d75aaaf-e504-4786-8512-b4504d36e900"
               }
             }
           ],
@@ -2731,7 +2728,7 @@
             "query": [
               {
                 "key": "_id",
-                "value": "xXjAnWdyvFSbajY2"
+                "value": "n9NcC84jR8obpzIB"
               }
             ],
             "variable": []
@@ -2739,7 +2736,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1hcmdvdEBxYS5jb20uYnIiLCJwYXNzd29yZCI6Imk1R1JEbEh3WDdHQkZMRSIsImlhdCI6MTY4NzM5NjA0MSwiZXhwIjoxNjg3Mzk2NjQxfQ.PZ0IFWfqYmhaTkj7yNDy5eE0Y7eXv0kHfxSmOW0US9I"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1heWVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJqUlFJU2ljRWJmb0pCdnYiLCJpYXQiOjE2ODc3NDQ2OTksImV4cCI6MTY4Nzc0NTI5OX0.1-fIBbiyxof9eyn8oQcCW2YVpQodAKB_y_gCq1JB6HQ"
             },
             {
               "key": "User-Agent",
@@ -2758,7 +2755,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "bc77b245-7216-4ce7-8f1f-518dc2117e66",
+              "value": "aa3fcdf3-1fd2-433c-8cd4-85cc5a321781",
               "system": true
             },
             {
@@ -2789,7 +2786,7 @@
           }
         },
         "response": {
-          "id": "f24cd30d-641d-4400-b387-718425ce29ed",
+          "id": "3ee94917-4e21-46db-bd68-70b283513e90",
           "status": "OK",
           "code": 200,
           "header": [
@@ -2823,7 +2820,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "256596f3-6480-4572-9c32-adf8f226e1f5"
+              "value": "4831db8b-06b8-4fd2-a925-f8d02463ad7b"
             },
             {
               "key": "content-type",
@@ -2831,11 +2828,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "8c5fa02e718c6a94541611a5ae383152"
+              "value": "cba55cd292ef65878ddedd9c03ddc79a"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:22 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -2979,22 +2976,22 @@
               58,
               32,
               34,
-              116,
               72,
-              97,
-              51,
-              79,
-              110,
-              121,
-              101,
-              76,
-              97,
+              75,
+              49,
+              68,
+              119,
+              89,
               108,
-              101,
-              114,
-              50,
-              111,
-              103,
+              85,
+              119,
+              73,
+              67,
+              112,
+              119,
+              76,
+              108,
+              105,
               34,
               44,
               10,
@@ -3072,9 +3069,9 @@
               34,
               58,
               32,
-              55,
               50,
-              57,
+              53,
+              52,
               10,
               32,
               32,
@@ -3135,9 +3132,9 @@
               34,
               58,
               32,
-              55,
               50,
-              57,
+              53,
+              52,
               44,
               10,
               32,
@@ -3200,22 +3197,22 @@
               58,
               32,
               34,
-              67,
-              112,
-              107,
-              51,
-              78,
-              113,
-              49,
-              84,
               69,
-              55,
+              56,
+              54,
               104,
+              87,
+              119,
+              102,
+              49,
+              87,
+              122,
+              114,
+              116,
+              108,
               75,
-              48,
-              89,
-              98,
-              69,
+              57,
+              78,
               34,
               44,
               10,
@@ -3239,22 +3236,22 @@
               58,
               32,
               34,
-              120,
-              88,
-              106,
-              65,
               110,
-              87,
-              100,
-              121,
-              118,
-              70,
-              83,
-              98,
-              97,
+              57,
+              78,
+              99,
+              67,
+              56,
+              52,
               106,
-              89,
-              50,
+              82,
+              56,
+              111,
+              98,
+              112,
+              122,
+              73,
+              66,
               34,
               10,
               32,
@@ -3277,10 +3274,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 41,
+          "responseTime": 73,
           "responseSize": 425
         },
-        "id": "006f74c8-ce54-4a59-a33c-883f015cae64",
+        "id": "958c1367-ec85-41d5-9bbb-22fee1ead79b",
         "assertions": [
           {
             "assertion": "Valida o schema e status code",
@@ -3290,15 +3287,15 @@
       },
       {
         "cursor": {
-          "ref": "bfabafc1-014d-4ae2-93e9-c8613dbd295d",
+          "ref": "8607fb63-6b45-4803-8998-25676a44e225",
           "length": 7,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "a8d4b7eb-8455-47a2-9824-9d23027f6b5a"
+          "httpRequestId": "a9d21fa6-2130-44ae-be6d-c84113227bca"
         },
         "item": {
-          "id": "30831312-15d8-4dc6-9df9-5f71ff6c60a4",
+          "id": "37a2ff86-e0bb-49c1-8739-3eb9aae94be3",
           "name": "Excluir carrinho",
           "request": {
             "url": {
@@ -3334,7 +3331,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "1abb490a-1299-42f3-926f-a5636a3a5950",
+                "id": "a4c8c9a4-e6b8-4651-a784-de454851a012",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Deve retornar status 200 com mensagem de sucesso\", () => {\r",
@@ -3345,7 +3342,7 @@
                   "    pm.expect(responseJson.message).to.eql('Registro excluído com sucesso');\r",
                   "});"
                 ],
-                "_lastExecutionId": "015f0651-05cb-46f3-a94e-2495662481e0"
+                "_lastExecutionId": "b1e0ea6e-b6e6-4b9a-8703-50c689d94df6"
               }
             }
           ]
@@ -3367,7 +3364,7 @@
           "header": [
             {
               "key": "Authorization",
-              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1hcmdvdEBxYS5jb20uYnIiLCJwYXNzd29yZCI6Imk1R1JEbEh3WDdHQkZMRSIsImlhdCI6MTY4NzM5NjA0MSwiZXhwIjoxNjg3Mzk2NjQxfQ.PZ0IFWfqYmhaTkj7yNDy5eE0Y7eXv0kHfxSmOW0US9I"
+              "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1heWVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJqUlFJU2ljRWJmb0pCdnYiLCJpYXQiOjE2ODc3NDQ2OTksImV4cCI6MTY4Nzc0NTI5OX0.1-fIBbiyxof9eyn8oQcCW2YVpQodAKB_y_gCq1JB6HQ"
             },
             {
               "key": "User-Agent",
@@ -3386,7 +3383,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "11aba207-7d20-4c08-a46c-ebbe67522c05",
+              "value": "2e6c71e4-e994-4047-a64f-cfad2507844b",
               "system": true
             },
             {
@@ -3417,7 +3414,7 @@
           }
         },
         "response": {
-          "id": "5cf389e1-38ac-4844-8e0b-a5370610cf1d",
+          "id": "b19bf8a9-e216-4ec9-ac48-b8716b6c8b24",
           "status": "OK",
           "code": 200,
           "header": [
@@ -3451,7 +3448,7 @@
             },
             {
               "key": "x-moesif-transaction-id",
-              "value": "0c0c31a6-b171-4df3-bd13-56854da61dd0"
+              "value": "2940ded8-ba3f-4676-8a64-970965e0a2d5"
             },
             {
               "key": "content-type",
@@ -3459,11 +3456,11 @@
             },
             {
               "key": "X-Cloud-Trace-Context",
-              "value": "4fe6cbbe35100dc9affd9103dd97b875"
+              "value": "8362ecc79dfb0c9d9349c09c80dfdfc7"
             },
             {
               "key": "Date",
-              "value": "Thu, 22 Jun 2023 01:07:22 GMT"
+              "value": "Mon, 26 Jun 2023 01:58:19 GMT"
             },
             {
               "key": "Server",
@@ -3531,10 +3528,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 41,
+          "responseTime": 75,
           "responseSize": 51
         },
-        "id": "30831312-15d8-4dc6-9df9-5f71ff6c60a4",
+        "id": "37a2ff86-e0bb-49c1-8739-3eb9aae94be3",
         "assertions": [
           {
             "assertion": "Deve retornar status 200 com mensagem de sucesso",
@@ -3544,7 +3541,7 @@
       }
     ],
     "transfers": {
-      "responseTotal": 1440
+      "responseTotal": 1437
     },
     "failures": [],
     "error": null

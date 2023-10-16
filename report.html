@@ -472,7 +472,7 @@ body.theme-light code {
                 <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">7</span></a>
             </li>
             <li class="nav-item bg-danger" data-toggle="tooltip" title="Click to view the Failed Tests">
-                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">1</span></a>
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
             </li>
             <li class="nav-item bg-warning" data-toggle="tooltip" title="Click to view the Skipped Tests">
                 <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
@@ -483,11 +483,11 @@ body.theme-light code {
 <div class="row">
   <div class="col-md-9 col-lg-12 main">
    <h1 class="display-2 text-center">Newman Run Dashboard</h1>
-   <h5 class="text-center">Monday, 09 October 2023 00:21:37</h5>
+   <h5 class="text-center">Monday, 16 October 2023 00:21:28</h5>
    <div class="row">
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-success">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-retweet fa-5x"></i>
        </div>
@@ -509,12 +509,12 @@ body.theme-light code {
     </div>
     <div class="col-lg-3 col-md-6">
      <div class="card text-white card-info">
-      <div class="card-body bg-danger">
+      <div class="card-body bg-success">
        <div class="rotate">
         <i class="fa fa-plus-circle fa-5x"></i>
        </div>
        <h6 class="text-uppercase">Total Failed Tests</h6>
-       <h1 class="display-1">1</h1>
+       <h1 class="display-1">0</h1>
       </div>
      </div>
     </div>
@@ -566,9 +566,9 @@ API utilizada:
             <div class="card border-info">
                 <div class="card-body">
                 <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 1046ms<br>
-                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 2.13KB<br>
-                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 107ms<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 706ms<br>
+                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 2.16KB<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 69ms<br>
                 </div>
             </div>
         </div>
@@ -600,10 +600,10 @@ API utilizada:
                         <td class="text-center">7</td>
                         <td class="text-center">0</td>
                     </tr>
-                    <tr class="table-danger">
+                    <tr class="">
                         <td>Assertions</td>
                         <td class="text-center">6</td>
-                        <td class="text-center">1</td>
+                        <td class="text-center">0</td>
                     </tr>
                     <tr class="">
                         <td>Skipped Tests</td>
@@ -624,37 +624,9 @@ API utilizada:
             <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
                 <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
-                    <div class="btn-group float-right" role="group" aria-label="Button Group">
-                        <button id="openAllFailed" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 185px;">Expand All Failed Tests</button>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="alert alert-danger text-uppercase text-center">
-                        <h4>Showing 1 Failure</h4>
-                    </div>
-                    <div class="col-sm-12 mb-3">
-                    <div class="card-deck">
-                        <div class="card border-danger">
-                            <div class="card-header bg-danger">
-                                <a data-toggle="collapse" href="#" data-target="#fails-collapse-6399bfb6-4a1c-404b-84b0-1b48755061b2" aria-expanded="false" aria-controls="collapse" id="fails-6399bfb6-4a1c-404b-84b0-1b48755061b2" class="collapsed text-white z-block">
-                                    Iteration 1 - AssertionError - Produtos - Listar produtos cadastrados <i class="float-lg-right fa fa-chevron-down" style="padding-top:5px;"></i>
-                                </a>
-                            </div>
-                            <div id="fails-collapse-6399bfb6-4a1c-404b-84b0-1b48755061b2" class="collapse" aria-labelledby="fails-6399bfb6-4a1c-404b-84b0-1b48755061b2">
-                            <div class="card-body">
-                                <h5 ><strong>Failed Test:</strong> Valida o schema e status code</h5>
-                            <hr>
-                            <h5 class="card-title text-uppercase text-white text-center bg-danger">Assertion Error Message</h5>
-                            <div>
-                                <pre><code >expected data to satisfy schema but found following errors: 
-data.produtos[5].quantidade should be integer</code></pre>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                <div class="alert alert-success text-uppercase text-center">
+                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
+                </div>
             </div>
 
             <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
@@ -669,7 +641,6 @@ data.produtos[5].quantidade should be integer</code></pre>
             <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()">Go To Top</button>
 
             <div class="btn-group float-right" role="group" aria-label="Button Group">
-                <button id="showOnlyFailures" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width:160px;">Show Failed Iterations</button>
                 <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Folders</button>
                 <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px;">Expand Requests</button>
             </div>
@@ -685,22 +656,22 @@ data.produtos[5].quantidade should be integer</code></pre>
     <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;"></h6>
 	<div class="tab-content" id="execution-data">
         <div class="alert alert-dark text-uppercase text-center iteration-0">
-        <a data-toggle="collapse" href="#" data-target="#folder-collapse-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0" class="collapsed text-dark z-block">
+        <a data-toggle="collapse" href="#" data-target="#folder-collapse-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0" class="collapsed text-dark z-block">
         <i class="fas fa-info-circle float-left resultsInfoPass" ></i>
             Usuários - 1 Request in the folder<i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
         </a>
         </div>
-        <div id="folder-collapse-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0" class="collapse" aria-labelledby="folder-75719a2e-7028-4022-ad1e-f22f60ca9026">
-            <div id="folder-484c5dd2-1506-4369-8f4c-61685c399c7f" class="card-deck iteration-0">
+        <div id="folder-collapse-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0" class="collapse" aria-labelledby="folder-c45dc083-ddc5-474a-9a78-00dc81a1c8f7">
+            <div id="folder-98d11889-1338-4a9f-b795-492acdaf7116" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-484c5dd2-1506-4369-8f4c-61685c399c7f" aria-expanded="false" aria-controls="collapse" id="requests-484c5dd2-1506-4369-8f4c-61685c399c7f" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-98d11889-1338-4a9f-b795-492acdaf7116" aria-expanded="false" aria-controls="collapse" id="requests-98d11889-1338-4a9f-b795-492acdaf7116" class="collapsed text-white z-block">
                     Iteration: 1 - Cadastrar usuário <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-484c5dd2-1506-4369-8f4c-61685c399c7f" class="collapse" aria-labelledby="requests-484c5dd2-1506-4369-8f4c-61685c399c7f">
+                    <div id="collapse-98d11889-1338-4a9f-b795-492acdaf7116" class="collapse" aria-labelledby="requests-98d11889-1338-4a9f-b795-492acdaf7116">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -716,7 +687,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 201 - Created</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 295ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 210ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 82B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -760,7 +731,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">e986024e-fd0e-4a6a-bd9e-921f78b0ec50</td>
+                                                        <td class="text-wrap">ab8c5920-4811-46bf-954e-9255a52fefc5</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -776,7 +747,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Length</td>
-                                                        <td class="text-wrap">118</td>
+                                                        <td class="text-wrap">124</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -795,8 +766,8 @@ data.produtos[5].quantidade should be integer</code></pre>
                                         <div class="dyn-height">
                                             <pre><code id="copyReqText-0" class="prettyPrint">{
           &quot;nome&quot;: &quot;{{nome}}&quot;,
-          &quot;email&quot;: &quot;Elmo@qa.com.br&quot;,
-          &quot;password&quot;: &quot;K43Xma8rENJO2JS&quot;,
+          &quot;email&quot;: &quot;Christelle@qa.com.br&quot;,
+          &quot;password&quot;: &quot;Iqh3deYRY77fOyt&quot;,
           &quot;administrador&quot;: &quot;true&quot;
         }</code></pre>
                                         </div>
@@ -852,11 +823,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">8bdbf8905052c81ffdf5c08c0db261bd;o&#x3D;1</td>
+                                                    <td class="text-wrap">a92f4eb47af756da1c7a06014dd84d78;o&#x3D;1</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:36 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -881,13 +852,13 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-4caf2404-dd63-40b1-87c8-9ff5383f0414" class="prettyPrint">{
+                                                <pre><code id="copyText-993d64be-d0f9-4bf6-9148-589b1e09bde1" class="prettyPrint">{
             &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
-            &quot;_id&quot;: &quot;nN76VXSk8ts9QNlo&quot;
+            &quot;_id&quot;: &quot;RFvoUSmfs03YkOSY&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-4caf2404-dd63-40b1-87c8-9ff5383f0414">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-993d64be-d0f9-4bf6-9148-589b1e09bde1">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -910,22 +881,22 @@ data.produtos[5].quantidade should be integer</code></pre>
             </div>
         </div>
         <div class="alert alert-dark text-uppercase text-center iteration-0">
-        <a data-toggle="collapse" href="#" data-target="#folder-collapse-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0" class="collapsed text-dark z-block">
+        <a data-toggle="collapse" href="#" data-target="#folder-collapse-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0" class="collapsed text-dark z-block">
         <i class="fas fa-info-circle float-left resultsInfoPass" ></i>
             Login - 1 Request in the folder<i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
         </a>
         </div>
-        <div id="folder-collapse-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0" class="collapse" aria-labelledby="folder-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967">
-            <div id="folder-26adb197-93ec-4c59-9646-b1f4bf62bb42" class="card-deck iteration-0">
+        <div id="folder-collapse-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0" class="collapse" aria-labelledby="folder-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1">
+            <div id="folder-44715b0b-3b23-437a-a713-9ea7eb59a996" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42" aria-expanded="false" aria-controls="collapse" id="requests-26adb197-93ec-4c59-9646-b1f4bf62bb42" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-44715b0b-3b23-437a-a713-9ea7eb59a996" aria-expanded="false" aria-controls="collapse" id="requests-44715b0b-3b23-437a-a713-9ea7eb59a996" class="collapsed text-white z-block">
                     Iteration: 1 - Login <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42" class="collapse" aria-labelledby="requests-26adb197-93ec-4c59-9646-b1f4bf62bb42">
+                    <div id="collapse-44715b0b-3b23-437a-a713-9ea7eb59a996" class="collapse" aria-labelledby="requests-44715b0b-3b23-437a-a713-9ea7eb59a996">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -941,8 +912,8 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 77ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 280B</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 45ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 288B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
@@ -985,7 +956,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">a651d921-6f28-4a78-b5b2-2404bf465a2c</td>
+                                                        <td class="text-wrap">1610eb11-bc51-4f2e-81d0-0dea87f8a5dc</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1001,7 +972,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Length</td>
-                                                        <td class="text-wrap">67</td>
+                                                        <td class="text-wrap">73</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1019,8 +990,8 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Body</h5>
                                         <div class="dyn-height">
                                             <pre><code id="copyReqText-0" class="prettyPrint">{
-          &quot;email&quot;: &quot;Elmo@qa.com.br&quot;,
-          &quot;password&quot;: &quot;K43Xma8rENJO2JS&quot;
+          &quot;email&quot;: &quot;Christelle@qa.com.br&quot;,
+          &quot;password&quot;: &quot;Iqh3deYRY77fOyt&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
@@ -1075,11 +1046,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">cc90c88a984fd9b98ca7ecf40db305f1</td>
+                                                    <td class="text-wrap">bb9ea811d6876fc11bc404e758ee4f7d</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:36 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -1087,7 +1058,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">280</td>
+                                                    <td class="text-wrap">288</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1104,13 +1075,13 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-8a151583-8a91-469c-ba87-0701254c0f8f" class="prettyPrint">{
+                                                <pre><code id="copyText-e3fbcca3-52d3-4cc5-93c7-766c28c8d0a4" class="prettyPrint">{
             &quot;message&quot;: &quot;Login realizado com sucesso&quot;,
-            &quot;authorization&quot;: &quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsbW9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJLNDNYbWE4ckVOSk8ySlMiLCJpYXQiOjE2OTY4MTA4OTYsImV4cCI6MTY5NjgxMTQ5Nn0.sMjiAxE5nvKD5cRp0GaBwDOMtlcLi5JwTZk1v2vK6js&quot;
+            &quot;authorization&quot;: &quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNocmlzdGVsbGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJJcWgzZGVZUlk3N2ZPeXQiLCJpYXQiOjE2OTc0MTU2ODcsImV4cCI6MTY5NzQxNjI4N30.y2b66DK_pH4jT802flXFiA38RFzcK60uI_wwWA4uwUM&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-8a151583-8a91-469c-ba87-0701254c0f8f">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-e3fbcca3-52d3-4cc5-93c7-766c28c8d0a4">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1171,22 +1142,22 @@ data.produtos[5].quantidade should be integer</code></pre>
             </div>
         </div>
         <div class="alert alert-dark text-uppercase text-center iteration-0">
-        <a data-toggle="collapse" href="#" data-target="#folder-collapse-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0" class="collapsed text-dark z-block">
-        <i class="fas fa-info-circle float-left resultsInfoPass"  style="color: #c24a3f; padding-top: 4px;"></i>
+        <a data-toggle="collapse" href="#" data-target="#folder-collapse-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0" class="collapsed text-dark z-block">
+        <i class="fas fa-info-circle float-left resultsInfoPass" ></i>
             Produtos - 2 Requests in the folder<i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
         </a>
         </div>
-        <div id="folder-collapse-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0" class="collapse" aria-labelledby="folder-ad73e710-5d37-42b7-a9e6-a631fd4ae269">
-            <div id="folder-11044e5e-cde7-4970-accb-ce5d8e762ec7" class="card-deck iteration-0">
+        <div id="folder-collapse-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0" class="collapse" aria-labelledby="folder-d9c7778f-25a9-4e94-bc4f-99cf79c782cd">
+            <div id="folder-61c1381f-2251-4829-a7fa-780d6226e368" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
-                    <div class="card-header  bg-danger iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7" aria-expanded="false" aria-controls="collapse" id="requests-11044e5e-cde7-4970-accb-ce5d8e762ec7" class="collapsed text-white z-block">
+                    <div class="card-header  bg-success iteration-0">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-61c1381f-2251-4829-a7fa-780d6226e368" aria-expanded="false" aria-controls="collapse" id="requests-61c1381f-2251-4829-a7fa-780d6226e368" class="collapsed text-white z-block">
                     Iteration: 1 - Listar produtos cadastrados <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7" class="collapse" aria-labelledby="requests-11044e5e-cde7-4970-accb-ce5d8e762ec7">
+                    <div id="collapse-61c1381f-2251-4829-a7fa-780d6226e368" class="collapse" aria-labelledby="requests-61c1381f-2251-4829-a7fa-780d6226e368">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1202,14 +1173,14 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 72ms</span><br>
-                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 1.15KB</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 44ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 1.17KB</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
                                     <div>
                                         <div class="progress" style="height: 40px;">
-                                            <div class="progress-bar  bg-danger" style="width: 100%" role="progressbar">
-                                            <h5 style="padding-top:5px;"><strong>0 %</strong></h5>
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -1242,7 +1213,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">37b2aae0-b961-40a4-8a09-a9ced41d82e8</td>
+                                                        <td class="text-wrap">ef13a36d-8785-4090-a3c7-ead3a54a0cdf</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1308,11 +1279,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">4978fd2bccdc736ad9235445e026f955</td>
+                                                    <td class="text-wrap">b2ffd0125082278d11fb37ef045bb8fc</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:36 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -1320,7 +1291,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Content-Length</td>
-                                                    <td class="text-wrap">1180</td>
+                                                    <td class="text-wrap">1203</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1337,56 +1308,56 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-21be5ddc-b04a-4af1-9945-a5ca58605878" class="prettyPrint">{
+                                                <pre><code id="copyText-727a0e15-cdcd-47ab-b587-5a7508ad883e" class="prettyPrint">{
             &quot;quantidade&quot;: 6,
             &quot;produtos&quot;: [
-                {
-                    &quot;nome&quot;: &quot;Handmade Fresh Pants&quot;,
-                    &quot;preco&quot;: 43,
-                    &quot;descricao&quot;: &quot;Metal&quot;,
-                    &quot;quantidade&quot;: 2,
-                    &quot;_id&quot;: &quot;6Qy7W1beePMo0cH0&quot;
-                },
-                {
-                    &quot;nome&quot;: &quot;batatinha&quot;,
-                    &quot;preco&quot;: 999,
-                    &quot;descricao&quot;: &quot;cebola&quot;,
-                    &quot;quantidade&quot;: 111,
-                    &quot;_id&quot;: &quot;8HQCWtaBeqGa1s6D&quot;
-                },
                 {
                     &quot;nome&quot;: &quot;Logitech MX Vertical&quot;,
                     &quot;preco&quot;: 470,
                     &quot;descricao&quot;: &quot;Mouse&quot;,
-                    &quot;quantidade&quot;: 3239206,
+                    &quot;quantidade&quot;: 382,
                     &quot;_id&quot;: &quot;BeeJh5lz3k6kSIzA&quot;
+                },
+                {
+                    &quot;nome&quot;: &quot;Notebook Acer&quot;,
+                    &quot;preco&quot;: 6000,
+                    &quot;descricao&quot;: &quot;Notebook&quot;,
+                    &quot;quantidade&quot;: 150,
+                    &quot;_id&quot;: &quot;Fe0yeAQdgEdKEpfC&quot;
                 },
                 {
                     &quot;nome&quot;: &quot;Samsung 60 polegadas&quot;,
                     &quot;preco&quot;: 5240,
                     &quot;descricao&quot;: &quot;TV&quot;,
-                    &quot;quantidade&quot;: 0,
+                    &quot;quantidade&quot;: 49977,
                     &quot;_id&quot;: &quot;K6leHdftCeOJj8BJ&quot;
                 },
                 {
-                    &quot;nome&quot;: &quot;{{name}}&quot;,
-                    &quot;preco&quot;: 43,
-                    &quot;descricao&quot;: &quot;Granite&quot;,
-                    &quot;quantidade&quot;: 21,
-                    &quot;_id&quot;: &quot;WRiV69a5Qjl2sldE&quot;
+                    &quot;nome&quot;: &quot;Iphone 15 Pro&quot;,
+                    &quot;preco&quot;: 12000,
+                    &quot;descricao&quot;: &quot;Celular&quot;,
+                    &quot;quantidade&quot;: 100,
+                    &quot;_id&quot;: &quot;Mxx7TFKxsKDRSp5G&quot;
                 },
                 {
-                    &quot;nome&quot;: &quot;batatinha2&quot;,
-                    &quot;preco&quot;: 17,
-                    &quot;descricao&quot;: &quot;cebola2&quot;,
-                    &quot;quantidade&quot;: &quot;0100&quot;,
-                    &quot;_id&quot;: &quot;kXTV0YwNkU0UpAcU&quot;
+                    &quot;nome&quot;: &quot;Notebook Acer 1&quot;,
+                    &quot;preco&quot;: 6000,
+                    &quot;descricao&quot;: &quot;Notebook&quot;,
+                    &quot;quantidade&quot;: 150,
+                    &quot;_id&quot;: &quot;RR1I3h0MYUfWuEjB&quot;
+                },
+                {
+                    &quot;nome&quot;: &quot;Notebook Acer 2&quot;,
+                    &quot;preco&quot;: 6000,
+                    &quot;descricao&quot;: &quot;Notebook&quot;,
+                    &quot;quantidade&quot;: 150,
+                    &quot;_id&quot;: &quot;t8iCXCzTpXjl35bV&quot;
                 }
             ]
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-21be5ddc-b04a-4af1-9945-a5ca58605878">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-727a0e15-cdcd-47ab-b587-5a7508ad883e">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1403,22 +1374,22 @@ data.produtos[5].quantidade should be integer</code></pre>
                                             <tbody>
                                                 <tr >
                                                     <td >Valida o schema e status code</td>
+                                                    <td class="text-center bg-success">1</td>
                                                     <td class="text-center ">0</td>
-                                                    <td class="text-center bg-danger">1</td>
                                                     <td class="text-center ">0</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="bg-light">
                                                     <td><strong>Total</strong></td>
-                                                    <td class="text-center">0</td>
                                                     <td class="text-center">1</td>
+                                                    <td class="text-center">0</td>
                                                     <td class="text-center">0</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="row ">
+                                    <div class="row d-none">
                                     <div class="col-sm-12 mb-3">
                                         <div class="card-deck">
                                         <div class="card border-danger" style="width: 50rem;">
@@ -1428,11 +1399,6 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     <table class="table table-hover">
                                                     <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td class="w-45 text-nowrap ">Valida o schema e status code</td>
-                                                                <td class="w-55"><pre><code >expected data to satisfy schema but found following errors: 
-        data.produtos[5].quantidade should be integer</code></pre></td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1450,16 +1416,16 @@ data.produtos[5].quantidade should be integer</code></pre>
                 </div>
             </div>
             </div>
-            <div id="folder-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0" class="card-deck iteration-0">
+            <div id="folder-17bd5aae-5057-4bee-862d-32a5d06430c8" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0" aria-expanded="false" aria-controls="collapse" id="requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-17bd5aae-5057-4bee-862d-32a5d06430c8" aria-expanded="false" aria-controls="collapse" id="requests-17bd5aae-5057-4bee-862d-32a5d06430c8" class="collapsed text-white z-block">
                     Iteration: 1 - Cadastrar produto <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0" class="collapse" aria-labelledby="requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0">
+                    <div id="collapse-17bd5aae-5057-4bee-862d-32a5d06430c8" class="collapse" aria-labelledby="requests-17bd5aae-5057-4bee-862d-32a5d06430c8">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1475,7 +1441,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 201 - Created</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 77ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 44ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 82B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -1503,7 +1469,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 <tbody>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsbW9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJLNDNYbWE4ckVOSk8ySlMiLCJpYXQiOjE2OTY4MTA4OTYsImV4cCI6MTY5NjgxMTQ5Nn0.sMjiAxE5nvKD5cRp0GaBwDOMtlcLi5JwTZk1v2vK6js</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNocmlzdGVsbGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJJcWgzZGVZUlk3N2ZPeXQiLCJpYXQiOjE2OTc0MTU2ODcsImV4cCI6MTY5NzQxNjI4N30.y2b66DK_pH4jT802flXFiA38RFzcK60uI_wwWA4uwUM</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Type</td>
@@ -1523,7 +1489,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">76bfea97-ff94-4ff1-8b95-7335794df62f</td>
+                                                        <td class="text-wrap">9339d1da-cafa-40ec-9358-01790293eb6d</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1539,7 +1505,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Length</td>
-                                                        <td class="text-wrap">125</td>
+                                                        <td class="text-wrap">111</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1557,10 +1523,10 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Body</h5>
                                         <div class="dyn-height">
                                             <pre><code id="copyReqText-1" class="prettyPrint">{
-          &quot;nome&quot;: &quot;Ergonomic Plastic Cheese&quot;,
-          &quot;preco&quot;: 695,
-          &quot;descricao&quot;: &quot;Intelligent Cotton Table&quot;,
-          &quot;quantidade&quot;: 702
+          &quot;nome&quot;: &quot;Rustic Frozen Fish&quot;,
+          &quot;preco&quot;: 513,
+          &quot;descricao&quot;: &quot;Tasty Fresh Ball&quot;,
+          &quot;quantidade&quot;: 512
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
@@ -1615,11 +1581,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">a1943b7acfa3b892fc6a96db35bbe241</td>
+                                                    <td class="text-wrap">781ccb7f0f79f9fba13d32a971d1cd78</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:37 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -1644,13 +1610,13 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-1c988567-ae05-4189-a661-773af9fbec2a" class="prettyPrint">{
+                                                <pre><code id="copyText-f0facdf4-25b7-47c0-a22d-45c5a66a2376" class="prettyPrint">{
             &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
-            &quot;_id&quot;: &quot;Ej09akP0uVLHDZEL&quot;
+            &quot;_id&quot;: &quot;ffWhme1hEQYsniKx&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-1c988567-ae05-4189-a661-773af9fbec2a">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-f0facdf4-25b7-47c0-a22d-45c5a66a2376">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1711,22 +1677,22 @@ data.produtos[5].quantidade should be integer</code></pre>
             </div>
         </div>
         <div class="alert alert-dark text-uppercase text-center iteration-0">
-        <a data-toggle="collapse" href="#" data-target="#folder-collapse-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0" class="collapsed text-dark z-block">
+        <a data-toggle="collapse" href="#" data-target="#folder-collapse-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0" aria-expanded="false" aria-controls="collapse" id="folder-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0" class="collapsed text-dark z-block">
         <i class="fas fa-info-circle float-left resultsInfoPass" ></i>
             Carrinhos - 3 Requests in the folder<i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
         </a>
         </div>
-        <div id="folder-collapse-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0" class="collapse" aria-labelledby="folder-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0">
-            <div id="folder-e6e7d076-d210-463f-8b47-e15bfaf2d55b" class="card-deck iteration-0">
+        <div id="folder-collapse-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0" class="collapse" aria-labelledby="folder-071ae136-41b1-447b-8743-f9e26267fab3">
+            <div id="folder-73513aec-e96e-4612-a124-e95229b6a6f8" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b" aria-expanded="false" aria-controls="collapse" id="requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-73513aec-e96e-4612-a124-e95229b6a6f8" aria-expanded="false" aria-controls="collapse" id="requests-73513aec-e96e-4612-a124-e95229b6a6f8" class="collapsed text-white z-block">
                     Iteration: 1 - Cadastrar carrinho <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b" class="collapse" aria-labelledby="requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b">
+                    <div id="collapse-73513aec-e96e-4612-a124-e95229b6a6f8" class="collapse" aria-labelledby="requests-73513aec-e96e-4612-a124-e95229b6a6f8">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1742,7 +1708,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 201 - Created</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 78ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 49ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 82B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -1770,7 +1736,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 <tbody>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsbW9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJLNDNYbWE4ckVOSk8ySlMiLCJpYXQiOjE2OTY4MTA4OTYsImV4cCI6MTY5NjgxMTQ5Nn0.sMjiAxE5nvKD5cRp0GaBwDOMtlcLi5JwTZk1v2vK6js</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNocmlzdGVsbGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJJcWgzZGVZUlk3N2ZPeXQiLCJpYXQiOjE2OTc0MTU2ODcsImV4cCI6MTY5NzQxNjI4N30.y2b66DK_pH4jT802flXFiA38RFzcK60uI_wwWA4uwUM</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Content-Type</td>
@@ -1790,7 +1756,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">62a8753b-975c-496c-bcd7-c93b4ed6ae58</td>
+                                                        <td class="text-wrap">90d31a98-780d-4cb7-bd19-89099325e181</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -1826,7 +1792,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                             <pre><code id="copyReqText-0" class="prettyPrint">{
           &quot;produtos&quot;: [
             {
-              &quot;idProduto&quot;: &quot;Ej09akP0uVLHDZEL&quot;,
+              &quot;idProduto&quot;: &quot;ffWhme1hEQYsniKx&quot;,
               &quot;quantidade&quot;: 1
             }
           ]
@@ -1884,11 +1850,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">0c17a41af5fd983b37bd61a870fa5b65</td>
+                                                    <td class="text-wrap">5b041ee7131078f3bc00a65c04ba1ce0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:37 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -1913,13 +1879,13 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-ca18c426-327f-4eab-9b9d-0d87ce22075e" class="prettyPrint">{
+                                                <pre><code id="copyText-accb49b3-80d8-401a-b8bc-87fb58850519" class="prettyPrint">{
             &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
-            &quot;_id&quot;: &quot;mCZTXtIs2plni8vK&quot;
+            &quot;_id&quot;: &quot;Sfz9Qvux4T0OQtWc&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-ca18c426-327f-4eab-9b9d-0d87ce22075e">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-accb49b3-80d8-401a-b8bc-87fb58850519">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -1978,16 +1944,16 @@ data.produtos[5].quantidade should be integer</code></pre>
                 </div>
             </div>
             </div>
-            <div id="folder-c45257a6-82c9-40ef-9c7f-7745f132043a" class="card-deck iteration-0">
+            <div id="folder-55faf6d2-f3fe-4b62-9003-278ecfbbef19" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-c45257a6-82c9-40ef-9c7f-7745f132043a" aria-expanded="false" aria-controls="collapse" id="requests-c45257a6-82c9-40ef-9c7f-7745f132043a" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19" aria-expanded="false" aria-controls="collapse" id="requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19" class="collapsed text-white z-block">
                     Iteration: 1 - Buscar carrinho por ID <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-c45257a6-82c9-40ef-9c7f-7745f132043a" class="collapse" aria-labelledby="requests-c45257a6-82c9-40ef-9c7f-7745f132043a">
+                    <div id="collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19" class="collapse" aria-labelledby="requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -1996,14 +1962,14 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
-                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://serverest.dev/carrinhos?_id&#x3D;mCZTXtIs2plni8vK" target="_blank">https://serverest.dev/carrinhos?_id&#x3D;mCZTXtIs2plni8vK</a><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://serverest.dev/carrinhos?_id&#x3D;Sfz9Qvux4T0OQtWc" target="_blank">https://serverest.dev/carrinhos?_id&#x3D;Sfz9Qvux4T0OQtWc</a><br>
                                     </div>
                                 </div>
                                 <div class="card border-info" style="width: 50rem;">
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 77ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 46ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 425B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -2031,7 +1997,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 <tbody>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsbW9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJLNDNYbWE4ckVOSk8ySlMiLCJpYXQiOjE2OTY4MTA4OTYsImV4cCI6MTY5NjgxMTQ5Nn0.sMjiAxE5nvKD5cRp0GaBwDOMtlcLi5JwTZk1v2vK6js</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNocmlzdGVsbGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJJcWgzZGVZUlk3N2ZPeXQiLCJpYXQiOjE2OTc0MTU2ODcsImV4cCI6MTY5NzQxNjI4N30.y2b66DK_pH4jT802flXFiA38RFzcK60uI_wwWA4uwUM</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">User-Agent</td>
@@ -2047,7 +2013,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">408c7275-ea2c-4ea6-9665-bf61e0434e0a</td>
+                                                        <td class="text-wrap">0269e5ab-7003-447a-8f19-d36623d2b7ca</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -2113,11 +2079,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">d5c631926b81afc1b9a80257535352b1</td>
+                                                    <td class="text-wrap">9be0c7390b470f9dbfe85da8ff84082d</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:37 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -2142,27 +2108,27 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-5a058fab-1fde-4226-bc27-eda9cf9c18b9" class="prettyPrint">{
+                                                <pre><code id="copyText-193be89c-9415-4913-861a-d45e75e35f5f" class="prettyPrint">{
             &quot;quantidade&quot;: 1,
             &quot;carrinhos&quot;: [
                 {
                     &quot;produtos&quot;: [
                         {
-                            &quot;idProduto&quot;: &quot;Ej09akP0uVLHDZEL&quot;,
+                            &quot;idProduto&quot;: &quot;ffWhme1hEQYsniKx&quot;,
                             &quot;quantidade&quot;: 1,
-                            &quot;precoUnitario&quot;: 695
+                            &quot;precoUnitario&quot;: 513
                         }
                     ],
-                    &quot;precoTotal&quot;: 695,
+                    &quot;precoTotal&quot;: 513,
                     &quot;quantidadeTotal&quot;: 1,
-                    &quot;idUsuario&quot;: &quot;nN76VXSk8ts9QNlo&quot;,
-                    &quot;_id&quot;: &quot;mCZTXtIs2plni8vK&quot;
+                    &quot;idUsuario&quot;: &quot;RFvoUSmfs03YkOSY&quot;,
+                    &quot;_id&quot;: &quot;Sfz9Qvux4T0OQtWc&quot;
                 }
             ]
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-5a058fab-1fde-4226-bc27-eda9cf9c18b9">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-193be89c-9415-4913-861a-d45e75e35f5f">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -2221,16 +2187,16 @@ data.produtos[5].quantidade should be integer</code></pre>
                 </div>
             </div>
             </div>
-            <div id="folder-0ef580c6-9af9-4a17-96d5-7f211ce605fc" class="card-deck iteration-0">
+            <div id="folder-b77b5516-cd87-48d8-b026-2ad993cb9fd5" class="card-deck iteration-0">
             <div class="row iteration-0">
                 <div class="col-sm-12 mb-3 iteration-0">
                 <div class="card iteration-0">
                     <div class="card-header  bg-success iteration-0">
-                        <a data-toggle="collapse" href="#" data-target="#collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc" aria-expanded="false" aria-controls="collapse" id="requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc" class="collapsed text-white z-block">
+                        <a data-toggle="collapse" href="#" data-target="#collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5" aria-expanded="false" aria-controls="collapse" id="requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5" class="collapsed text-white z-block">
                     Iteration: 1 - Excluir carrinho <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
                 </a>
                     </div>
-                    <div id="collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc" class="collapse" aria-labelledby="requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc">
+                    <div id="collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5" class="collapse" aria-labelledby="requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 mb-3">
@@ -2246,7 +2212,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                     <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
                                     <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
-                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 75ms</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 48ms</span><br>
                                     <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 51B</span><br>
                                     <hr>
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
@@ -2274,7 +2240,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 <tbody>
                                                     <tr>
                                                         <td class="text-nowrap">Authorization</td>
-                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsbW9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJLNDNYbWE4ckVOSk8ySlMiLCJpYXQiOjE2OTY4MTA4OTYsImV4cCI6MTY5NjgxMTQ5Nn0.sMjiAxE5nvKD5cRp0GaBwDOMtlcLi5JwTZk1v2vK6js</td>
+                                                        <td class="text-wrap">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkNocmlzdGVsbGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJJcWgzZGVZUlk3N2ZPeXQiLCJpYXQiOjE2OTc0MTU2ODcsImV4cCI6MTY5NzQxNjI4N30.y2b66DK_pH4jT802flXFiA38RFzcK60uI_wwWA4uwUM</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">User-Agent</td>
@@ -2290,7 +2256,7 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Postman-Token</td>
-                                                        <td class="text-wrap">20f72c72-fa45-4381-ad69-25739b7f5252</td>
+                                                        <td class="text-wrap">ad6744e8-2415-401b-8dff-a838d7dc5604</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-nowrap">Host</td>
@@ -2356,11 +2322,11 @@ data.produtos[5].quantidade should be integer</code></pre>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">X-Cloud-Trace-Context</td>
-                                                    <td class="text-wrap">9e2a1e30c5717f2a56446ecf789bef26</td>
+                                                    <td class="text-wrap">abd7e1eb6738e6cfaeb0156c5c4b9fa0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Date</td>
-                                                    <td class="text-wrap">Mon, 09 Oct 2023 00:21:37 GMT</td>
+                                                    <td class="text-wrap">Mon, 16 Oct 2023 00:21:27 GMT</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">Server</td>
@@ -2385,12 +2351,12 @@ data.produtos[5].quantidade should be integer</code></pre>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
                                         <div class="dyn-height">
-                                                <pre><code id="copyText-4517e267-219d-48a3-a469-dd66429269a7" class="prettyPrint">{
+                                                <pre><code id="copyText-c4a3d938-1b9b-47b2-a421-167deab07fac" class="prettyPrint">{
             &quot;message&quot;: &quot;Registro excluído com sucesso&quot;
         }</code></pre>
                                         </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-4517e267-219d-48a3-a469-dd66429269a7">Copy to Clipboard</button>
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-c4a3d938-1b9b-47b2-a421-167deab07fac">Copy to Clipboard</button>
                                         </div>
                                 </div>
                             </div>
@@ -2516,25 +2482,25 @@ $('#openAll').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#folder-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0').removeClass('collapsed')
-            $('#folder-collapse-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0').addClass('show')
-            $('#folder-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0').removeClass('collapsed')
-            $('#folder-collapse-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0').addClass('show')
-            $('#folder-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0').removeClass('collapsed')
-            $('#folder-collapse-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0').addClass('show')
-            $('#folder-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0').removeClass('collapsed')
-            $('#folder-collapse-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0').addClass('show')
+            $('#folder-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0').addClass('show')
+            $('#folder-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0').addClass('show')
+            $('#folder-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0').addClass('show')
+            $('#folder-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0').addClass('show')
         $('#openAll').html("Collapse Folders");
         break;
     case 2:
-            $('#folder-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0').addClass('collapsed')
-            $('#folder-collapse-75719a2e-7028-4022-ad1e-f22f60ca9026-iteration-0').removeClass('show')
-            $('#folder-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0').addClass('collapsed')
-            $('#folder-collapse-2a3c0b96-c9c1-42b2-a2ee-f98814ea6967-iteration-0').removeClass('show')
-            $('#folder-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0').addClass('collapsed')
-            $('#folder-collapse-ad73e710-5d37-42b7-a9e6-a631fd4ae269-iteration-0').removeClass('show')
-            $('#folder-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0').addClass('collapsed')
-            $('#folder-collapse-4dc2c03c-bfea-4bd6-bc8d-f118f449bdb0-iteration-0').removeClass('show')
+            $('#folder-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0').addClass('collapsed')
+            $('#folder-collapse-c45dc083-ddc5-474a-9a78-00dc81a1c8f7-iteration-0').removeClass('show')
+            $('#folder-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0').addClass('collapsed')
+            $('#folder-collapse-8964c6e7-cf5d-4d75-b812-c6d7c419e6b1-iteration-0').removeClass('show')
+            $('#folder-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0').addClass('collapsed')
+            $('#folder-collapse-d9c7778f-25a9-4e94-bc4f-99cf79c782cd-iteration-0').removeClass('show')
+            $('#folder-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0').addClass('collapsed')
+            $('#folder-collapse-071ae136-41b1-447b-8743-f9e26267fab3-iteration-0').removeClass('show')
         $('#openAll').html("Expand Folders");
         break;
 }
@@ -2550,65 +2516,65 @@ $('#openAllRequests').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#requests-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('collapsed')
-            $('#collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('collapsed')
-            $('#requests-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('show')
-            $('#collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('show')
-            $('#requests-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('collapsed')
-            $('#collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('collapsed')
-            $('#requests-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('show')
-            $('#collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('show')
-            $('#requests-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('collapsed')
-            $('#collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('collapsed')
-            $('#requests-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('show')
-            $('#collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('show')
-            $('#requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('collapsed')
-            $('#collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('collapsed')
-            $('#requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('show')
-            $('#collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('show')
-            $('#requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('collapsed')
-            $('#collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('collapsed')
-            $('#requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('show')
-            $('#collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('show')
-            $('#requests-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('collapsed')
-            $('#collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('collapsed')
-            $('#requests-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('show')
-            $('#collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('show')
-            $('#requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('collapsed')
-            $('#collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('collapsed')
-            $('#requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('show')
-            $('#collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('show')
+            $('#requests-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('collapsed')
+            $('#collapse-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('collapsed')
+            $('#requests-98d11889-1338-4a9f-b795-492acdaf7116').addClass('show')
+            $('#collapse-98d11889-1338-4a9f-b795-492acdaf7116').addClass('show')
+            $('#requests-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('collapsed')
+            $('#collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('collapsed')
+            $('#requests-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('show')
+            $('#collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('show')
+            $('#requests-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('collapsed')
+            $('#collapse-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('collapsed')
+            $('#requests-61c1381f-2251-4829-a7fa-780d6226e368').addClass('show')
+            $('#collapse-61c1381f-2251-4829-a7fa-780d6226e368').addClass('show')
+            $('#requests-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('collapsed')
+            $('#collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('collapsed')
+            $('#requests-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('show')
+            $('#collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('show')
+            $('#requests-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('collapsed')
+            $('#collapse-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('collapsed')
+            $('#requests-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('show')
+            $('#collapse-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('show')
+            $('#requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('collapsed')
+            $('#collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('collapsed')
+            $('#requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('show')
+            $('#collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('show')
+            $('#requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('collapsed')
+            $('#collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('collapsed')
+            $('#requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('show')
+            $('#collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('show')
         $('#openAllRequests').html("Collapse Requests");
         break;
     case 2:
-            $('#requests-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('collapsed')
-            $('#collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('collapsed')
-            $('#requests-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('show')
-            $('#collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('show')
-            $('#requests-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('collapsed')
-            $('#collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('collapsed')
-            $('#requests-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('show')
-            $('#collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('show')
-            $('#requests-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('collapsed')
-            $('#collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('collapsed')
-            $('#requests-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('show')
-            $('#collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('show')
-            $('#requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('collapsed')
-            $('#collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('collapsed')
-            $('#requests-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('show')
-            $('#collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('show')
-            $('#requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('collapsed')
-            $('#collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('collapsed')
-            $('#requests-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('show')
-            $('#collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('show')
-            $('#requests-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('collapsed')
-            $('#collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('collapsed')
-            $('#requests-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('show')
-            $('#collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('show')
-            $('#requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('collapsed')
-            $('#collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('collapsed')
-            $('#requests-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('show')
-            $('#collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('show')
+            $('#requests-98d11889-1338-4a9f-b795-492acdaf7116').addClass('collapsed')
+            $('#collapse-98d11889-1338-4a9f-b795-492acdaf7116').addClass('collapsed')
+            $('#requests-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('show')
+            $('#collapse-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('show')
+            $('#requests-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('collapsed')
+            $('#collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('collapsed')
+            $('#requests-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('show')
+            $('#collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('show')
+            $('#requests-61c1381f-2251-4829-a7fa-780d6226e368').addClass('collapsed')
+            $('#collapse-61c1381f-2251-4829-a7fa-780d6226e368').addClass('collapsed')
+            $('#requests-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('show')
+            $('#collapse-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('show')
+            $('#requests-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('collapsed')
+            $('#collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('collapsed')
+            $('#requests-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('show')
+            $('#collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('show')
+            $('#requests-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('collapsed')
+            $('#collapse-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('collapsed')
+            $('#requests-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('show')
+            $('#collapse-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('show')
+            $('#requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('collapsed')
+            $('#collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('collapsed')
+            $('#requests-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('show')
+            $('#collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('show')
+            $('#requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('collapsed')
+            $('#collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('collapsed')
+            $('#requests-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('show')
+            $('#collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('show')
         $('#openAllRequests').html("Expand Requests");
         break;
 }
@@ -2624,65 +2590,65 @@ $('#openAllSkipped').on('click', function(e) {
 let clickCount = $(this).data("clickCount") || 1
 switch (clickCount){
     case 1:
-            $('#skipped-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('collapsed')
-            $('#skipped-collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('collapsed')
-            $('#skipped-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('show')
-            $('#skipped-collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('show')
-            $('#skipped-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('collapsed')
-            $('#skipped-collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('collapsed')
-            $('#skipped-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('show')
-            $('#skipped-collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('show')
-            $('#skipped-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('collapsed')
-            $('#skipped-collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('collapsed')
-            $('#skipped-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('show')
-            $('#skipped-collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('show')
-            $('#skipped-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('collapsed')
-            $('#skipped-collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('collapsed')
-            $('#skipped-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('show')
-            $('#skipped-collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('show')
-            $('#skipped-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('collapsed')
-            $('#skipped-collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('collapsed')
-            $('#skipped-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('show')
-            $('#skipped-collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('show')
-            $('#skipped-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('collapsed')
-            $('#skipped-collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('collapsed')
-            $('#skipped-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('show')
-            $('#skipped-collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('show')
-            $('#skipped-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('collapsed')
-            $('#skipped-collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('collapsed')
-            $('#skipped-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('show')
-            $('#skipped-collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('show')
+            $('#skipped-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('collapsed')
+            $('#skipped-collapse-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('collapsed')
+            $('#skipped-98d11889-1338-4a9f-b795-492acdaf7116').addClass('show')
+            $('#skipped-collapse-98d11889-1338-4a9f-b795-492acdaf7116').addClass('show')
+            $('#skipped-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('collapsed')
+            $('#skipped-collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('collapsed')
+            $('#skipped-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('show')
+            $('#skipped-collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('show')
+            $('#skipped-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('collapsed')
+            $('#skipped-collapse-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('collapsed')
+            $('#skipped-61c1381f-2251-4829-a7fa-780d6226e368').addClass('show')
+            $('#skipped-collapse-61c1381f-2251-4829-a7fa-780d6226e368').addClass('show')
+            $('#skipped-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('collapsed')
+            $('#skipped-collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('collapsed')
+            $('#skipped-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('show')
+            $('#skipped-collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('show')
+            $('#skipped-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('collapsed')
+            $('#skipped-collapse-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('collapsed')
+            $('#skipped-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('show')
+            $('#skipped-collapse-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('show')
+            $('#skipped-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('collapsed')
+            $('#skipped-collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('collapsed')
+            $('#skipped-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('show')
+            $('#skipped-collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('show')
+            $('#skipped-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('collapsed')
+            $('#skipped-collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('collapsed')
+            $('#skipped-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('show')
+            $('#skipped-collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('show')
         $('#openAllSkipped').html("Collapse All Skipped Tests");
         break;
     case 2:
-            $('#skipped-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('collapsed')
-            $('#skipped-collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').addClass('collapsed')
-            $('#skipped-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('show')
-            $('#skipped-collapse-484c5dd2-1506-4369-8f4c-61685c399c7f').removeClass('show')
-            $('#skipped-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('collapsed')
-            $('#skipped-collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').addClass('collapsed')
-            $('#skipped-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('show')
-            $('#skipped-collapse-26adb197-93ec-4c59-9646-b1f4bf62bb42').removeClass('show')
-            $('#skipped-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('collapsed')
-            $('#skipped-collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').addClass('collapsed')
-            $('#skipped-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('show')
-            $('#skipped-collapse-11044e5e-cde7-4970-accb-ce5d8e762ec7').removeClass('show')
-            $('#skipped-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('collapsed')
-            $('#skipped-collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').addClass('collapsed')
-            $('#skipped-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('show')
-            $('#skipped-collapse-0f7066fc-88f8-4c1e-a381-b3ec5b93b2d0').removeClass('show')
-            $('#skipped-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('collapsed')
-            $('#skipped-collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').addClass('collapsed')
-            $('#skipped-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('show')
-            $('#skipped-collapse-e6e7d076-d210-463f-8b47-e15bfaf2d55b').removeClass('show')
-            $('#skipped-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('collapsed')
-            $('#skipped-collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').addClass('collapsed')
-            $('#skipped-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('show')
-            $('#skipped-collapse-c45257a6-82c9-40ef-9c7f-7745f132043a').removeClass('show')
-            $('#skipped-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('collapsed')
-            $('#skipped-collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').addClass('collapsed')
-            $('#skipped-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('show')
-            $('#skipped-collapse-0ef580c6-9af9-4a17-96d5-7f211ce605fc').removeClass('show')
+            $('#skipped-98d11889-1338-4a9f-b795-492acdaf7116').addClass('collapsed')
+            $('#skipped-collapse-98d11889-1338-4a9f-b795-492acdaf7116').addClass('collapsed')
+            $('#skipped-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('show')
+            $('#skipped-collapse-98d11889-1338-4a9f-b795-492acdaf7116').removeClass('show')
+            $('#skipped-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('collapsed')
+            $('#skipped-collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').addClass('collapsed')
+            $('#skipped-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('show')
+            $('#skipped-collapse-44715b0b-3b23-437a-a713-9ea7eb59a996').removeClass('show')
+            $('#skipped-61c1381f-2251-4829-a7fa-780d6226e368').addClass('collapsed')
+            $('#skipped-collapse-61c1381f-2251-4829-a7fa-780d6226e368').addClass('collapsed')
+            $('#skipped-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('show')
+            $('#skipped-collapse-61c1381f-2251-4829-a7fa-780d6226e368').removeClass('show')
+            $('#skipped-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('collapsed')
+            $('#skipped-collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').addClass('collapsed')
+            $('#skipped-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('show')
+            $('#skipped-collapse-17bd5aae-5057-4bee-862d-32a5d06430c8').removeClass('show')
+            $('#skipped-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('collapsed')
+            $('#skipped-collapse-73513aec-e96e-4612-a124-e95229b6a6f8').addClass('collapsed')
+            $('#skipped-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('show')
+            $('#skipped-collapse-73513aec-e96e-4612-a124-e95229b6a6f8').removeClass('show')
+            $('#skipped-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('collapsed')
+            $('#skipped-collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').addClass('collapsed')
+            $('#skipped-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('show')
+            $('#skipped-collapse-55faf6d2-f3fe-4b62-9003-278ecfbbef19').removeClass('show')
+            $('#skipped-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('collapsed')
+            $('#skipped-collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').addClass('collapsed')
+            $('#skipped-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('show')
+            $('#skipped-collapse-b77b5516-cd87-48d8-b026-2ad993cb9fd5').removeClass('show')
         $('#openAllSkipped').html("Expand All Skipped Tests");
         break;
 }
@@ -2700,21 +2666,9 @@ let failedItemContent
 let failedItemHeading
 switch (clickCount){
     case 1:
-            failedItemHeading = $('#fails-6399bfb6-4a1c-404b-84b0-1b48755061b2');
-            failedItemContent = $("#fails-collapse-6399bfb6-4a1c-404b-84b0-1b48755061b2");
-            failedItemHeading.removeClass('collapsed')
-            failedItemContent.removeClass('collapsed')
-            failedItemHeading.addClass('show')
-            failedItemContent.addClass('show')
         $('#openAllFailed').html("Collapse All Failed Tests");
         break;
     case 2:
-            failedItemHeading = $('#fails-6399bfb6-4a1c-404b-84b0-1b48755061b2');
-            failedItemContent = $("#fails-collapse-6399bfb6-4a1c-404b-84b0-1b48755061b2");
-            failedItemHeading.removeClass('show')
-            failedItemContent.removeClass('show')
-            failedItemHeading.addClass('collapsed')
-            failedItemContent.addClass('collapsed')
         $('#openAllFailed').html("Expand All Failed Tests");
         break;
 }
@@ -2839,8 +2793,6 @@ function scrollFunction() {
     document.getElementById("openAllRequests").style.display = "none";
 
 
-    document.getElementById("showOnlyFailures").style.display = "none";
-    document.getElementById("openAllFailed").style.display = "none";
   } else {
     document.getElementById("topOfRequestsScreen").style.display = "none";
     document.getElementById("topOfFailuresScreen").style.display = "none";
@@ -2848,8 +2800,6 @@ function scrollFunction() {
     document.getElementById("openAll").style.display = "block";
     document.getElementById("openAllRequests").style.display = "block";
 
-    document.getElementById("showOnlyFailures").style.display = "block";
-    document.getElementById("openAllFailed").style.display = "block";
   }
 }
 
@@ -2912,7 +2862,6 @@ window.onload = function () {
   document.getElementById('iteration-0').click();
   document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
 
-    $("#iteration-0").removeClass('itPassed').addClass('itFailed')
 }
 </script>
 
